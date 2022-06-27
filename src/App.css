@@ -1,0 +1,22 @@
+.ScrollDown > * {
+  animation: float 1s infinite;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.SITTag{
+  background-image: url("./assets/images/SITKMUTT_Tag.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
