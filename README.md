@@ -8,6 +8,8 @@ run command: `pnpm run dev`
 
 build command: `pnpm run build`
 
+install node modules: `pnpm install`
+
 ### Installed packages
 
 * `Tailwind css` 
