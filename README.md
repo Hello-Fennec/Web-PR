@@ -8,6 +8,8 @@ run command: `pnpm run dev`
 
 build command: `pnpm run build`
 
+install node modules: `pnpm install`
+
 ### Installed packages
 
 * `Tailwind css` 
@@ -18,4 +20,4 @@ build command: `pnpm run build`
 
 * `useWindowDimensions` to get window width and height
 
-> const { height, width } = useWindowDimensions();
+`const { height, width } = useWindowDimensions();`
