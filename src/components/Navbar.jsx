@@ -11,7 +11,8 @@ const Navbar = () => {
       <a
         href="https://www.sit.kmutt.ac.th/"
         target="blank"
-        className="SITTag w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 sm:rounded-b-xl absolute top-0 left-10 md:left-5 shadow-md rounded-b-3xl hover:-translate-y-1 duration-200"
+        id="SITTag"
+        className="SITTag opacity-0 w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 sm:rounded-b-xl absolute -top-5 left-10 md:left-5 shadow-md rounded-b-3xl hover:-translate-y-1 duration-200"
       ></a>
     );
   };
@@ -52,7 +53,7 @@ const Navbar = () => {
 
   const DesktopNavbar = () => {
     return (
-        <nav className="p-3 pr-5 container flex justify-between items-start mx-auto  ">
+        <nav id="desktop-nav" className="duration-500 opacity-0 p-3 pr-5 container flex justify-between items-start mx-auto  ">
           <div></div>
           <div className="block w-auto" id="mobile-menu">
             <ul className="flex mt-4 flex-row space-x-8 md:space-x-4 md:mt-3 md:text-xs md:font-medium">

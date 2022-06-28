@@ -16,17 +16,33 @@ function App() {
 
   useEffect(() => {
     const scrollLabel = document.getElementsByClassName("ScrollDown");
+    const bottomFixedLayout = document.getElementById("bottomFixedLayout");
+    const sitTag = document.getElementById("SITTag");
+    const desktopNav = document.getElementById("desktop-nav");
+
     setTimeout(() => {
-      scrollLabel[0].style.opacity = 1;
-    }, 2000);
+      sitTag.style.opacity = 1;
+      sitTag.style.top = 0;
+      desktopNav.style.opacity = 1;
+
+      setTimeout(() => {
+        bottomFixedLayout.style.opacity = 1;
+        bottomFixedLayout.style.bottom = 0;
+      }, 500);
+
+      setTimeout(() => {
+        scrollLabel[0].style.opacity = 1;
+      }, 1300);
+
+    }, 1500);
+
     return () => {};
   }, []);
-
 
   return (
     <div className="App">
       <Navbar />
-      <Home/>
+      <Home />
       <BottomFixedLayout isMobile={isMobile} />
     </div>
   );
