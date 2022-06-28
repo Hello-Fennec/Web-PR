@@ -20,4 +20,4 @@ install node modules: `pnpm install`
 
 * `useWindowDimensions` to get window width and height
 
-> const { height, width } = useWindowDimensions();
+* > const { height, width } = useWindowDimensions();
