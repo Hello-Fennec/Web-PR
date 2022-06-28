@@ -23,7 +23,7 @@ function App() {
     setTimeout(() => {
       // sitTag.style.opacity = 1;
       // sitTag.style.top = 0;
-      desktopNav.style.opacity = 1;
+      desktopNav==null?null:desktopNav.style.opacity = 1;
 
       setTimeout(() => {
         bottomFixedLayout.style.opacity = 1;
