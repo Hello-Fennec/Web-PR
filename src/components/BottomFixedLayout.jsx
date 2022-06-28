@@ -1,7 +1,7 @@
 import AudioToggle from "./AudioToggle";
 import SocialMedia from "./SocialMedia";
 
-const BottomFixedLayout = () => {
+const BottomFixedLayout = ({isMobile}) => {
   return (
     <div
       className={
@@ -9,7 +9,7 @@ const BottomFixedLayout = () => {
       }
     >
       <SocialMedia />
-      <AudioToggle />
+      {isMobile?null:<AudioToggle />}
     </div>
   );
 };

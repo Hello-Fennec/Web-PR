@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Home/>
-      <BottomFixedLayout />
+      <BottomFixedLayout isMobile={isMobile} />
     </div>
   );
 }

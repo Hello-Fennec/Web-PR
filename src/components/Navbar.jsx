@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const MobileNavbar = () => {
     return (
-      <div className="w-full h-screen">
+      <div className="w-full">
         <section
           id="bottom-navigation"
           className="block fixed inset-x-0 bottom-0 z-10 bg-white shadow"
