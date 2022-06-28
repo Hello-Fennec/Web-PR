@@ -12,7 +12,7 @@ const Navbar = () => {
         href="https://www.sit.kmutt.ac.th/"
         target="blank"
         id="SITTag"
-        className="SITTag opacity-0 w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 sm:rounded-b-xl absolute -top-5 left-10 md:left-5 shadow-md rounded-b-3xl hover:-translate-y-1 duration-200"
+        className="SITTag opacity-1 w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 sm:rounded-b-xl absolute top-0 left-10 md:left-5 shadow-md rounded-b-3xl hover:-translate-y-1 duration-200"
       ></a>
     );
   };

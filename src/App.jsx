@@ -21,13 +21,13 @@ function App() {
     const desktopNav = document.getElementById("desktop-nav");
 
     setTimeout(() => {
-      sitTag.style.opacity = 1;
-      sitTag.style.top = 0;
+      // sitTag.style.opacity = 1;
+      // sitTag.style.top = 0;
       desktopNav.style.opacity = 1;
 
       setTimeout(() => {
         bottomFixedLayout.style.opacity = 1;
-        bottomFixedLayout.style.bottom = 0;
+      //   bottomFixedLayout.style.bottom = 0;
       }, 500);
 
       setTimeout(() => {
