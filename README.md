@@ -3,12 +3,9 @@
 
 ### React Project built on Vite JS
 
-
-run command: `pnpm run dev`
-
-build command: `pnpm run build`
-
-install node modules: `pnpm install`
+* run command: `pnpm run dev`
+* build command: `pnpm run build`
+* install node modules: `pnpm install`
 
 ### Installed packages
 
@@ -20,4 +17,6 @@ install node modules: `pnpm install`
 
 * `useWindowDimensions` to get window width and height
 
-`const { height, width } = useWindowDimensions();`
+```
+const { height, width } = useWindowDimensions();
+```
