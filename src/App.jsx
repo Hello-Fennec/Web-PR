@@ -11,6 +11,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import { useEffect } from "react";
 
 import PAGES from "./constants/PAGES";
+import { useState } from "react";
 function App() {
   document.title = "Helloworld 2022";
   const isMobile =
@@ -19,40 +20,43 @@ function App() {
     ) ||
     (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0);
 
+  const [pageOnScreen, setPageOnScreen] = useState(0);
+
   useEffect(() => {
     const scrollLabel = document.getElementsByClassName("ScrollDown");
     const bottomFixedLayout = document.getElementById("bottomFixedLayout");
-    const desktopNav = document.getElementById("desktop-nav");
-    // const sitTag = document.getElementById("SITTag");
 
     setTimeout(() => {
-      desktopNav == null ? null : (desktopNav.style.opacity = 1);
-      // sitTag.style.opacity = 1;
-      // sitTag.style.top = 0;
+      bottomFixedLayout.style.opacity = 1;
+    }, 1200);
 
-      setTimeout(() => {
-        bottomFixedLayout.style.opacity = 1;
-        //   bottomFixedLayout.style.bottom = 0;
-      }, 500);
-
-      setTimeout(() => {
-        scrollLabel[0].style.opacity = 1;
-      }, 1300);
-    }, 700);
+    setTimeout(() => {
+      scrollLabel[0].style.opacity = 1;
+    }, 2000);
 
     // fullpage.js init
 
     return () => {};
   }, []);
 
+  useEffect(() => {
+    console.log(pageOnScreen);
+  }, [pageOnScreen]);
   return (
     <div className="App">
       <ReactFullpage
         //fullpage options
         licenseKey={"YOUR_KEY_HERE"}
         scrollingSpeed={1000} /* Options here */
-        // anchors={PAGES.map((page) => page.name)}
-
+        onLeave={(origin, destination) => {
+          console.log(
+            "Leaving section " +
+              origin.index +
+              " to section " +
+              destination.index
+          );
+          setPageOnScreen(destination.index);
+        }}
         render={({ state, fullpageApi }) => {
           return (
             <ReactFullpage.Wrapper>
@@ -82,7 +86,7 @@ function App() {
         }}
       />
       <Home />
-      <Navbar />
+      <Navbar pageOnScreen={pageOnScreen} />
       <BottomFixedLayout isMobile={isMobile} />
     </div>
   );

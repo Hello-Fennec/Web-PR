@@ -3,7 +3,7 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 import BREAKPOINTS from "../constants/BREAKPOINTS";
 import PAGES from "../constants/PAGES";
 
-const Navbar = () => {
+const Navbar = ({ pageOnScreen }) => {
   const { height, width } = useWindowDimensions();
 
   const SITTag = () => {
@@ -16,14 +16,6 @@ const Navbar = () => {
       ></a>
     );
   };
-
-  //   const scrollToAnchor = (selectedAnchor) => {
-  //     document.querySelector(selectedAnchor).scrollIntoView({
-  //         behavior: 'smooth',
-  //         block: 'start',
-  //         inline: 'nearest',
-  //     });
-  // }
 
   const MobileNavbar = () => {
     return (
@@ -63,7 +55,7 @@ const Navbar = () => {
     return (
       <nav
         id="desktop-nav"
-        className="fixed top-0 duration-500 opacity-0 p-3 pr-5 container flex justify-between items-start mx-auto  "
+        className="fixed top-0 duration-500 opacity-1 p-3 pr-5 container flex justify-between items-start mx-auto  "
       >
         <div></div>
         <div className="block w-auto" id="mobile-menu">
@@ -75,8 +67,10 @@ const Navbar = () => {
                     onClick={() => {
                       window.fullpage_api.moveTo(index + 1);
                     }}
-                    // href={"#" + PAGES[index].name}
-                    className="text-black hover:text-gray-500 text-xl font-sans"
+                    className={
+                      (pageOnScreen == index ? "text-red-500" : "text-black") +
+                      " hover:text-gray-500 text-xl font-sans"
+                    }
                   >
                     {page.name}
                   </button>
@@ -91,7 +85,7 @@ const Navbar = () => {
 
   return (
     <div id="myMenu">
-      {width < BREAKPOINTS.mobile ? null : <DesktopNavbar />}
+      {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
       <SITTag />
     </div>
   );
