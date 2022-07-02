@@ -15,6 +15,7 @@ React Project built on Vite JS
 * `HowlJS` for playing audio
 * `React Icons`
 * `Fullpage JS`
+* `Styled-components`
 
 ### Custom hooks
 
