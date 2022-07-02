@@ -19,15 +19,11 @@ const Navbar = ({ pageOnScreen }) => {
     const mobileNavbar = document.getElementById("mobileNav");
 
     if (mobileNavbar) {
-      mobileNavbar.classList.toggle("on", navToggle);
-      mobileNavbar.classList.toggle("off", !navToggle);
-
       if (!navToggle) {
-        setTimeout(() => {
-          mobileNavbar.style.display = "none";
-        }, 400);
+        mobileNavbar.classList.toggle("off");
         window.fullpage_api.setAllowScrolling(true);
       } else {
+        mobileNavbar.classList.toggle("on");
         window.fullpage_api.setAllowScrolling(false);
       }
     }
@@ -155,13 +151,11 @@ const NavBurger = styled.div`
 const MobileNav = styled.div`
   .on {
     animation: FADEIN 0.4s ease-in-out;
-    opacity: 1;
     transform: translateY(0%);
   }
 
   .off {
     animation: FADEOUT 0.4s ease-in-out;
-    opacity: 0;
   }
 
   @keyframes FADEIN {
