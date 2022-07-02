@@ -1,7 +1,9 @@
 # HelloWorld 2022 Web-PR 
 
 
-### React Project built on Vite JS
+React Project built on Vite JS
+
+### Main command
 
 * run command: `pnpm run dev`
 * build command: `pnpm run build`
