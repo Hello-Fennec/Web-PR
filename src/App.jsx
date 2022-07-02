@@ -45,15 +45,6 @@ function App() {
     return () => {};
   }, []);
 
-  useEffect(() => {
-    // 'fullpage_api' is not defined.
-    // It works in codesandbox but my vscode.
-    fullpage_api.setAllowScrolling(false);
-
-    // It works both in codesandbox and my vscode.
-    window.fullpage_api.setAllowScrolling(false);
-  }, []);
-
   return (
     <div className="App">
       <ReactFullpage
