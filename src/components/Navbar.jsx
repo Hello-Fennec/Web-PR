@@ -2,9 +2,21 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 
 import BREAKPOINTS from "../constants/BREAKPOINTS";
 import PAGES from "../constants/PAGES";
+import { AiOutlineMenu } from "react-icons/ai";
+import { useState, useEffect } from "react";
 
 const Navbar = ({ pageOnScreen }) => {
   const { height, width } = useWindowDimensions();
+  const [navToggle, setNavToggle] = useState(false);
+  const toggleNav = () => {
+    setNavToggle(!navToggle);
+  };
+
+  useEffect(() => {
+    console.log(navToggle);
+  }, [navToggle]);
+
+  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
 
   const SITTag = () => {
     return (
@@ -12,7 +24,7 @@ const Navbar = ({ pageOnScreen }) => {
         href="https://www.sit.kmutt.ac.th/"
         target="blank"
         id="SITTag"
-        className="SITTag opacity-1 w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 sm:rounded-b-xl fixed top-0 left-10 md:left-5 shadow-md rounded-b-3xl hover:-translate-y-1 duration-200"
+        className="SITTag bg-white opacity-1 w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 sm:rounded-b-xl fixed top-0 left-10 md:left-5 shadow-md rounded-b-3xl hover:-translate-y-1 duration-200"
       ></a>
     );
   };
@@ -20,33 +32,57 @@ const Navbar = ({ pageOnScreen }) => {
   const MobileNavbar = () => {
     return (
       <div className="w-full">
-        <section
-          id="bottom-navigation"
-          className="block fixed inset-x-0 bottom-0 z-10 bg-white shadow"
+        <div
+          className={
+            `${navToggle ? "block" : "hidden"}` +
+            " w-full fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/20 opacity-90 z-10 p-5 shadow-sm shadow-white/30"
+          }
         >
-          <div id="tabs" className="flex justify-between rounded-t-3xl ">
+          <ul className="flex mt-6 mb-12 flex-col space-y-12">
             {PAGES.map((page, index) => {
               return (
-                <a
-                  href="#"
-                  className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center py-3 "
-                >
-                  <svg
-                    width="25"
-                    height="25"
-                    viewBox="0 0 42 42"
-                    className="inline-block mb-1"
+                <li className="flex justify-center items-center" key={index}>
+                  <button
+                    onClick={() => {
+                      window.fullpage_api.moveTo(index + 1);
+                      toggleNav();
+                    }}
+                    className={
+                      (pageOnScreen == index ? "text-red-500" : "text-black") +
+                      " hover:text-gray-500 text-xl font-sans"
+                    }
                   >
-                    {page.icon}
-                  </svg>
-                  <span className="tab tab-home block text-xs">
                     {page.name}
-                  </span>
-                </a>
+                  </button>
+                </li>
               );
             })}
-          </div>
-        </section>
+          </ul>
+        </div>
+        <button
+          className="flex flex-col fixed top-0 right-0  pt-3 pr-6 z-20 justify-center items-center group"
+          onClick={toggleNav}
+        >
+          <div
+            className={`${genericHamburgerLine} ${
+              navToggle
+                ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100"
+                : "opacity-50 group-hover:opacity-100"
+            }`}
+          />
+          <div
+            className={`${genericHamburgerLine} ${
+              navToggle ? "opacity-0" : "opacity-50 group-hover:opacity-100"
+            }`}
+          />
+          <div
+            className={`${genericHamburgerLine} ${
+              navToggle
+                ? "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
+                : "opacity-50 group-hover:opacity-100"
+            }`}
+          />
+        </button>
       </div>
     );
   };

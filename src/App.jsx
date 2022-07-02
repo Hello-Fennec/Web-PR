@@ -34,14 +34,11 @@ function App() {
       scrollLabel[0].style.opacity = 1;
     }, 2000);
 
-    // fullpage.js init
-
     return () => {};
   }, []);
 
-  useEffect(() => {
-    console.log(pageOnScreen);
-  }, [pageOnScreen]);
+  
+
   return (
     <div className="App">
       <ReactFullpage
@@ -49,12 +46,6 @@ function App() {
         licenseKey={"YOUR_KEY_HERE"}
         scrollingSpeed={1000} /* Options here */
         onLeave={(origin, destination) => {
-          console.log(
-            "Leaving section " +
-              origin.index +
-              " to section " +
-              destination.index
-          );
           setPageOnScreen(destination.index);
         }}
         render={({ state, fullpageApi }) => {
@@ -62,7 +53,7 @@ function App() {
             <ReactFullpage.Wrapper>
               {PAGES.map((page, index) => {
                 return (
-                  <div className="section" key={index}>
+                  <div className="section " key={index}>
                     <div className="flex flex-col justify-center items-center text-center">
                       <div className="w-full">
                         <button onClick={() => fullpageApi.moveSectionUp()}>
