@@ -77,8 +77,9 @@ function App() {
         }}
       />
       <Home />
-      <Navbar pageOnScreen={pageOnScreen} />
       <BottomFixedLayout isMobile={isMobile} />
+      <Navbar pageOnScreen={pageOnScreen} />
+
     </div>
   );
 }
