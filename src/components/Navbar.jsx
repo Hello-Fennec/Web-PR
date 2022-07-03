@@ -5,7 +5,6 @@ import PAGES from "../constants/PAGES";
 import { useState } from "react";
 import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
-import { GiNuclearPlant } from "react-icons/gi";
 import { useEffect } from "react";
 
 const Navbar = ({ pageOnScreen }) => {
@@ -26,7 +25,7 @@ const Navbar = ({ pageOnScreen }) => {
           bar.classList.toggle("off");
         });
         window.fullpage_api.setAllowScrolling(true);
-      } else {
+      } else{
         mobileNavbar.classList.toggle("on");
         bars.forEach((bar) => {
           bar.classList.toggle("on");
@@ -43,7 +42,7 @@ const Navbar = ({ pageOnScreen }) => {
       <MobileNav className="w-full ">
         <div
           id="mobileNav"
-          className="-translate-y-full transition-all duration-200 ease-in-out w-full trans fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/20  z-10 p-5 shadow-sm shadow-white/30"
+          className="-translate-y-full opacity-0 hidden transition-all duration-200 ease-in-out w-full trans fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/20  z-10 p-5 shadow-sm shadow-white/30"
         >
           <ul className="flex mt-6 mb-12 flex-col space-y-12 ">
             {PAGES.map((page, index) => {
@@ -240,13 +239,18 @@ const NavBurger = styled.div`
 `;
 
 const MobileNav = styled.div`
+
   #mobileNav.on {
     animation: FADEIN 0.4s ease-in-out;
     transform: translateY(0%);
+    opacity: 1;
+    display: block;
   }
 
   #mobileNav.off {
     animation: FADEOUT 0.4s ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
   }
 
   @keyframes FADEIN {
