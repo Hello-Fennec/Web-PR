@@ -18,12 +18,19 @@ const Navbar = ({ pageOnScreen }) => {
   useEffect(() => {
     const mobileNavbar = document.getElementById("mobileNav");
 
+    const bars = document.querySelectorAll(".bar");
     if (mobileNavbar) {
       if (!navToggle) {
         mobileNavbar.classList.toggle("off");
+        bars.forEach((bar) => {
+          bar.classList.toggle("off");
+        });
         window.fullpage_api.setAllowScrolling(true);
       } else {
         mobileNavbar.classList.toggle("on");
+        bars.forEach((bar) => {
+          bar.classList.toggle("on");
+        });
         window.fullpage_api.setAllowScrolling(false);
       }
     }
@@ -49,7 +56,7 @@ const Navbar = ({ pageOnScreen }) => {
                     }}
                     className={
                       (pageOnScreen == index ? "text-red-500" : "text-black") +
-                      " hover:text-gray-500 text-xl font-sans w-full"
+                      " hover:text-gray-500 text-xl font-sans w-2/3"
                     }
                   >
                     {page.name}
@@ -64,13 +71,11 @@ const Navbar = ({ pageOnScreen }) => {
           className="flex flex-col fixed top-0 right-0  pt-3 pr-6 z-20 justify-center items-center"
           onClick={toggleNav}
         >
-          <NavBurger
-            className={`${navToggle ? "rotate-45 translate-y-3" : null}`}
-          />
-          <NavBurger className={`${navToggle ? "opacity-0" : null}`} />
-          <NavBurger
-            className={`${navToggle ? "-rotate-45 -translate-y-3" : null}`}
-          />
+          <NavBurger>
+            <Bar id="bar1" className="bar" />
+            <Bar id="bar2" className="bar" />
+            <Bar id="bar3" className="bar" />
+          </NavBurger>
         </button>
       </MobileNav>
     );
@@ -136,7 +141,7 @@ const SITTag = styled.a`
   background-size: contain;
   background-repeat: no-repeat;
 `;
-const NavBurger = styled.div`
+const Bar = styled.div`
   height: 0.25rem;
   width: 1.5rem;
   margin: 0.25rem 0;
@@ -148,13 +153,99 @@ const NavBurger = styled.div`
   -o-transition: 0.3s;
 `;
 
+const NavBurger = styled.div`
+  #bar1.on {
+    animation: bar1On 0.1s ease-in-out;
+    transform: translateY(0.5rem) rotate(45deg);
+  }
+
+  #bar2.on {
+    opacity: 0;
+    animation: bar2On 0.1s ease-in-out;
+  }
+
+  #bar3.on {
+    transform: translateY(-0.5rem) rotate(-45deg);
+    animation: bar3On 0.1s ease-in-out;
+  }
+
+  #bar1.off {
+    animation: bar1Off 0.1s ease-in-out;
+    transform: translateY(0) rotate(0);
+  }
+
+  #bar2.off {
+    opacity: 1;
+    animation: bar2Off 0.1s ease-in-out;
+  }
+
+  #bar3.off {
+    transform: translateY(0) rotate(0);
+    animation: bar3Off 0.1s ease-in-out;
+  }
+
+  @keyframes bar1On {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+
+    100% {
+      transform: translateY(0.5rem) rotate(45deg);
+    }
+  }
+  @keyframes bar2On {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes bar3On {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+
+    100% {
+      transform: translateY(-0.5rem) rotate(-45deg);
+    }
+  }
+
+  @keyframes bar1Off {
+    0% {
+      transform: translateY(0.5rem) rotate(45deg);
+    }
+
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes bar2Off {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes bar3Off {
+    0% {
+      transform: translateY(-0.5rem) rotate(-45deg);
+    }
+
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+`;
+
 const MobileNav = styled.div`
-  .on {
+  #mobileNav.on {
     animation: FADEIN 0.4s ease-in-out;
     transform: translateY(0%);
   }
 
-  .off {
+  #mobileNav.off {
     animation: FADEOUT 0.4s ease-in-out;
   }
 
