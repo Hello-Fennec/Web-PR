@@ -2,10 +2,9 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 
 import BREAKPOINTS from "../constants/BREAKPOINTS";
 import PAGES from "../constants/PAGES";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
-import { useEffect } from "react";
 
 const Navbar = ({ pageOnScreen }) => {
   const { height, width } = useWindowDimensions();
@@ -16,22 +15,21 @@ const Navbar = ({ pageOnScreen }) => {
 
   useEffect(() => {
     const mobileNavbar = document.getElementById("mobileNav");
-
     const bars = document.querySelectorAll(".bar");
-    if (mobileNavbar) {
-      if (!navToggle) {
-        mobileNavbar.classList.toggle("off");
-        bars.forEach((bar) => {
-          bar.classList.toggle("off");
-        });
-        window.fullpage_api.setAllowScrolling(true);
-      } else{
-        mobileNavbar.classList.toggle("on");
-        bars.forEach((bar) => {
-          bar.classList.toggle("on");
-        });
-        window.fullpage_api.setAllowScrolling(false);
-      }
+
+    if (mobileNavbar===null) return;
+    if (!navToggle) {
+      mobileNavbar.classList.toggle("off");
+      bars.forEach((bar) => {
+        bar.classList.toggle("off");
+      });
+      window.fullpage_api.setAllowScrolling(true);
+    } else {
+      mobileNavbar.classList.toggle("on");
+      bars.forEach((bar) => {
+        bar.classList.toggle("on");
+      });
+      window.fullpage_api.setAllowScrolling(false);
     }
   }, [navToggle]);
 
@@ -239,7 +237,6 @@ const NavBurger = styled.div`
 `;
 
 const MobileNav = styled.div`
-
   #mobileNav.on {
     animation: FADEIN 0.4s ease-in-out;
     transform: translateY(0%);
@@ -250,7 +247,6 @@ const MobileNav = styled.div`
   #mobileNav.off {
     animation: FADEOUT 0.4s ease-in-out;
     transform: translateY(-100%);
-    opacity: 0;
   }
 
   @keyframes FADEIN {
