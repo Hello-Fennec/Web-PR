@@ -1,34 +1,30 @@
-import { AiOutlineHome } from "react-icons/ai";
-import { BsCodeSlash } from 'react-icons/bs';
-import { MdQuestionAnswer, MdFormatQuote } from "react-icons/md";
-import { IoLogoGameControllerA } from "react-icons/io";
+import Home from "../pages/Home/Home";
+import About from "../pages/About/About";
+import Teams from "../pages/Teams/Teams";
+import Faqs from "../pages/FAQs/FAQs";
+import Game from "../pages/Game/Game";
 
-const PAGES = [
+const PAGES = [ 
     {
       name: "Home",
-      link: "/",
-      icon: <AiOutlineHome size={42} />,
+      component: <Home />,
     },
     {
       name: "About",
-      link: "/about",
-      icon: <MdFormatQuote size={42} />,
+      component: <About />,
     },
     {
       name: "Teams",
-      link: "/teams",
-      icon: <BsCodeSlash size={42} />,
+      component: <Teams />,
     },
     {
       name: "FAQs",
-      link: "/faqs",
-      icon: <MdQuestionAnswer size={42} />,
+      component: <Faqs />,
     },
     {
       name: "Game",
-      link: "/game",
-      icon: <IoLogoGameControllerA size={42} />,
-    },
-  ];
+      component: <Game />,
+    }, 
+  ]; 
 
     export default PAGES;

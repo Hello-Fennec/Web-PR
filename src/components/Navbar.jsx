@@ -96,7 +96,7 @@ const Navbar = ({ pageOnScreen }) => {
                     }}
                     className={
                       (pageOnScreen == index ? "text-red-500" : "text-black") +
-                      " hover:text-gray-500 text-xl font-sans"
+                      " hover:text-gray-500 md:hover:text-black text-xl font-sans"
                     }
                   >
                     {page.name}

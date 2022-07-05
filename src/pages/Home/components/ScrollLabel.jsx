@@ -8,7 +8,10 @@ const ScrollLabel = () => {
   const { height, width } = useWindowDimensions();
 
   return width > BREAKPOINTS.mobile ? (
-    <ScrollDown className="ScrollDown bottom-0 my-10 text-black text-xl duration-500 transition-all">
+    <ScrollDown
+      onClick={() => window.fullpage_api.moveSectionDow()}
+      className="ScrollDown bottom-0 my-10 text-black text-xl duration-500 transition-all"
+    >
       <h1>Scroll Down</h1>
       <BsChevronDown size="20" />
     </ScrollDown>
@@ -22,7 +25,7 @@ const ScrollLabel = () => {
 const ScrollDown = styled.div`
   animation: float 1s infinite;
   opacity: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
   display: flex;
   flex-direction: column;

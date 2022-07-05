@@ -2,42 +2,32 @@
 import BottomFixedLayout from "./components/BottomFixedLayout";
 import Navbar from "./components/Navbar";
 // pages
-import Home from "./pages/Home/Home";
-// css
-import "./App.css";
-// libs
 import ReactFullpage from "@fullpage/react-fullpage";
 // hooks
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import PAGES from "./constants/PAGES";
-import { useState } from "react";
+
 function App() {
-  document.title = "Helloworld 2022";
   const isMobile =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
     ) ||
-    (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0);
+    (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0); // check if the device is mobile
 
-  const [pageOnScreen, setPageOnScreen] = useState(0);
+  const [pageOnScreen, setPageOnScreen] = useState(0); // 0 = home, 1 = about, 2 = teams, 3 = faqs, 4 = game
 
+  // When page is loaded
   useEffect(() => {
-    const scrollLabel = document.getElementsByClassName("ScrollDown");
-    const bottomFixedLayout = document.getElementById("bottomFixedLayout");
+    document.title = "Helloworld 2022"; // set title of the page
 
+    const bottomFixedLayout = document.getElementById("bottomFixedLayout");
     setTimeout(() => {
       bottomFixedLayout.style.opacity = 1;
-    }, 1200);
-
-    setTimeout(() => {
-      scrollLabel[0].style.opacity = 1;
-    }, 2000);
+    }, 1200); // set opacity of the bottom fixed layout
 
     return () => {};
   }, []);
-
-  
 
   return (
     <div className="App">
@@ -54,32 +44,21 @@ function App() {
               {PAGES.map((page, index) => {
                 return (
                   <div className="section " key={index}>
-                    <div className="flex flex-col justify-center items-center text-center">
-                      <div className="w-full">
-                        <button onClick={() => fullpageApi.moveSectionUp()}>
-                          Move Up
-                        </button>
-                        <h1>{page.name}</h1>
-                        <button
-                          onClick={() => {
-                            fullpageApi.moveTo(index + 2);
-                          }}
-                        >
-                          Move Down
-                        </button>
-                      </div>
+                    <div className="flex flex-col justify-center items-center text-center ">
+                      <div className="w-full h-full">{page.component}</div>{" "}
+                      {/* render the page */}
                     </div>
                   </div>
                 );
               })}
-            </ReactFullpage.Wrapper>
+            </ReactFullpage.Wrapper> // fullpage wrapper
           );
         }}
-      />
-      <Home />
-      <BottomFixedLayout isMobile={isMobile} />
-      <Navbar pageOnScreen={pageOnScreen} />
-
+      />{" "}
+      // fullpage react component
+      <BottomFixedLayout isMobile={isMobile} /> // render the bottom fixed
+      layout
+      <Navbar pageOnScreen={pageOnScreen} /> // render the navbar
     </div>
   );
 }
