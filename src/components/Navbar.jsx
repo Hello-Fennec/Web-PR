@@ -12,8 +12,10 @@ const Navbar = ({ pageOnScreen }) => {
   const toggleMobileNav = () => {
     const mobileNavbar = document.getElementById("mobileNav");
     const bars = document.querySelectorAll(".bar");
+    const navBackground = document.getElementById("navBackground");
 
     mobileNavbar.classList.toggle("on");
+    navBackground.classList.toggle("on");
     bars.forEach((bar) => {
       bar.classList.toggle("on");
       console.log(bar.classList);
@@ -24,10 +26,10 @@ const Navbar = ({ pageOnScreen }) => {
 
   const MobileNavbar = () => {
     return (
-      <MobileNav className="w-full ">
+      <MobileNav>
         <div
           id="mobileNav"
-          className="-translate-y-full opacity-0  transition-all duration-500 ease-in-out w-full trans fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/20  z-10 p-5 shadow-sm shadow-white/30"
+          className="-translate-y-full opacity-0  transition-all duration-500 ease-in-out w-full trans fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/50  z-10 p-5 shadow-sm shadow-white/30"
         >
           <ul className="flex mt-6 mb-12 flex-col space-y-12 ">
             {PAGES.map((page, index) => {
@@ -61,6 +63,10 @@ const Navbar = ({ pageOnScreen }) => {
             <Bar id="bar3" className="bar" />
           </NavBurger>
         </button>
+        <button onClick={toggleMobileNav} 
+          id="navBackground"
+          className="bg-black w-full h-full absolute top-0 left-0 opacity-0 duration-500 ease-in-out hidden"
+        />
       </MobileNav>
     );
   };
@@ -99,13 +105,13 @@ const Navbar = ({ pageOnScreen }) => {
 
   return (
     <div id="myMenu">
-      {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
       <SITTag
         href="https://www.sit.kmutt.ac.th/"
         target="blank"
         id="SITTag"
         className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5 shadow-md "
       />
+      {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
     </div>
   );
 };
@@ -157,6 +163,10 @@ const MobileNav = styled.div`
   #mobileNav.on {
     transform: translateY(0%);
     opacity: 1;
+  }
+
+  #navBackground.on {
+    display: block;
   }
 `;
 
