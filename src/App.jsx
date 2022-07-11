@@ -59,6 +59,7 @@ function App() {
       <BottomFixedLayout isMobile={isMobile} /> // render the bottom fixed
       layout
       <Navbar pageOnScreen={pageOnScreen} /> // render the navbar
+      
     </div>
   );
 }
