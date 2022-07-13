@@ -1,6 +1,6 @@
 // components
-import BottomFixedLayout from "./components/BottomFixedLayout";
-import Navbar from "./components/Navbar";
+import BottomFixedLayout from "./layout/BottomFixedLayout";
+import Navbar from "./layout/Navbar";
 // pages
 import ReactFullpage from "@fullpage/react-fullpage";
 // hooks

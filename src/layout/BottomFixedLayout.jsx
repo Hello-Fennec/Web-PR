@@ -1,5 +1,5 @@
-import AudioToggle from "./AudioToggle";
-import SocialMedia from "./SocialMedia";
+import AudioToggle from "../components/AudioToggle";
+import SocialMedia from "../components/SocialMedia";
 
 const BottomFixedLayout = ({isMobile}) => {
   return (
