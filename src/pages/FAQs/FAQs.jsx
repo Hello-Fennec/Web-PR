@@ -13,10 +13,10 @@ function Faqs() {
                 onClick={() => setCurrent(index)}
                 className={
                   (current === index ? "bg-red-500" : "bg-gray-500") +
-                  " p-5 w-96 rounded-lg"
+                  " p-5 w-80 rounded-lg"
                 }
               >
-                {faq.question}
+                {faq.title}
               </button>
             </div>
           );
