@@ -40,7 +40,7 @@ export default function Content({ selectedTeam, setselectedTeam }) {
 
   const DesktopCarousel = () => {
     return (
-      <Floating className="flex justify-center mb-5 lg:flex-col lg:space-x-0 lg:space-y-5">
+      <Floating className="flex justify-center items-center mb-5 lg:flex-col lg:space-x-0 lg:space-y-5">
         <div className="hidden  text-4xl font-bold lg:block mb-10">
           {TEAMS[selectedTeam].name}
         </div>
