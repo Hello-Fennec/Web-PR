@@ -29,7 +29,7 @@ const AudioToggle = (props) => {
 
 
 
-  const  style = "Audio h-16 w-16 sm:h-14 sm:w-14 flex sm:fixed sm:top-0 sm:right-0 sm:m-3 justify-center items-center text-black  transition-all duration-200 ease-in-out";
+  const  style = "Audio h-16 w-16 fixed bottom-0 right-0 flex mb-10 mr-10 flex justify-center items-center text-black  transition-all duration-200 ease-in-out";
 
   return isPlaying ? (
     <button onClick={SoundMute}>

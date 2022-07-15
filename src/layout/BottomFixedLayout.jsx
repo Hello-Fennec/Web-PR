@@ -1,16 +1,11 @@
 import AudioToggle from "../components/AudioToggle";
 import SocialMedia from "../components/SocialMedia";
 
-const BottomFixedLayout = ({isMobile}) => {
+const BottomFixedLayout = ({ isMobile }) => {
   return (
-    <div
-      id="bottomFixedLayout"
-      className={
-        " fixed bottom-0 opacity-0 flex justify-between p-10 pt-0 w-full sm:px-3 sm:py-3  duration-700 transition-all ease-in-out"
-      }
-    >
+    <div id="bottomFixedLayout">
       <SocialMedia />
-      {isMobile?null:<AudioToggle />}
+      {isMobile ? null : <AudioToggle />}
     </div>
   );
 };
