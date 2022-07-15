@@ -3,6 +3,7 @@ import TEAMS from "../../../constants/TEAMS";
 import { Carousel } from "@trendyol-js/react-carousel";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../constants/BREAKPOINTS";
+import styled from "styled-components";
 
 export default function Content({ selectedTeam, setselectedTeam }) {
   const { height, width } = useWindowDimensions();
@@ -39,11 +40,11 @@ export default function Content({ selectedTeam, setselectedTeam }) {
 
   const DesktopCarousel = () => {
     return (
-      <div className="flex justify-center mb-16 lg:flex-col lg:space-x-0 lg:space-y-5">
+      <Floating className="flex justify-center mb-5 lg:flex-col lg:space-x-0 lg:space-y-5">
         <div className="hidden  text-4xl font-bold lg:block mb-10">
           {TEAMS[selectedTeam].name}
         </div>
-        <div className="h-80 w-96 bg-gray-500 rounded-3xl mr-10"></div>
+        <div className="h-80 w-80 bg-gray-500 rounded-3xl mr-10"></div>
         <div className="h-80 w-1/3 flex flex-col lg:h-36 lg:w-96">
           <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold">
             {TEAMS[selectedTeam].name}
@@ -52,7 +53,7 @@ export default function Content({ selectedTeam, setselectedTeam }) {
             {TEAMS[selectedTeam].description}
           </div>
         </div>
-      </div>
+      </Floating>
     );
   };
 
@@ -60,3 +61,19 @@ export default function Content({ selectedTeam, setselectedTeam }) {
     <>{width < BREAKPOINTS.mobile ? <MobileCourasel /> : <DesktopCarousel />}</>
   );
 }
+
+const Floating = styled.div`
+  animation: floating 2s ease-in-out infinite;
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+`;
