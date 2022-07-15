@@ -10,9 +10,7 @@ const AudioToggle = (props) => {
     setIsPlaying(!isPlaying);
   };
 
-  useEffect(() => {
-    SoundPlay(NatureSound);
-  }, []);
+ 
 
   const SoundPlay = (src) => {
     const sound = new Howl({ src });
