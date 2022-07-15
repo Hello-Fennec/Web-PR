@@ -12,7 +12,8 @@ function Faqs() {
               <button
                 onClick={() => setCurrent(index)}
                 className={
-                  (current === index ? "bg-red-500" : "bg-gray-500") + " p-5 w-96"
+                  (current === index ? "bg-red-500" : "bg-gray-500") +
+                  " p-5 w-96 rounded-lg"
                 }
               >
                 {faq.question}
@@ -21,8 +22,10 @@ function Faqs() {
           );
         })}
       </div>
-      <div className="w-1/2 bg-gray-300 ml-2 flex justify-center items-center">
-        {FAQS[current].answer}
+      <div className="w-1/2 bg-gray-300 ml-2 p-2 flex flex-col justify-center items-center rounded-lg">
+        <div className="text-xl">{FAQS[current].question}</div>
+        <br />
+        <div className="text-3xl">{FAQS[current].answer}</div>
       </div>
     </div>
   );
