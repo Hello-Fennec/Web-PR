@@ -7,7 +7,6 @@ import BREAKPOINTS from "../../../constants/BREAKPOINTS";
 export default function Content({ selectedTeam, setselectedTeam }) {
   const { height, width } = useWindowDimensions();
 
-
   const MobileCourasel = () => {
     return (
       <Carousel
@@ -21,20 +20,15 @@ export default function Content({ selectedTeam, setselectedTeam }) {
         {TEAMS.map((team, index) => {
           return (
             <div
-              className="flex justify-center lg:flex-col lg:space-x-0 lg:items-center lg:space-y-5 cursor-grab"
+              className="flex flex-col space-x-0 items-center space-y-5 "
               key={index}
             >
               <div className="hidden text-4xl font-bold lg:block ">
                 {team.name}
               </div>
-              <div className="h-52 w-64 bg-gray-500 rounded-3xl mr-10"></div>
-              <div className="h-80 w-1/3 flex flex-col lg:h-36 lg:w-96">
-                <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold">
-                  {team.name}
-                </div>
-                <div className="h-full w-full text-left lg:text-center text-lg">
-                  {team.description}
-                </div>
+              <div className="h-52 w-11/12 bg-gray-500 rounded-xl mr-10"></div>
+              <div className="w-11/12 flex flex-col items-center text-center text-lg">
+                {team.description}
               </div>
             </div>
           );
@@ -46,7 +40,9 @@ export default function Content({ selectedTeam, setselectedTeam }) {
   const DesktopCarousel = () => {
     return (
       <div className="flex justify-center mb-16 lg:flex-col lg:space-x-0 lg:space-y-5">
-  
+        <div className="hidden  text-4xl font-bold lg:block mb-10">
+          {TEAMS[selectedTeam].name}
+        </div>
         <div className="h-80 w-96 bg-gray-500 rounded-3xl mr-10"></div>
         <div className="h-80 w-1/3 flex flex-col lg:h-36 lg:w-96">
           <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold">
