@@ -25,7 +25,7 @@ function Faqs() {
       <div className="w-1/2 bg-gray-300 ml-2 p-2 flex flex-col justify-center items-center rounded-lg">
         <div className="text-xl">{FAQS[current].question}</div>
         <br />
-        <div className="text-3xl">{FAQS[current].answer}</div>
+        <div className="text-2xl font-semibold">{FAQS[current].answer}</div>
       </div>
     </div>
   );
