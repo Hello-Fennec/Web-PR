@@ -1,6 +1,7 @@
 import TeamSelector from "./components/TeamSelectors";
 import Content from "./components/Content";
 import { useState } from "react";
+import RegisterBtn from "./components/RegisterBtn";
 
 function Teams() {
   const [selectedTeam, setselectedTeam] = useState(0);
@@ -11,6 +12,7 @@ function Teams() {
         selectedTeam={selectedTeam}
         setselectedTeam={setselectedTeam}
       />
+      <RegisterBtn/> 
     </div>
   );
 }
