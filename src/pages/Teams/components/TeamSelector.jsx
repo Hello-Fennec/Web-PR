@@ -8,7 +8,6 @@ export default function TeamSelector() {
   const Selector = ({ index }) => (
     <a
       onClick={() => {
-        console.log({ index });
         setselectedTeam(index);
       }}
       className={
