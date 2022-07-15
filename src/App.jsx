@@ -6,7 +6,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 // hooks
 import { useEffect, useState } from "react";
 
-import PAGES from "./constants/PAGES";
+import PAGES from "./Data/PAGES";
 
 function App() {
   const isMobile =

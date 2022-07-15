@@ -1,8 +1,7 @@
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
-import BREAKPOINTS from "../constants/BREAKPOINTS";
-import PAGES from "../constants/PAGES";
-import { useState, useEffect } from "react";
+import BREAKPOINTS from "../Data/BREAKPOINTS";
+import PAGES from "../Data/PAGES";
 import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
 

@@ -1,6 +1,5 @@
 import React from "react";
-import { useState } from "react";
-import TEAMS from "../../../constants/TEAMS";
+import TEAMS from "../../../Data/TEAMS";
 
 export default function TeamSelector({ selectedTeam, setselectedTeam }) {
   const Selector = ({ index }) => (

@@ -1,4 +1,4 @@
-import SOCIALMEDIAS from "../constants/SOCIALMEDIAS";
+import SOCIALMEDIAS from "../Data/SOCIALMEDIAS";
 
 const SocialMedia = () => {
   return (

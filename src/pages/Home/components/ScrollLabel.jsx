@@ -1,7 +1,7 @@
 import { BsChevronDown } from "react-icons/bs";
 import { CgArrowLongDown } from "react-icons/cg";
 import styled from "styled-components";
-import BREAKPOINTS from "../../../constants/BREAKPOINTS";
+import BREAKPOINTS from "../../../Data/BREAKPOINTS";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 const ScrollLabel = () => {

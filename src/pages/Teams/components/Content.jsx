@@ -1,8 +1,8 @@
 import React from "react";
-import TEAMS from "../../../constants/TEAMS";
+import TEAMS from "../../../Data/TEAMS";
 import { Carousel } from "@trendyol-js/react-carousel";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
-import BREAKPOINTS from "../../../constants/BREAKPOINTS";
+import BREAKPOINTS from "../../../Data/BREAKPOINTS";
 import styled from "styled-components";
 
 export default function Content({ selectedTeam, setselectedTeam }) {
