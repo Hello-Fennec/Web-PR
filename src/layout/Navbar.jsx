@@ -105,13 +105,14 @@ const Navbar = ({ pageOnScreen }) => {
 
   return (
     <div id="myMenu">
+      {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
+
       <SITTag
         href="https://www.sit.kmutt.ac.th/"
         target="blank"
         id="SITTag"
         className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5 shadow-md "
       />
-      {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
     </div>
   );
 };

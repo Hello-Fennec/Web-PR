@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import ScrollLabel from "./components/ScrollLabel";
+import Logo from "./components/Logo";
 
 function Home() {
 
@@ -14,6 +15,7 @@ function Home() {
 
   return (
     <div>
+      <Logo/>
       <ScrollLabel />
     </div>
   );

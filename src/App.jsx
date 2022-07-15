@@ -45,7 +45,7 @@ function App() {
                 return (
                   <div className="section " key={index}>
                     <div className="flex flex-col justify-center items-center text-center ">
-                      <div className="w-full h-full">{page.component}</div>{" "}
+                      <div className="w-full h-full">{page.component}</div>
                       {/* render the page */}
                     </div>
                   </div>
