@@ -75,10 +75,9 @@ const Navbar = ({ pageOnScreen }) => {
     return (
       <nav
         id="desktop-nav"
-        className="fixed top-0 duration-500 opacity-1 p-3 pr-5 container flex justify-between items-start mx-auto  "
+        className="fixed top-0 duration-500 opacity-1 p-3 pr-5  right-0 items-start"
       >
-        <div></div>
-        <div className="block w-auto" id="mobile-menu">
+        <div className="block" >
           <ul className="flex mt-4 flex-row space-x-8 md:space-x-4 md:mt-3 md:text-xs md:font-medium">
             {PAGES.map((page, index) => {
               return (
