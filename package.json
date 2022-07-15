@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.26",
+    "@trendyol-js/react-carousel": "^3.0.0",
     "fullpage.js": "^4.0.9",
     "hamburger-react": "^2.5.0",
     "howler": "^2.2.3",

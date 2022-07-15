@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@fullpage/react-fullpage': ^0.1.26
+  '@trendyol-js/react-carousel': ^3.0.0
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
   '@vitejs/plugin-react': ^1.3.0
@@ -23,6 +24,7 @@ specifiers:
 
 dependencies:
   '@fullpage/react-fullpage': 0.1.26
+  '@trendyol-js/react-carousel': 3.0.0
   fullpage.js: 4.0.9
   hamburger-react: 2.5.0_react@18.2.0
   howler: 2.2.3
@@ -446,6 +448,12 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       defer-to-connect: 1.1.3
+    dev: false
+
+  /@trendyol-js/react-carousel/3.0.0:
+    resolution: {integrity: sha512-3BzdDGBtMsAQgFcddjpD98xqOzfW4pZVhdTXmn7/FOIiGWg+ipomWLp1iN1hFe4fXSGTx7+xFg2pObkJlz3BPg==}
+    dependencies:
+      react: 16.14.0
     dev: false
 
   /@ts-morph/common/0.11.1:
@@ -2464,6 +2472,15 @@ packages:
     resolution: {integrity: sha512-XP8A9BT0CpRBD+NYLLeIhld/RqG9+gktUjW1FkE+Vm7OCinbG1SshcK5tb9ls4kzvjZr9mOQc7HYgBngEyPAXg==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /react/16.14.0:
+    resolution: {integrity: sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.8.1
+    dev: false
 
   /react/16.4.2:
     resolution: {integrity: sha512-dMv7YrbxO4y2aqnvA7f/ik9ibeLSHQJTI6TrYAenPSaQ6OXfb+Oti+oJiy8WBxgRzlKatYqtCjphTgDSCEiWFg==}
