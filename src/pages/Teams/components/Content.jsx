@@ -7,6 +7,7 @@ import BREAKPOINTS from "../../../constants/BREAKPOINTS";
 export default function Content({ selectedTeam, setselectedTeam }) {
   const { height, width } = useWindowDimensions();
 
+
   const MobileCourasel = () => {
     return (
       <Carousel

@@ -10,7 +10,7 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
       }}
       className={
         (selectedTeam == index ? "bg-red-500" : "bg-gray-500") +
-        " w-16 h-16 bg-gray-500 cursor-pointer rounded-2xl drop-shadow-lg"
+        " w-16 h-16 bg-gray-500 cursor-pointer rounded-2xl drop-shadow-lg hover:-translate-y-1 duration-300"
       }
     ></button>
   );
