@@ -13,6 +13,6 @@ export default Logo;
 
 const LogoContainer = styled.div`
 
-  background-color: #666666;
+  background-color: gray;
   /* background-image: url(); */
 `
