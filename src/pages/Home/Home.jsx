@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import ScrollLabel from "./components/ScrollLabel";
 import Logo from "./components/Logo";
-import ImgContainer from "../../components/ImgContainer";
 
 function Home() {
 
@@ -15,10 +14,10 @@ function Home() {
   }, []);
 
   return (
-    <ImgContainer src={""} className="w-screen h-full absolute top-0 left-0 overflow-hidden bg-red-300">
+    <div src={""} className="w-screen h-full absolute top-0 left-0 overflow-hidden bg-red-300">
       <Logo/>
       <ScrollLabel />
-    </ImgContainer>
+    </div>
   );
 }
 
