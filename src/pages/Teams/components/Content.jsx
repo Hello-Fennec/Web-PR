@@ -4,9 +4,16 @@ import { Carousel } from "@trendyol-js/react-carousel";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../Data/BREAKPOINTS";
 import styled from "styled-components";
+import { useEffect } from "react";
 
 export default function Content({ selectedTeam, setselectedTeam }) {
   const { height, width } = useWindowDimensions();
+
+  useEffect(() => {
+    const courasel = document.getElementById("carousel");
+
+    courasel.classList.toggle("active");
+  }, [selectedTeam]);
 
   const MobileCourasel = () => {
     return (
@@ -40,7 +47,10 @@ export default function Content({ selectedTeam, setselectedTeam }) {
 
   const DesktopCarousel = () => {
     return (
-      <Floating className="flex justify-center items-center mb-5 lg:flex-col lg:space-x-0 lg:space-y-5">
+      <Floating
+        id="carousel"
+        className="flex justify-center items-center opacity-0 mb-5 lg:flex-col lg:space-x-0 lg:space-y-5"
+      >
         <div className="hidden  text-4xl font-bold lg:block mb-10">
           {TEAMS[selectedTeam].name}
         </div>
@@ -64,6 +74,11 @@ export default function Content({ selectedTeam, setselectedTeam }) {
 
 const Floating = styled.div`
   animation: floating 2s ease-in-out infinite;
+  transition: all 0.5s ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
 
   @keyframes floating {
     0% {
