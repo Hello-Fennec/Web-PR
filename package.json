@@ -19,6 +19,7 @@
     "react-fullpage": "^0.1.19",
     "react-icons": "^4.4.0",
     "react-is": "^18.2.0",
+    "react-parallax": "^3.5.1",
     "styled-components": "^5.3.5",
     "vercel": "^25.2.3"
   },

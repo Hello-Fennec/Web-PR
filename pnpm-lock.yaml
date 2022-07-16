@@ -17,6 +17,7 @@ specifiers:
   react-fullpage: ^0.1.19
   react-icons: ^4.4.0
   react-is: ^18.2.0
+  react-parallax: ^3.5.1
   styled-components: ^5.3.5
   tailwindcss: ^3.1.4
   vercel: ^25.2.3
@@ -34,6 +35,7 @@ dependencies:
   react-fullpage: 0.1.19
   react-icons: 4.4.0_react@18.2.0
   react-is: 18.2.0
+  react-parallax: 3.5.1_biqbaboplfbrettd7655fr4n2y
   styled-components: 5.3.5_7i5myeigehqah43i5u7wbekgba
   vercel: 25.2.3
 
@@ -2466,6 +2468,16 @@ packages:
 
   /react-is/18.2.0:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
+    dev: false
+
+  /react-parallax/3.5.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-p5zPsPsqELlIOGaPS01O0IRx8R2bxcBAtrdF/RHf9nIxxk5hijbM2y89tk4rJQBcNH6ESSLe7J2NV4/ms7FLFw==}
+    peerDependencies:
+      react: 16.x.x || 17.x.x || 18.x.x
+      react-dom: 16.x.x || 17.x.x || 18.x.x
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-refresh/0.13.0:

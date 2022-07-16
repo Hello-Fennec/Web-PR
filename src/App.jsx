@@ -1,14 +1,11 @@
-// components
 import BottomFixedLayout from "./layout/BottomFixedLayout";
 import Navbar from "./layout/Navbar";
-// pages
 import ReactFullpage from "@fullpage/react-fullpage";
-// hooks
 import { useEffect, useState } from "react";
 
 import PAGES from "./Data/PAGES";
 import Background from "./components/Background";
-
+import { Parallax } from "react-parallax";
 function App() {
   const isMobile =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -44,7 +41,11 @@ function App() {
             <ReactFullpage.Wrapper>
               {PAGES.map((page, index) => {
                 return (
-                  <Background src={page.background} className="section " key={index}>
+                  <Background
+                    src={page.background}
+                    className="section"
+                    key={index}
+                  >
                     <div className="flex flex-col justify-center items-center text-center ">
                       <div className="w-full h-full">{page.component}</div>
                       {/* render the page */}
@@ -60,7 +61,6 @@ function App() {
       <BottomFixedLayout isMobile={isMobile} /> // render the bottom fixed
       layout
       <Navbar pageOnScreen={pageOnScreen} /> // render the navbar
-      
     </div>
   );
 }
