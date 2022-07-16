@@ -1,24 +1,21 @@
 import { useState } from "react";
 import FAQS from "../../Data/FAQS";
+import FaqsToggle from "./components/FaqsToggle";
 
 function Faqs() {
   const [current, setCurrent] = useState(0);
   return (
     <div className="flex flex-row justify-center h-full">
-      <div className="space-y-2">
+      <div className="flex flex-col space-y-2">
         {FAQS.map((faq, index) => {
           return (
-            <div key={index}>
-              <button
-                onClick={() => setCurrent(index)}
-                className={
-                  (current === index ? "bg-red-500" : "bg-gray-500") +
-                  " p-5 w-80 rounded-lg"
-                }
-              >
-                {faq.title}
-              </button>
-            </div>
+            <FaqsToggle
+              key={index}
+              index={index}
+              current={current}
+              setCurrent={setCurrent}
+              title={faq.title}
+            />
           );
         })}
       </div>
