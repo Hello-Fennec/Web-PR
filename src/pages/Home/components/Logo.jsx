@@ -1,18 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import ImgContainer from "../../../components/ImgContainer";
 
 const Logo = () => {
   return (
-    <div>
-      <LogoContainer className='w-96 h-40 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'/>
-    </div>
+    <ImgContainer
+      src={""}
+      className="w-96 h-40 bg-gray-500 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    />
   );
-}
+};
 
 export default Logo;
-
-const LogoContainer = styled.div`
-
-  background-color: gray;
-  /* background-image: url(); */
-`
