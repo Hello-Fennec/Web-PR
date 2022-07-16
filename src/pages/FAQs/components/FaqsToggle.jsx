@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
-import BREAKPOINTS from "../../../Data/BREAKPOINTS";
+import React from "react";
 
 export default function FaqsToggle({
   current,
@@ -10,10 +8,6 @@ export default function FaqsToggle({
   question,
   answer,
 }) {
-  useEffect(() => {
-    const ansContainer = document.getElementById(`ansContainer`);
-    ansContainer.classList.toggle("active");
-  }, [current]);
   return (
     <div className=" flex sm:w-11/12 flex-col items-center">
       <button
@@ -26,21 +20,15 @@ export default function FaqsToggle({
         {title}
         {question}
       </button>
-      <AnsContainer
+      <div
         id="ansContainer"
         className={
-          (index === current ? "sm:flex" : "") +
-          " h-32 w-full hidden bg-slate-300 -z-10 p-2 flex-col justify-center items-center mb-2"
+          (index === current ? "sm:flex " : "") +
+          " h-32 w-full hidden opacity-1 bg-slate-300 -z-10 p-2 flex-col justify-center items-center mb-2 duration-300"
         }
       >
         {answer}
-      </AnsContainer>
+      </div>
     </div>
   );
 }
-
-const AnsContainer = styled.div`
-  &.active {
-    height: 8rem;
-  }
-`;

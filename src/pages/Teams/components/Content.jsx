@@ -12,7 +12,7 @@ export default function Content({ selectedTeam, setselectedTeam }) {
   useEffect(() => {
     const courasel = document.getElementById("carousel");
 
-    courasel.classList.toggle("active");
+    courasel && courasel.classList.toggle("active");
   }, [selectedTeam]);
 
   const MobileCourasel = () => {
