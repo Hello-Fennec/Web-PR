@@ -14,7 +14,7 @@ export default function Content({ selectedTeam, setselectedTeam }) {
     const courasel = document.getElementById("carousel");
 
     courasel && (courasel.style.opacity = "1");
-  }, [selectedTeam]);
+  }, [selectedTeam, height, width]);
 
   const MobileCourasel = () => {
     return (
