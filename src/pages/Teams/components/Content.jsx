@@ -3,9 +3,9 @@ import TEAMS from "../../../Data/TEAMS";
 import { Carousel } from "@trendyol-js/react-carousel";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../Data/BREAKPOINTS";
-import styled from "styled-components";
 import { useEffect } from "react";
 import ImgContainer from "../../../components/ImgContainer";
+import Floating from "../../../components/Floating";
 
 export default function Content({ selectedTeam, setselectedTeam }) {
   const { height, width } = useWindowDimensions();
@@ -78,25 +78,4 @@ export default function Content({ selectedTeam, setselectedTeam }) {
     <>{width < BREAKPOINTS.mobile ? <MobileCourasel /> : <DesktopCarousel />}</>
   );
 }
-
-const Floating = styled.div`
-  animation: floating 2s ease-in-out infinite;
-  transition: all 0.5s ease-in-out;
-
-  &.active {
-    opacity: 1;
-  }
-
-  @keyframes floating {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-`;
 
