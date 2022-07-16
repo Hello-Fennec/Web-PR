@@ -13,7 +13,7 @@ export default function Content({ selectedTeam, setselectedTeam }) {
   useEffect(() => {
     const courasel = document.getElementById("carousel");
 
-    courasel && (courasel.style.opacity = "1") 
+    courasel && (courasel.style.opacity = "1");
   }, [selectedTeam]);
 
   const MobileCourasel = () => {
@@ -51,17 +51,19 @@ export default function Content({ selectedTeam, setselectedTeam }) {
 
   const DesktopCarousel = () => {
     return (
-      <Floating
+      <div
         id="carousel"
-        className="flex justify-center items-center opacity-0 mb-5 lg:flex-col lg:space-x-0 lg:space-y-5"
+        className="flex justify-center items-center opacity-0 mb-5 lg:flex-col lg:space-x-0 lg:space-y-5 duration-500"
       >
         <div className="hidden  text-4xl font-bold lg:block mb-10">
           {TEAMS[selectedTeam].name}
         </div>
-        <ImgContainer
-          src={TEAMS[selectedTeam].image}
-          className="h-80 w-80 mr-10"
-        />
+        <Floating>
+          <ImgContainer
+            src={TEAMS[selectedTeam].image}
+            className="h-80 w-80 mr-10"
+          />
+        </Floating>
         <div className="h-80 w-1/3 flex flex-col lg:h-36 lg:w-96">
           <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold">
             {TEAMS[selectedTeam].name}
@@ -70,7 +72,7 @@ export default function Content({ selectedTeam, setselectedTeam }) {
             {TEAMS[selectedTeam].description}
           </div>
         </div>
-      </Floating>
+      </div>
     );
   };
 
@@ -78,4 +80,3 @@ export default function Content({ selectedTeam, setselectedTeam }) {
     <>{width < BREAKPOINTS.mobile ? <MobileCourasel /> : <DesktopCarousel />}</>
   );
 }
-
