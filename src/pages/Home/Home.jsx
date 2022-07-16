@@ -15,7 +15,7 @@ function Home() {
   }, []);
 
   return (
-    <ImgContainer src={""} className="w-screen h-screen bg-red-300">
+    <ImgContainer src={""} className="w-screen h-screen overflow-hidden bg-red-300">
       <Logo/>
       <ScrollLabel />
     </ImgContainer>
