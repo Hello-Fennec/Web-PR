@@ -5,6 +5,7 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../Data/BREAKPOINTS";
 import styled from "styled-components";
 import { useEffect } from "react";
+import ImgContainer from "../../../components/ImgContainer";
 
 export default function Content({ selectedTeam, setselectedTeam }) {
   const { height, width } = useWindowDimensions();
@@ -34,7 +35,10 @@ export default function Content({ selectedTeam, setselectedTeam }) {
               <div className="hidden text-4xl font-bold lg:block ">
                 {team.name}
               </div>
-              <div className="h-52 w-11/12 bg-gray-500 rounded-xl mr-10"></div>
+              <ImgContainer
+                src={team.image}
+                className="h-52 w-11/12  mr-10"
+              ></ImgContainer>
               <div className="w-11/12 flex flex-col items-center text-center text-lg">
                 {team.description}
               </div>
@@ -54,7 +58,10 @@ export default function Content({ selectedTeam, setselectedTeam }) {
         <div className="hidden  text-4xl font-bold lg:block mb-10">
           {TEAMS[selectedTeam].name}
         </div>
-        <div className="h-80 w-80 bg-gray-500 rounded-3xl mr-10"></div>
+        <ImgContainer
+          src={TEAMS[selectedTeam].image}
+          className="h-80 w-80 mr-10"
+        />
         <div className="h-80 w-1/3 flex flex-col lg:h-36 lg:w-96">
           <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold">
             {TEAMS[selectedTeam].name}
@@ -92,3 +99,4 @@ const Floating = styled.div`
     }
   }
 `;
+

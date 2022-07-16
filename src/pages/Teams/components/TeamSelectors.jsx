@@ -1,4 +1,5 @@
 import React from "react";
+import ImgContainer from "../../../components/ImgContainer";
 import TEAMS from "../../../Data/TEAMS";
 
 export default function TeamSelector({ selectedTeam, setselectedTeam }) {
@@ -8,10 +9,12 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
         setselectedTeam(index);
       }}
       className={
-        (selectedTeam == index ? "bg-red-500" : "bg-gray-500") +
-        " w-20 h-20 cursor-pointer rounded-xl drop-shadow-lg hover:-translate-y-1 duration-300"
+        (selectedTeam !== index && "grayscale") +
+        " w-20 h-20 cursor-pointer rounded-xl shadow-xl hover:-translate-y-1 duration-300"
       }
-    ></button>
+    >
+      <ImgContainer src={TEAMS[index].image} className="w-full h-full" />
+    </button>
   );
 
   return (
