@@ -14,10 +14,10 @@ function Home() {
   }, []);
 
   return (
-    <div src={""} className="w-screen h-full absolute top-0 left-0 overflow-hidden bg-red-300">
+    <>
       <Logo/>
       <ScrollLabel />
-    </div>
+    </>
   );
 }
 

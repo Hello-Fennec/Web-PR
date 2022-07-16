@@ -7,6 +7,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import { useEffect, useState } from "react";
 
 import PAGES from "./Data/PAGES";
+import Background from "./components/Background";
 
 function App() {
   const isMobile =
@@ -43,12 +44,12 @@ function App() {
             <ReactFullpage.Wrapper>
               {PAGES.map((page, index) => {
                 return (
-                  <div className="section " key={index}>
+                  <Background src={page.background} className="section " key={index}>
                     <div className="flex flex-col justify-center items-center text-center ">
                       <div className="w-full h-full">{page.component}</div>
                       {/* render the page */}
                     </div>
-                  </div>
+                  </Background>
                 );
               })}
             </ReactFullpage.Wrapper> // fullpage wrapper
