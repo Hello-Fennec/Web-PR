@@ -19,8 +19,8 @@ export default function FaqsToggle({
       <button
         onClick={() => (index === current ? setCurrent(-1) : setCurrent(index))}
         className={
-          (current === index ? "bg-red-500" : "bg-gray-500") +
-          " p-5 w-72 sm:w-full h-full rounded-lg sm:text-sm"
+          (current === index ? "bg-red-500 sm:mb-0" : "bg-gray-500") +
+          " p-5 w-72 sm:w-full h-full rounded-lg sm:text-sm mb-2"
         }
       >
         {title}
@@ -29,8 +29,8 @@ export default function FaqsToggle({
       <AnsContainer
         id="ansContainer"
         className={
-          (index === current && "sm:flex") +
-          " w-full h-32 hidden bg-slate-300 -z-10 p-2 flex-col justify-center items-center"
+          (index === current ? "sm:flex" : "") +
+          " h-32 w-full hidden bg-slate-300 -z-10 p-2 flex-col justify-center items-center mb-2"
         }
       >
         {answer}
