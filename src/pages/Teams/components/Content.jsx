@@ -39,7 +39,7 @@ export default function Content({ selectedTeam, setselectedTeam }) {
                 src={team.image}
                 className="h-52 w-11/12  mr-10"
               ></ImgContainer>
-              <div className="w-11/12 flex flex-col items-center text-center text-lg">
+              <div className="w-11/12 flex flex-col items-center text-center text-lg ">
                 {team.description}
               </div>
             </div>
@@ -61,14 +61,14 @@ export default function Content({ selectedTeam, setselectedTeam }) {
         <Floating>
           <ImgContainer
             src={TEAMS[selectedTeam].image}
-            className="h-80 w-80 mr-10"
+            className="h-80 w-80 mr-10 bg-white rounded-xl"
           />
         </Floating>
-        <div className="h-80 w-1/3 flex flex-col lg:h-36 lg:w-96">
+        <div className="h-80 w-1/3 flex flex-col lg:h-36 lg:w-96 bg-white rounded-xl">
           <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold">
             {TEAMS[selectedTeam].name}
           </div>
-          <div className="h-full w-full text-left lg:text-center text-lg">
+          <div className="h-full w-full text-left lg:text-center text-lg ">
             {TEAMS[selectedTeam].description}
           </div>
         </div>

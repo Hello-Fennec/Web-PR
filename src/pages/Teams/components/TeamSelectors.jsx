@@ -10,7 +10,7 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
       }}
       className={
         (selectedTeam !== index && "grayscale") +
-        " w-20 h-20 cursor-pointer rounded-xl shadow-xl hover:-translate-y-1 duration-300"
+        " w-20 h-20 cursor-pointer rounded-xl shadow-xl hover:-translate-y-1 duration-300 bg-white"
       }
     >
       <ImgContainer src={TEAMS[index].image} className="w-full h-full" />
