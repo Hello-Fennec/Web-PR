@@ -21,14 +21,14 @@ export default function FaqsToggle({
         {title}
         {question}
       </button>
-      {index === current && (
-        <div
-          id="ansContainer"
-          className="sm:flex w-full h-28 hidden bg-slate-300 p-2 flex-col justify-center items-center mb-2 duration-300"
-        >
-          {answer}
-        </div>
-      )}
+        {index === current && (
+          <div
+            id="ansContainer"
+            className="sm:flex w-full h-8 hidden bg-slate-300 p-2 flex-col justify-center items-center mb-2 duration-300"
+          >
+            {answer}
+          </div>
+        )}
     </div>
   );
 }
