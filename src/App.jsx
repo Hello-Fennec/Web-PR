@@ -50,7 +50,7 @@ function App() {
                   >
                     {/* <div className="-z-0 absolute top-0 w-full h-10 bg-gradient-to-b from-black to-transparent" /> */}
                     <div className="flex flex-col justify-center items-center text-center ">
-                      <div className="w-full h-full"><page.component pageIndex={index} pageOnScreen={pageOnScreen}/></div>
+                      <div className="w-full h-full">{page.component}</div>
                       {/* render the page */}
                     </div>
                     {/* <div className="-z-0 absolute bottom-0 w-full h-10 bg-gradient-to-t from-black to-transparent" /> */}
