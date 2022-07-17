@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TEAMS from "../../../Data/TEAMS";
 import { Carousel } from "@trendyol-js/react-carousel";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
@@ -8,6 +8,12 @@ import Floating from "../../../components/Floating";
 
 export default function Content({ selectedTeam, pageIndex, pageOnScreen }) {
   const { height, width } = useWindowDimensions();
+
+  useEffect(() => {
+    const carousel = document.getElementById("carousel");
+    carousel && (carousel.style.opacity = "1");
+
+  }, [width, height,selectedTeam]);
 
   const MobileCourasel = () => {
     return (
