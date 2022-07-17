@@ -5,12 +5,8 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 import FaqsToggle from "./components/FaqsToggle";
 
 function Faqs() {
-  const [current, setCurrent] = useState(1);
+  const [current, setCurrent] = useState(0);
   const { height, width } = useWindowDimensions();
-
-  useEffect(() => {
-    setCurrent(0);
-  }, []);
 
   const MobileFaqs = () => {
     return (
@@ -49,9 +45,13 @@ function Faqs() {
           })}
         </div>
         <div className="w-1/2 bg-gray-300 ml-2 p-5 flex flex-col justify-center items-center rounded-lg ">
-          <div className="text-xl">{current>-1&&FAQS[current].question}</div>
+          <div className="text-xl">
+            {current > -1 && FAQS[current].question}
+          </div>
           <br />
-          <div className="text-2xl font-semibold ">{current>-1?FAQS[current].answer:"Click to see"}</div>
+          <div className="text-2xl font-semibold ">
+            {current > -1 ? FAQS[current].answer : "Click to see"}
+          </div>
         </div>
       </div>
     );
