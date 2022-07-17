@@ -44,7 +44,7 @@ function App() {
               {PAGES.map((page, index) => {
                 return (
                   <Background
-                    src={page.background}
+                    // src={page.background}
                     className="section"
                     key={index}
                   >
