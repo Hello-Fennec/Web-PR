@@ -3,22 +3,11 @@ import TEAMS from "../../../Data/TEAMS";
 import { Carousel } from "@trendyol-js/react-carousel";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../Data/BREAKPOINTS";
-import { useEffect } from "react";
 import ImgContainer from "../../../components/ImgContainer";
 import Floating from "../../../components/Floating";
 
 export default function Content({ selectedTeam, pageIndex, pageOnScreen }) {
   const { height, width } = useWindowDimensions();
-
-  useEffect(() => {
-    const courasel = document.getElementById("carousel");
-    courasel && (courasel.style.opacity = "1");
-  }, [selectedTeam, height, width]);
-
-  useEffect(() => {
-    const courasel = document.getElementById("carousel");
-    pageIndex === pageOnScreen && courasel && (courasel.style.opacity = "1");
-  }, [pageOnScreen]);
 
   const MobileCourasel = () => {
     return (
