@@ -11,11 +11,13 @@ React Project built on Vite JS
 
 ### Installed packages
 
-* `Tailwind css` 
-* `HowlJS` for playing audio
-* `React Icons`
-* `Fullpage JS`
-* `Styled-components`
+* `Tailwind css` https://tailwindcss.com/
+* `HowlerJS` for playing audio https://github.com/goldfire/howler.js#documentation
+* `React Icons` https://react-icons.github.io/react-icons/
+* `Fullpage JS` https://github.com/alvarotrigo/react-fullpage
+* `Styled-components` https://styled-components.com/
+* `react-carousel` https://trendyol.github.io/react-carousel/docs/installation
+* `Framer motion` https://www.framer.com/motion/
 
 ### Custom hooks
 
