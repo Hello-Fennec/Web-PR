@@ -14,27 +14,27 @@ import GameBG from "../assets/images/Backgrounds/Game.jpg";
 const PAGES = [ 
     {
       name: "Home",
-      component: <Home />,
+      component: Home ,
       background: HomeBG,
     },
     {
       name: "About",
-      component: <About />,
+      component: About ,
       background: AboutBG,
     },
     {
       name: "Teams",
-      component: <Teams />,
+      component: Teams ,
       background: TeamsBG,
     },
     {
       name: "FAQs",
-      component: <Faqs />,
+      component: Faqs ,
       background: FaqsBG,
     },
     {
       name: "Game",
-      component: <Game />,
+      component: Game ,
       background: GameBG,
     }, 
   ]; 

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import PageAnimation from "../../components/PageAnimation";
 import BREAKPOINTS from "../../Data/BREAKPOINTS";
 import FAQS from "../../Data/FAQS";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
@@ -57,11 +56,7 @@ function Faqs() {
       </div>
     );
   };
-  return (
-    <PageAnimation>
-      {width < BREAKPOINTS.mobile ? <MobileFaqs /> : <DesktopFaqs />}
-    </PageAnimation>
-  );
+  return width < BREAKPOINTS.mobile ? <MobileFaqs /> : <DesktopFaqs />;
 }
 
 export default Faqs;
