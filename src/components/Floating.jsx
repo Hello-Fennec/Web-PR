@@ -1,20 +1,12 @@
-import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const Floating = styled.div`
-  animation: floating 2s ease-in-out infinite;
-  transition: all 0.5s ease-in-out;
-
-  @keyframes floating {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-`;
+const Floating = (props) => (
+  <motion.div
+    animate={{ y: -10 }}
+    transition={{ duration: .7,yoyo: Infinity}}
+  >
+    {props.children}
+  </motion.div>
+);
 
 export default Floating;
