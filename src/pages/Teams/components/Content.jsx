@@ -5,6 +5,7 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../Data/BREAKPOINTS";
 import ImgContainer from "../../../components/ImgContainer";
 import Floating from "../../../components/Floating";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function Content({ selectedTeam, pageIndex, pageOnScreen }) {
   const { height, width } = useWindowDimensions();
@@ -12,8 +13,7 @@ export default function Content({ selectedTeam, pageIndex, pageOnScreen }) {
   useEffect(() => {
     const carousel = document.getElementById("carousel");
     carousel && (carousel.style.opacity = "1");
-
-  }, [width, height,selectedTeam]);
+  }, [width, height, selectedTeam]);
 
   const MobileCourasel = () => {
     return (
@@ -23,6 +23,14 @@ export default function Content({ selectedTeam, pageIndex, pageOnScreen }) {
         swiping={true}
         swipeOn={0.05}
         responsive={true}
+        autoplaySpeed={3000}
+        infinite={true}
+        rightArrow={
+          <IoIosArrowForward className="w-12 h-12 absolute top-1/2 right-0 -translate-y-1/2" />
+        }
+        leftArrow={
+          <IoIosArrowBack className="w-12 h-12 absolute top-1/2 left-0 -translate-y-1/2 z-20" />
+        }
         className="w-4/5 lg:w-2/3 md:w-screen "
       >
         {TEAMS.map((team, index) => {
