@@ -15,7 +15,7 @@ export default function FaqsToggle({
         onClick={() => (index === current ? setCurrent(-1) : setCurrent(index))}
         className={
           (current === index ? "bg-red-500 sm:mb-0" : "bg-gray-500") +
-          " p-5 w-72 sm:w-full h-full rounded-lg sm:text-sm mb-2 z-10"
+          " p-5 w-72 sm:w-full h-full rounded-lg sm:text-sm mb-2 z-10 hover:-translate-y-1 duration-200 transition-all"
         }
       >
         {title}
