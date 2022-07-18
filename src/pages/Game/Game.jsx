@@ -12,7 +12,7 @@ function Game() {
     <div className="flex flex-col justify-center items-center">
       <motion.a
         whileHover={{
-          scale: [1, 1.1, 1],
+          scale: [1, 1.3, 1.1],
           transition: { duration: 0.5, ease: "easeInOut" },
           rotate: [0, -20, 15, 0],
         }}
