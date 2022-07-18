@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { IoIosArrowDropupCircle } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 
 const ScrollToTopBtn = ({ pageOnScreen, isMobile }) => {
   return (
@@ -10,8 +10,8 @@ const ScrollToTopBtn = ({ pageOnScreen, isMobile }) => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            y: "-50%",
-            transition: { duration: 0.5, delay: 1 },
+
+            transition: { duration: 0.5, delay: 1.2 },
           }}
           exit={{ opacity: 0 }}
           whileHover={{
@@ -26,11 +26,11 @@ const ScrollToTopBtn = ({ pageOnScreen, isMobile }) => {
             window.fullpage_api.moveTo(1);
           }}
           className={
-            (isMobile ? "bottom-3" : "top-1/2") +
-            " right-5 absolute h-auto w-auto bg-white rounded-full"
+            (isMobile ? "bottom-0" : "top-1/2") +
+            " right-0 mb-10 mr-10 md:mb-5 md:mr-5 sm:mb-3 sm:mr-3 absolute h-20 w-20 md:h-16 md:w-16 sm:h-14 sm:w-14 p-2 bg-black rounded-full text-white"
           }
         >
-          <IoIosArrowDropupCircle size={70} />
+          <IoIosArrowUp size={40} className="w-full" />
         </motion.button>
       )}
     </AnimatePresence>

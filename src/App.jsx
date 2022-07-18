@@ -19,13 +19,10 @@ function App() {
   // When page is loaded
   useEffect(() => {
     document.title = "Helloworld 2022"; // set title of the page
-
-    const bottomFixedLayout = document.getElementById("bottomFixedLayout");
-    setTimeout(() => {
-      bottomFixedLayout.style.opacity = 1;
-    }, 1200); // set opacity of the bottom fixed layout
-
-    return () => {};
+    const watermarks = document.querySelectorAll(".fp-watermark");
+    watermarks.forEach((watermark) => {
+      watermark.style.display = "none";
+    }); // hide watermarks
   }, []);
 
   return (
