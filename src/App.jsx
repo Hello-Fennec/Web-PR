@@ -1,10 +1,11 @@
 import BottomFixedLayout from "./layout/BottomFixedLayout";
 import Navbar from "./layout/Navbar";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { useEffect, useState } from "react";
-
 import PAGES from "./Data/PAGES";
 import Background from "./components/Background";
+import ScrollToTopBtn from "./components/ScrollToTopBtn";
+
+import { useEffect, useState } from "react";
 
 function App() {
   const isMobile =
@@ -26,8 +27,6 @@ function App() {
 
     return () => {};
   }, []);
-
-  
 
   return (
     <div className="App">
@@ -65,6 +64,7 @@ function App() {
       <BottomFixedLayout isMobile={isMobile} /> // render the bottom fixed
       layout
       <Navbar pageOnScreen={pageOnScreen} /> // render the navbar
+      <ScrollToTopBtn pageOnScreen={pageOnScreen} isMobile={isMobile} />
     </div>
   );
 }
