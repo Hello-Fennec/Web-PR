@@ -4,6 +4,7 @@ import BREAKPOINTS from "../Data/BREAKPOINTS";
 import PAGES from "../Data/PAGES";
 import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
+import { motion } from "framer-motion";
 
 const Navbar = ({ pageOnScreen }) => {
   const { height, width } = useWindowDimensions();
@@ -62,7 +63,8 @@ const Navbar = ({ pageOnScreen }) => {
             <Bar id="bar3" className="bar" />
           </NavBurger>
         </button>
-        <button onClick={toggleMobileNav} 
+        <button
+          onClick={toggleMobileNav}
           id="navBackground"
           className="bg-black w-full h-full absolute top-0 left-0 opacity-0 duration-500 ease-in-out hidden"
         />
@@ -76,7 +78,7 @@ const Navbar = ({ pageOnScreen }) => {
         id="desktop-nav"
         className="fixed top-0 duration-500 opacity-1 p-3 pr-5  right-0 items-start"
       >
-        <div className="block" >
+        <div className="block">
           <ul className="flex mt-4 flex-row space-x-8 md:space-x-4 md:mt-3 md:text-xs md:font-medium">
             {PAGES.map((page, index) => {
               return (
@@ -102,7 +104,12 @@ const Navbar = ({ pageOnScreen }) => {
   };
 
   return (
-    <div id="myMenu">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay : 0.3 }}
+      id="myMenu"
+    >
       {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
 
       <SITTag
@@ -111,7 +118,7 @@ const Navbar = ({ pageOnScreen }) => {
         id="SITTag"
         className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5 shadow-md "
       />
-    </div>
+    </motion.div>
   );
 };
 
