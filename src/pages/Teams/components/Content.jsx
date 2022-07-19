@@ -5,15 +5,11 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../Data/BREAKPOINTS";
 import ImgContainer from "../../../components/ImgContainer";
 import Floating from "../../../components/Floating";
+import { motion } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function Content({ selectedTeam, pageIndex, pageOnScreen }) {
   const { height, width } = useWindowDimensions();
-
-  useEffect(() => {
-    const carousel = document.getElementById("carousel");
-    carousel && (carousel.style.opacity = "1");
-  }, [width, height, selectedTeam]);
 
   const MobileCourasel = () => {
     return (
@@ -58,9 +54,10 @@ export default function Content({ selectedTeam, pageIndex, pageOnScreen }) {
 
   const DesktopCarousel = () => {
     return (
-      <div
-        id="carousel"
-        className="flex justify-center items-center opacity-0 mb-5 lg:flex-col lg:space-x-0 lg:space-y-5 duration-500"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.1 } }}
+        className="flex justify-center items-center mb-5 lg:flex-col lg:space-x-0 lg:space-y-5 duration-500"
       >
         <div className="hidden  text-4xl font-bold lg:block mb-10">
           {TEAMS[selectedTeam].name}
@@ -79,7 +76,7 @@ export default function Content({ selectedTeam, pageIndex, pageOnScreen }) {
             {TEAMS[selectedTeam].description}
           </div>
         </div>
-      </div>
+      </motion.div>
     );
   };
 
