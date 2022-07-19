@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import PageAnimation from "../../components/PageAnimation";
 import BREAKPOINTS from "../../Data/BREAKPOINTS";
 import FAQS from "../../Data/FAQS";
@@ -46,13 +47,22 @@ function Faqs() {
           })}
         </div>
         <div className="w-1/2 bg-gray-300 ml-2 p-5 flex flex-col justify-center items-center rounded-lg ">
-          <div className="text-xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-xl"
+          >
             {current > -1 && FAQS[current].question}
-          </div>
+          </motion.div>
           <br />
-          <div className="text-2xl font-semibold ">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-2xl font-semibold"
+          >
             {current > -1 ? FAQS[current].answer : "Click to see"}
-          </div>
+          </motion.div>
         </div>
       </div>
     );
