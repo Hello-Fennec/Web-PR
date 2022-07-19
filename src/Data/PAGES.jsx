@@ -18,7 +18,7 @@ const PAGES = [
       background: HomeBG,
     },
     {
-      name: "About",
+      name: "About us",
       component: <About />,
       background: AboutBG,
     },
