@@ -14,6 +14,7 @@ export default function TapToPlay() {
       <motion.a
         whileHover={{
           scale: [1, 1.05],
+          rotate: [0, 1,-1],
           transition: {
             duration: 0.3,
             ease: "easeInOut",

@@ -15,14 +15,18 @@ const ScrollLabel = () => {
       }
     >
       <Floating>
-        <h1>Scroll Down</h1>
-        <BsChevronDown size="20" className="w-full" />
+        <button
+          onClick={() => {
+            window.fullpage_api.moveSectionDown();
+          }}
+        >
+          <h1>Scroll Down</h1>
+          <BsChevronDown size="20" className="w-full" />
+        </button>
       </Floating>
     </div>
   ) : (
-    <div
-      className={"ScrollDown top-2/3 -translate-y-1/2 " + scrollDownStyle}
-    >
+    <div className={"ScrollDown top-2/3 -translate-y-1/2 " + scrollDownStyle}>
       <Floating>
         <CgArrowLongDown size="30" />
       </Floating>

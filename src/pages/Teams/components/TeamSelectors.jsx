@@ -1,6 +1,7 @@
 import React from "react";
 import ImgContainer from "../../../components/ImgContainer";
 import TEAMS from "../../../Data/TEAMS";
+import { motion } from "framer-motion";
 
 export default function TeamSelector({ selectedTeam, setselectedTeam }) {
   const Selector = ({ index }) => (
@@ -18,10 +19,14 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
   );
 
   return (
-    <div className="selectorContainer sm:hidden flex flex-row justify-center items-end space-x-5 lg:absolute lg:right-0 lg:flex-col lg:space-x-0 lg:space-y-5 lg:mr-5">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { duration: 0.5, delay: .3 } }}
+      className="selectorContainer sm:hidden flex flex-row justify-center items-end space-x-5 lg:absolute lg:right-0 lg:flex-col lg:space-x-0 lg:space-y-5 lg:mr-5"
+    >
       {TEAMS.map((team, index) => {
         return <Selector key={index} index={index} />;
       })}
-    </div>
+    </motion.div>
   );
 }

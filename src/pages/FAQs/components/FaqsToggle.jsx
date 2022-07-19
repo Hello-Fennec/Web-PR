@@ -13,7 +13,7 @@ export default function FaqsToggle({
 }) {
   const { height, width } = useWindowDimensions();
   return (
-    <div className=" flex sm:w-11/12 flex-col items-center">
+    <div className="flex sm:w-11/12 flex-col items-center">
       <button
         onClick={() => (index === current ? setCurrent(-1) : setCurrent(index))}
         className={
