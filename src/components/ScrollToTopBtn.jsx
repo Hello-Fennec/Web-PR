@@ -32,7 +32,7 @@ const ScrollToTopBtn = ({ pageOnScreen, isMobile }) => {
         <motion.button
           variants={animation}
           initial={"hidden"}
-          animate={width < BREAKPOINTS.mobile ? "mobile" : "desktop"}
+          animate={isMobile ? "mobile" : "desktop"}
           exit={"hidden"}
           whileHover={"hover"}
           onClick={() => {
