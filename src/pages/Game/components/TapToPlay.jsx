@@ -13,9 +13,13 @@ export default function TapToPlay() {
     <div className="flex flex-col justify-center items-center">
       <motion.a
         whileHover={{
-          scale: [1, 1.3, 1.1],
-          transition: { duration: 0.5, ease: "easeInOut" },
-          rotate: [0, -20, 15, 0],
+          scale: [1, 1.05],
+          transition: {
+            duration: 0.3,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: "reverse",
+          },
         }}
         href="#"
         className="w-[36rem] h-80 bg-gray-500"
