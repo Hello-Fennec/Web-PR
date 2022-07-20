@@ -5,8 +5,7 @@ const RegisterBtn = () => {
   return (
     <motion.a
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.1, delay: 0.7 }}
+      whileInView={{ opacity: 1, transition: { duration: 0.1, delay: 0.7 } }}
       href="#"
       className="absolute bottom-0  p-4 w-1/3 mb-10 -translate-x-1/2
       sm:w-2/5 sm:mb-3 

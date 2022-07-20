@@ -58,9 +58,8 @@ function App() {
         }}
       />{" "}
       // fullpage react component
-      <BottomFixedLayout isMobile={isMobile} /> // render the bottom fixed
-      layout
-      <Navbar pageOnScreen={pageOnScreen} /> // render the navbar
+      <BottomFixedLayout isMobile={isMobile} /> 
+      <Navbar pageOnScreen={pageOnScreen} />
       <ScrollToTopBtn pageOnScreen={pageOnScreen} isMobile={isMobile} />
     </div>
   );

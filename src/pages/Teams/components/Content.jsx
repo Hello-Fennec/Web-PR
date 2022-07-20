@@ -8,7 +8,7 @@ import Floating from "../../../components/Floating";
 import { motion } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-export default function Content({ selectedTeam, pageIndex, pageOnScreen }) {
+export default function Content({ selectedTeam }) {
   const { height, width } = useWindowDimensions();
 
   const MobileCourasel = () => {

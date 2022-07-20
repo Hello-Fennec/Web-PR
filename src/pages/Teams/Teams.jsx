@@ -17,8 +17,6 @@ function Teams({ pageIndex, pageOnScreen }) {
       >
         <Content
           selectedTeam={selectedTeam}
-          pageIndex={pageIndex}
-          pageOnScreen={pageOnScreen}
         />
         <TeamSelector
           selectedTeam={selectedTeam}
