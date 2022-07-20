@@ -25,7 +25,7 @@ function About() {
           }}
           className="flex flex-col justify-center items-center"
         >
-          <ImgContainer className=" h-[24rem] w-[44rem] md:h-[75vh] md:w-[95%]  sm:px-4 p-8 overflow-scroll bg-gray-300 rounded-lg">
+          <ImgContainer className=" h-[24rem] w-[44rem] md:h-auto md:w-[95%]  sm:px-4 p-8  bg-gray-300 rounded-lg">
             <motion.div
               initial={"hidden"}
               whileInView={"visible"}
