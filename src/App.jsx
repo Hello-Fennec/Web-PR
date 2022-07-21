@@ -18,7 +18,6 @@ function App() {
 
   // When page is loaded
   useEffect(() => {
-    document.title = "Helloworld 2022"; // set title of the page
     const watermarks = document.querySelectorAll(".fp-watermark");
     watermarks.forEach((watermark) => {
       watermark.style.display = "none";
