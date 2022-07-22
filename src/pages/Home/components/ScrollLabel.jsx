@@ -36,7 +36,7 @@ const ScrollLabel = () => {
         </div>
       ) : (
         <div
-          className={"ScrollDown top-2/3 -translate-y-1/2 " + scrollDownStyle}
+          className={"ScrollDown top-[80%] -translate-y-1/2 " + scrollDownStyle}
         >
           <Floating>
             <CgArrowLongDown size="30" />

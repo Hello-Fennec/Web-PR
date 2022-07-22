@@ -22,6 +22,8 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, transition: { duration: 0.5, delay: .3 } }}
+      viewport={{once:true}}
+
       className="selectorContainer sm:hidden flex flex-row justify-center items-end space-x-5 lg:absolute lg:right-0 lg:flex-col lg:space-x-0 lg:space-y-5 lg:mr-5"
     >
       {TEAMS.map((team, index) => {
