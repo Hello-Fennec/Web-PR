@@ -8,6 +8,7 @@ const SocialMedia = () => {
           <a
             key={index}
             href={item.url}
+            target="_blank"
             className="bg-black rounded-full flex justify-center items-center hover:-translate-y-1 duration-200 transition-all h-20 w-20 md:h-16 md:w-16 sm:h-14 sm:w-14"
           >
             {item.icon}
