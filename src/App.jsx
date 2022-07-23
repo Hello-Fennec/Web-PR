@@ -4,7 +4,6 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import PAGES from "./Data/PAGES";
 import Background from "./components/Background";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
-import useMouseMove from "./hooks/useMouseMove";
 
 import { useEffect, useState } from "react";
 
@@ -23,7 +22,15 @@ function App() {
     watermarks.forEach((watermark) => {
       watermark.style.display = "none";
     }); // hide watermarks
-    useMouseMove();
+    function parallax(e) {
+      document.querySelectorAll(".mousemove").forEach((layer) => {
+        const speed = layer.getAttribute("data-speed");
+        const x = (window.innerWidth - e.pageX * speed) / 100;
+        const y = (window.innerHeight - e.pageY * speed) / 100;
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+      });
+    }
+    document.addEventListener("mousemove", parallax);
   }, []);
 
   return (
@@ -59,7 +66,7 @@ function App() {
         }}
       />{" "}
       // fullpage react component
-      <BottomFixedLayout isMobile={isMobile} /> 
+      <BottomFixedLayout isMobile={isMobile} />
       <Navbar pageOnScreen={pageOnScreen} />
       <ScrollToTopBtn pageOnScreen={pageOnScreen} isMobile={isMobile} />
     </div>
