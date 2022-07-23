@@ -26,3 +26,13 @@ React Project built on Vite JS
 ```
 const { height, width } = useWindowDimensions();
 ```
+
+* `useMouseMove` to use mouse move parallax effect
+
+``` 
+useMouseMove(); // on App.jsx
+
+// add className="mousemove" to the element you want to use mouse move parallax effect
+
+// add data-speed={number} as a prop to the element
+```
