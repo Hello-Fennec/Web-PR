@@ -18,7 +18,6 @@ const Navbar = ({ pageOnScreen }) => {
     navBackground.classList.toggle("on");
     bars.forEach((bar) => {
       bar.classList.toggle("on");
-      console.log(bar.classList);
     });
   };
 
@@ -38,7 +37,6 @@ const Navbar = ({ pageOnScreen }) => {
                   <button
                     onClick={() => {
                       window.fullpage_api.moveTo(index + 1);
-                      toggleNav();
                     }}
                     className={
                       (pageOnScreen == index ? "text-red-500" : "text-black") +
