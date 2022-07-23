@@ -17,13 +17,13 @@ function App() {
 
   const [pageOnScreen, setPageOnScreen] = useState(0); // 0 = home, 1 = about, 2 = teams, 3 = faqs, 4 = game
 
-  useMouseMove();
   // When page is loaded
   useEffect(() => {
     const watermarks = document.querySelectorAll(".fp-watermark");
     watermarks.forEach((watermark) => {
       watermark.style.display = "none";
     }); // hide watermarks
+    useMouseMove();
   }, []);
 
   return (
