@@ -9,34 +9,39 @@ import AboutBG from "../assets/images/Backgrounds/About.jpg";
 import TeamsBG from "../assets/images/Backgrounds/Teams.jpg";
 import FaqsBG from "../assets/images/Backgrounds/Faqs.jpg";
 import GameBG from "../assets/images/Backgrounds/Game.jpg";
+import Timeline from "../pages/Timeline/Timeline";
 
+const PAGES = [
+  {
+    name: "Home",
+    component: <Home />,
+    background: HomeBG,
+  },
+  {
+    name: "About us",
+    component: <About />,
+    background: AboutBG,
+  },
+  {
+    name: "Teams",
+    component: <Teams />,
+    background: TeamsBG,
+  },
+  {
+    name: "Timeline",
+    component: <Timeline />,
+    background: TeamsBG,
+  },
+  {
+    name: "FAQs",
+    component: <Faqs />,
+    background: FaqsBG,
+  },
+  {
+    name: "Game",
+    component: <Game />,
+    background: GameBG,
+  },
+];
 
-const PAGES = [ 
-    {
-      name: "Home",
-      component: <Home/>,
-      background: HomeBG,
-    },
-    {
-      name: "About us",
-      component: <About />,
-      background: AboutBG,
-    },
-    {
-      name: "Teams",
-      component: <Teams />,
-      background: TeamsBG,
-    },
-    {
-      name: "FAQs",
-      component: <Faqs />,
-      background: FaqsBG,
-    },
-    {
-      name: "Game",
-      component: <Game/> ,
-      background: GameBG,
-    }, 
-  ]; 
-
-    export default PAGES;
+export default PAGES;

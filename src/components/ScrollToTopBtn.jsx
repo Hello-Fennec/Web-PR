@@ -17,18 +17,18 @@ const ScrollToTopBtn = ({ pageOnScreen, isMobile }) => {
       opacity: 1,
       transition: { duration: 0.5, delay: 1.2 },
     },
-    hover: {
-      y: "-60%",
-      transition: {
-        duration: 0.5,
-        repeat: Infinity,
-        repeatType: "reverse",
-      },
-    },
+    // hover: {
+    //   y: "-60%",
+    //   transition: {
+    //     duration: 0.5,
+    //     repeat: Infinity,
+    //     repeatType: "reverse",
+    //   },
+    // },
   };
   return (
     <AnimatePresence exitBeforeEnter>
-      {pageOnScreen == 4 && (
+      {pageOnScreen == 5 && (
         <motion.button
           variants={animation}
           initial={"hidden"}
