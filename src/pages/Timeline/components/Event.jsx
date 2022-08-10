@@ -16,7 +16,7 @@ export default function Event({ date, month, title, description, isPassed }) {
         </h1>
       </div>
       <div className="text-start ml-5 my-auto">
-        <h1 className="text-[1.7rem] font-bold">{title}</h1>
+        <h1 className="text-[1.5rem] font-bold">{title}</h1>
         <p className="text-2xl text-gray-500">{description}</p>
       </div>
     </div>
