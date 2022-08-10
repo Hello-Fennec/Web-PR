@@ -4,7 +4,7 @@ import BREAKPOINTS from "../Data/BREAKPOINTS";
 import PAGES from "../Data/PAGES";
 import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = ({ pageOnScreen }) => {
   const { height, width } = useWindowDimensions();
@@ -105,23 +105,61 @@ const Navbar = ({ pageOnScreen }) => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay : 0.3 }}
+      transition={{ delay: 0.3 }}
       id="myMenu"
     >
       {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
 
-      <SITTag
-        href="https://www.sit.kmutt.ac.th/"
-        target="blank"
-        id="SITTag"
-        className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5 shadow-md "
-      />
+      <AnimatePresence exitBeforeEnter>
+        {pageOnScreen === 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+          >
+            <SITTag
+              href="https://www.sit.kmutt.ac.th/"
+              target={"_blank"}
+              id="SITTag"
+              src={SITKMUTT_Tag}
+              color="white"
+              className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5 shadow-md "
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence exitBeforeEnter>
+        {pageOnScreen !== 0 && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.3,
+              ease: "easeInOut",
+            }}
+          >
+            <SITTag
+              color="#A000001F"
+              id="SITTag"
+              className="w-72 h-20  md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5  "
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };
 
 const SITTag = styled.a`
-  background-color: white;
+  background-color: ${(props) => props.color};
   opacity: 1;
   position: fixed;
   top: 0;
@@ -131,7 +169,7 @@ const SITTag = styled.a`
     transform: translateY(-0.25rem);
   }
 
-  background-image: url(${SITKMUTT_Tag});
+  background-image: url(${(props) => props.src});
   background-size: contain;
   background-repeat: no-repeat;
 `;

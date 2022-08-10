@@ -6,7 +6,7 @@ const Timeline = () => {
 
   return (
     <div
-      className={formattedDate.includes("Aug 09 2022") && "text-red-500" }
+      className={formattedDate.includes("Aug 10 2022") && "text-red-500" }
     >
       {formattedDate}
     </div>

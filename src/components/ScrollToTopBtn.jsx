@@ -7,14 +7,20 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 const ScrollToTopBtn = ({ pageOnScreen, isMobile }) => {
   const { height, width } = useWindowDimensions();
   const animation = {
-    hidden: { opacity: 0 },
+    hidden: {
+      opacity: 0,
+      scale: 0.0001,
+      transition: { ease: "easeInOut" },
+    },
     desktop: {
       opacity: 1,
+      scale: 1,
       transition: { duration: 0.5, delay: 1.2 },
       y: "-50%",
     },
     mobile: {
       opacity: 1,
+      scale: 1,
       transition: { duration: 0.5, delay: 1.2 },
     },
     // hover: {
