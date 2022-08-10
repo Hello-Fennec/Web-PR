@@ -3,13 +3,14 @@ import About from "../pages/About/About";
 import Teams from "../pages/Teams/Teams";
 import Faqs from "../pages/FAQs/FAQs";
 import Game from "../pages/Game/Game";
+import Events from "../pages/Timeline/Events";
 
 import HomeBG from "../assets/images/Backgrounds/Home.jpg";
 import AboutBG from "../assets/images/Backgrounds/About.jpg";
 import TeamsBG from "../assets/images/Backgrounds/Teams.jpg";
 import FaqsBG from "../assets/images/Backgrounds/Faqs.jpg";
 import GameBG from "../assets/images/Backgrounds/Game.jpg";
-import Timeline from "../pages/Timeline/Timeline";
+import EventsBG from "../assets/images/Backgrounds/Game.jpg";
 
 const PAGES = [
   {
@@ -28,9 +29,9 @@ const PAGES = [
     background: TeamsBG,
   },
   {
-    name: "Timeline",
-    component: <Timeline />,
-    background: TeamsBG,
+    name: "Events",
+    component: <Events />,
+    background: EventsBG,
   },
   {
     name: "FAQs",

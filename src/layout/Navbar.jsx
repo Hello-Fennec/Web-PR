@@ -115,11 +115,9 @@ const Navbar = ({ pageOnScreen }) => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.3,
-              ease: "easeInOut",
+            exit={{
+              opacity: 0,
+              transition: { delay: 1, duration: 0.3, ease: "easeInOut" },
             }}
           >
             <SITTag
@@ -139,15 +137,13 @@ const Navbar = ({ pageOnScreen }) => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.3,
-              ease: "easeInOut",
+            exit={{
+              opacity: 0,
+              transition: { delay: 1, duration: 0.3, ease: "easeInOut" },
             }}
           >
             <SITTag
-              color="#A000001F"
+              color="gray"
               id="SITTag"
               className="w-72 h-20  md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5  "
             />

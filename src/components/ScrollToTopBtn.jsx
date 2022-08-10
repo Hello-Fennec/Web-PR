@@ -1,16 +1,11 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoIosArrowUp } from "react-icons/io";
-import BREAKPOINTS from "../Data/BREAKPOINTS";
-import useWindowDimensions from "../hooks/useWindowDimensions";
 
 const ScrollToTopBtn = ({ pageOnScreen, isMobile }) => {
-  const { height, width } = useWindowDimensions();
   const animation = {
     hidden: {
       opacity: 0,
-      scale: 0.0001,
-      transition: { ease: "easeInOut" },
     },
     desktop: {
       opacity: 1,
@@ -23,6 +18,10 @@ const ScrollToTopBtn = ({ pageOnScreen, isMobile }) => {
       scale: 1,
       transition: { duration: 0.5, delay: 1.2 },
     },
+    exit:{
+      opacity: 0,
+      scale: 0.0001,transition: { ease: "easeInOut" },
+    }
     // hover: {
     //   y: "-60%",
     //   transition: {
@@ -39,7 +38,7 @@ const ScrollToTopBtn = ({ pageOnScreen, isMobile }) => {
           variants={animation}
           initial={"hidden"}
           animate={isMobile ? "mobile" : "desktop"}
-          exit={"hidden"}
+          exit={"exit"}
           whileHover={"hover"}
           onClick={() => {
             window.fullpage_api.moveTo(1);
