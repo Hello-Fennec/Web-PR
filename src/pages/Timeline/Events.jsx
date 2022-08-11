@@ -12,7 +12,7 @@ import {
 
 const Events = () => {
   return (
-    <PageAnimation>
+    <>
       <div className="w-full flex space-x-5 justify-around">
         <div className="w-11/12 max-w-[40rem] bg-gray-500"></div>
         <div className="w-[35rem]  flex flex-col space-y-7">
@@ -54,7 +54,7 @@ const Events = () => {
           />
         </div>
       </div>
-    </PageAnimation>
+    </>
   );
 };
 
