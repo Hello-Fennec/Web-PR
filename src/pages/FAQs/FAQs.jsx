@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import PageAnimation from "../../components/PageAnimation";
-import BREAKPOINTS from "../../Data/BREAKPOINTS";
-import FAQS from "../../Data/FAQS";
+import BREAKPOINTS from "../../constants/BREAKPOINTS";
+import FAQS from "../../constants/FAQS";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import FaqsToggle from "./components/FaqsToggle";
 

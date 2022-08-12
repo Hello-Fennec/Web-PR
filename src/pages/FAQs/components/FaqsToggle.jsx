@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
-import BREAKPOINTS from "../../../Data/BREAKPOINTS";
+import BREAKPOINTS from "../../../constants/BREAKPOINTS";
 
 export default function FaqsToggle({
   current,

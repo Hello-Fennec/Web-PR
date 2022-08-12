@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import TEAMS from "../../../Data/TEAMS";
+import TEAMS from "../../../constants/TEAMS";
 import { Carousel } from "@trendyol-js/react-carousel";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
-import BREAKPOINTS from "../../../Data/BREAKPOINTS";
+import BREAKPOINTS from "../../../constants/BREAKPOINTS";
 import ImgContainer from "../../../components/ImgContainer";
 import Floating from "../../../components/Floating";
 import { motion } from "framer-motion";

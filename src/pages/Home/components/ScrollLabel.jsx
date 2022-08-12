@@ -1,7 +1,7 @@
 import { BsChevronDown } from "react-icons/bs";
 import { CgArrowLongDown } from "react-icons/cg";
 import Floating from "../../../components/Floating";
-import BREAKPOINTS from "../../../Data/BREAKPOINTS";
+import BREAKPOINTS from "../../../constants/BREAKPOINTS";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import { motion } from "framer-motion";
 

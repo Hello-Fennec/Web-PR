@@ -1,6 +1,6 @@
 import React from "react";
 import ImgContainer from "../../../components/ImgContainer";
-import TEAMS from "../../../Data/TEAMS";
+import TEAMS from "../../../constants/TEAMS";
 import { motion } from "framer-motion";
 
 export default function TeamSelector({ selectedTeam, setselectedTeam }) {

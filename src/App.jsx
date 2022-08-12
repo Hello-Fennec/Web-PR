@@ -1,7 +1,7 @@
 import BottomFixedLayout from "./layout/BottomFixedLayout";
 import Navbar from "./layout/Navbar";
 import ReactFullpage from "@fullpage/react-fullpage";
-import PAGES from "./Data/PAGES";
+import PAGES from "./constants/PAGES";
 import Background from "./components/Background";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ImgContainer from "../../../components/ImgContainer";
-import ABOUTUS from "../../../Data/ABOUTUS";
+import ABOUTUS from "../../../constants/ABOUTUS";
 
 export default function AboutUsContainer() {
 

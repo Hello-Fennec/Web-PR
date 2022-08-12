@@ -8,7 +8,7 @@ import {
   firstMeetDay,
   fennecDay,
   isPassed,
-} from "../../Data/EVENTS";
+} from "../../constants/EVENTS";
 
 const Events = () => {
   return (
