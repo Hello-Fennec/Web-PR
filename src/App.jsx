@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="App">
  
-      <ScrollContainer scrollIntertia={70}>
+      <ScrollContainer isMobile={isMobile} scrollIntertia={70}>
         {PAGES.map((page, index) => {
           return (
             <PageContainer

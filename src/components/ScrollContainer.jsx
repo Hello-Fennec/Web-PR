@@ -8,7 +8,7 @@ import React, {
 import { animated as a, useSpring } from "react-spring";
 import ResizeObserver from "resize-observer-polyfill";
 
-const ScrollContainer = ({ children, scrollIntertia }) => {
+const ScrollContainer = ({ children, scrollIntertia, isMobile }) => {
   const [{ y }, set] = useSpring(() => ({
     y: [0],
     config: {
@@ -50,14 +50,20 @@ const ScrollContainer = ({ children, scrollIntertia }) => {
 
   return (
     <>
-      <a.div
-        style={{ transform: y.interpolate((y) => `translate3d(0,${y}px,0)`) }}
-        ref={viewportRef}
-        className="scroll-container"
-      >
-        {children}
-      </a.div>
-      <div style={{ height: currentHeight }} />
+      {isMobile && (
+        <>
+          <a.div
+            style={{
+              transform: y.interpolate((y) => `translate3d(0,${y}px,0)`),
+            }}
+            ref={viewportRef}
+            className="scroll-container"
+          >
+            {children}
+          </a.div>
+          <div style={{ height: currentHeight }} />
+        </>
+      )}
     </>
   );
 };
