@@ -37,9 +37,10 @@ const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
                   <button
                     onClick={() => {
                       scrollToRef(pageRefs[index]);
+                      toggleMobileNav();
                     }}
                     className={
-                      (pageOnScreen == index ? "text-red-500" : "text-black") +
+                      // (pageOnScreen == index ? "text-red-500" : "text-black") +
                       " hover:text-gray-500 text-xl font-sans w-2/3"
                     }
                   >
@@ -86,7 +87,7 @@ const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
                       scrollToRef(pageRefs[index]);
                     }}
                     className={
-                      (pageOnScreen == index ? "text-red-500" : "text-black") +
+                      // (pageOnScreen == index ? "text-red-500" : "text-black") +
                       " hover:text-gray-500 md:hover:text-black text-xl font-sans"
                     }
                   >
@@ -110,7 +111,7 @@ const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
     >
       {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
 
-      <AnimatePresence exitBeforeEnter>
+      {/* <AnimatePresence exitBeforeEnter>
         {pageOnScreen === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -119,16 +120,16 @@ const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
               opacity: 0,
               transition: { delay: 1, duration: 0.3, ease: "easeInOut" },
             }}
-          >
-            <SITTag
-              href="https://www.sit.kmutt.ac.th/"
-              target={"_blank"}
-              id="SITTag"
-              src={SITKMUTT_Tag}
-              color="white"
-              className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5 shadow-md "
-            />
-          </motion.div>
+          > */}
+      <SITTag
+        href="https://www.sit.kmutt.ac.th/"
+        target={"_blank"}
+        id="SITTag"
+        src={SITKMUTT_Tag}
+        color="white"
+        className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5 shadow-md "
+      />
+      {/* </motion.div>
         )}
       </AnimatePresence>
 
@@ -149,7 +150,7 @@ const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
             />
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </motion.div>
   );
 };

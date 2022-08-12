@@ -13,7 +13,7 @@ import {
 const Events = () => {
   return (
     <>
-      <div className="w-full p-5 flex space-x-5 justify-around">
+      <div className="w-full p-5 flex space-x-5 justify-between">
         <div className="lg:hidden w-[35rem] bg-gray-500 rounded-2xl" />
         <div className="w-full  flex flex-col space-y-7">
           <div
