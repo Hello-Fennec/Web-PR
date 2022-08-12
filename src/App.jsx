@@ -2,7 +2,7 @@ import BottomFixedLayout from "./layout/BottomFixedLayout";
 import Navbar from "./layout/Navbar";
 import ReactFullpage from "@fullpage/react-fullpage";
 import PAGES from "./constants/PAGES";
-import Background from "./components/Background";
+import PageContainer from "./components/PageContainer";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
 import { useEffect, useState } from "react";
@@ -35,37 +35,19 @@ function App() {
 
   return (
     <div className="App">
-      <ReactFullpage
-        //fullpage options
-        licenseKey={"YOUR_KEY_HERE"}
-        scrollingSpeed={1000} /* Options here */
-        onLeave={(origin, destination) => {
-          setPageOnScreen(destination.index);
-        }}
-        render={({ state, fullpageApi }) => {
-          return (
-            <ReactFullpage.Wrapper>
-              {PAGES.map((page, index) => {
-                return (
-                  <Background
-                    // src={page.background}
-                    className="section"
-                    key={index}
-                  >
-                    {/* <div className="-z-0 absolute top-0 w-full h-10 bg-gradient-to-b from-black to-transparent" /> */}
-                    <div className="flex flex-col justify-center items-center text-center ">
-                      <div className="w-full h-full">{page.component}</div>
-                      {/* render the page */}
-                    </div>
-                    {/* <div className="-z-0 absolute bottom-0 w-full h-10 bg-gradient-to-t from-black to-transparent" /> */}
-                  </Background>
-                );
-              })}
-            </ReactFullpage.Wrapper> // fullpage wrapper
-          );
-        }}
-      />{" "}
-      // fullpage react component
+      {PAGES.map((page, index) => {
+        return (
+          <PageContainer
+            // src={page.background}
+            className="section"
+            key={index}
+          >
+              <div className="flex flex-col justify-center items-center text-center ">
+                <div className="w-full h-full">{page.component}</div>
+              </div>
+          </PageContainer>
+        );
+      })}
       <BottomFixedLayout isMobile={isMobile} />
       <Navbar pageOnScreen={pageOnScreen} />
       <ScrollToTopBtn pageOnScreen={pageOnScreen} isMobile={isMobile} />

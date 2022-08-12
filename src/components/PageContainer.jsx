@@ -5,6 +5,11 @@ const Background = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export default Background;

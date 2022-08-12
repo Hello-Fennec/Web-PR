@@ -13,9 +13,9 @@ import {
 const Events = () => {
   return (
     <>
-      <div className="w-full flex space-x-5 justify-around">
-        <div className="w-11/12 max-w-[40rem] bg-gray-500"></div>
-        <div className="w-[35rem]  flex flex-col space-y-7">
+      <div className="w-full p-5 flex space-x-5 justify-around">
+        <div className="lg:hidden w-[35rem] bg-gray-500 rounded-2xl" />
+        <div className="w-full  flex flex-col space-y-7">
           <div
             className="w-1 h-[33rem] absolute
             -z-10 ml-11"
@@ -34,7 +34,7 @@ const Events = () => {
           <Event
             date={25}
             month={"ต.ค."}
-            title={"ประกาศผลการสมัคร"}
+            title={"ประกาศผล"}
             description={"description"}
             isPassed={isPassed(today, announceDay)}
           />

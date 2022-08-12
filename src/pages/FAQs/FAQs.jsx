@@ -46,7 +46,7 @@ function Faqs() {
             );
           })}
         </div>
-        <div className="w-1/2 bg-gray-300 ml-2 p-5 flex flex-col justify-center items-center rounded-lg ">
+        <div className="w-[60%] max-w-[52rem] bg-gray-300 ml-2 p-5 flex flex-col justify-center items-center rounded-lg ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

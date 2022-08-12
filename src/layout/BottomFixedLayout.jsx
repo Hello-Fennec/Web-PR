@@ -10,7 +10,7 @@ const BottomFixedLayout = ({ isMobile }) => {
       transition={{ duration: 0.5, delay: 1.2 }}
     >
       <SocialMedia />
-      {isMobile ? null : <AudioToggle />}
+      {/* {isMobile ? null : <AudioToggle />} */}
     </motion.div>
   );
 };

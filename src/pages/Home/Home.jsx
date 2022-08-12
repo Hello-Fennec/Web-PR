@@ -6,10 +6,10 @@ function Home() {
 
   return (
     <>
-      <PageAnimation>
+      {/* <PageAnimation> */}
           <Logo />
-      </PageAnimation>
-      <ScrollLabel />
+      {/* </PageAnimation> */}
+      {/* <ScrollLabel /> */}
     </>
   );
 }

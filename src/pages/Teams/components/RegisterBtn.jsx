@@ -8,11 +8,7 @@ const RegisterBtn = () => {
       whileInView={{ opacity: 1, transition: { duration: 0.1, delay: 0.7 } }}
       viewport={{ once: true }}
       href="#"
-      className="absolute bottom-0  p-4 w-1/3 mb-10 -translate-x-1/2
-      sm:w-2/5 sm:mb-3 
-        md:mb-5 md:mr-3 md:right-0 md:-translate-x-0
-        rounded-md bg-gray-500 
-         hover:-translate-y-1 duration-500"
+      className="bg-gray-500 rounded-full h-20 w-20 fixed bottom-0 right-0 mb-10 mr-10 md:mb-5 md:mr-5 sm:mb-3 sm:mr-3 flex justify-center items-center text-black  transition-all duration-200 ease-in-out"
     >
       Register Now!
     </motion.a>
