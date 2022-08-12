@@ -44,7 +44,6 @@ function App() {
 
   return (
     <div className="App">
- 
       <ScrollContainer isMobile={isMobile} scrollIntertia={70}>
         {PAGES.map((page, index) => {
           return (
@@ -63,11 +62,16 @@ function App() {
       </ScrollContainer>
       <BottomFixedLayout isMobile={isMobile} />
       <Navbar
-        pageOnScreen={pageOnScreen}
+        // pageOnScreen={pageOnScreen}
         pageRefs={pageRefs}
         scrollToRef={scrollToRef}
       />
-      <ScrollToTopBtn pageOnScreen={pageOnScreen} isMobile={isMobile} />
+      {/* <ScrollToTopBtn
+        // pageOnScreen={pageOnScreen}
+        pageRefs={pageRefs}
+        scrollToRef={scrollToRef}
+        isMobile={isMobile}
+      /> */}
     </div>
   );
 }

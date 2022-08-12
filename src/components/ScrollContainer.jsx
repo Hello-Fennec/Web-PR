@@ -50,7 +50,9 @@ const ScrollContainer = ({ children, scrollIntertia, isMobile }) => {
 
   return (
     <>
-      {isMobile && (
+      {isMobile ? (
+        <>{children}</>
+      ) : (
         <>
           <a.div
             style={{

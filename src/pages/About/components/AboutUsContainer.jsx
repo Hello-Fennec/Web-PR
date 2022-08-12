@@ -24,7 +24,7 @@ export default function AboutUsContainer() {
       className="flex flex-col justify-center items-center"
     >
       <ImgContainer
-        data-speed={2}
+        data-speed={3}
         className="mousemove h-auto w-[95%] min-h-[24rem] max-w-[44rem] sm:px-4 p-8 pb-14 bg-gray-300 rounded-lg"
       >
         <motion.div

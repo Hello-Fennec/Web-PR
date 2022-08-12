@@ -9,7 +9,7 @@ function Home() {
       {/* <PageAnimation> */}
           <Logo />
       {/* </PageAnimation> */}
-      {/* <ScrollLabel /> */}
+      <ScrollLabel />
     </>
   );
 }
