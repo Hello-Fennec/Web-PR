@@ -24,7 +24,7 @@ function Teams({ pageIndex, pageOnScreen }) {
         />
       </div>
       </PageAnimation>
-      <RegisterBtn />
+      {/* <RegisterBtn /> */}
     </>
   );
 }

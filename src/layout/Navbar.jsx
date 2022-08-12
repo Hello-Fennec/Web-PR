@@ -6,7 +6,7 @@ import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Navbar = ({ pageOnScreen }) => {
+const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
   const { height, width } = useWindowDimensions();
 
   const toggleMobileNav = () => {
@@ -36,7 +36,7 @@ const Navbar = ({ pageOnScreen }) => {
                 <li className="flex justify-center items-center" key={index}>
                   <button
                     onClick={() => {
-                      window.fullpage_api.moveTo(index + 1);
+                      scrollToRef(pageRefs[index]);
                     }}
                     className={
                       (pageOnScreen == index ? "text-red-500" : "text-black") +
@@ -83,7 +83,7 @@ const Navbar = ({ pageOnScreen }) => {
                 <li className="flex items-center" key={index}>
                   <button
                     onClick={() => {
-                      window.fullpage_api.moveTo(index + 1);
+                      scrollToRef(pageRefs[index]);
                     }}
                     className={
                       (pageOnScreen == index ? "text-red-500" : "text-black") +

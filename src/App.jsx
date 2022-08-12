@@ -5,7 +5,8 @@ import PAGES from "./constants/PAGES";
 import PageContainer from "./components/PageContainer";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import ScrollContainer from "./components/ScrollContainer";
 
 function App() {
   const isMobile =
@@ -15,7 +16,15 @@ function App() {
     (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0); // check if the device is mobile
 
   const [pageOnScreen, setPageOnScreen] = useState(0); // 0 = home, 1 = about, 2 = teams, 3 = faqs, 4 = game
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const teamsRef = useRef(null);
+  const eventsRef = useRef(null);
+  const faqsRef = useRef(null);
+  const gameRef = useRef(null);
 
+  const pageRefs = [homeRef, aboutRef, teamsRef, eventsRef, faqsRef, gameRef];
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
   // When page is loaded
   useEffect(() => {
     const watermarks = document.querySelectorAll(".fp-watermark");
@@ -35,21 +44,29 @@ function App() {
 
   return (
     <div className="App">
-      {PAGES.map((page, index) => {
-        return (
-          <PageContainer
-            // src={page.background}
-            className="section"
-            key={index}
-          >
+ 
+      <ScrollContainer scrollIntertia={70}>
+        {PAGES.map((page, index) => {
+          return (
+            <PageContainer
+              // src={page.background}
+              className="section"
+              key={index}
+              ref={pageRefs[index]}
+            >
               <div className="flex flex-col justify-center items-center text-center ">
                 <div className="w-full h-full">{page.component}</div>
               </div>
-          </PageContainer>
-        );
-      })}
+            </PageContainer>
+          );
+        })}
+      </ScrollContainer>
       <BottomFixedLayout isMobile={isMobile} />
-      <Navbar pageOnScreen={pageOnScreen} />
+      <Navbar
+        pageOnScreen={pageOnScreen}
+        pageRefs={pageRefs}
+        scrollToRef={scrollToRef}
+      />
       <ScrollToTopBtn pageOnScreen={pageOnScreen} isMobile={isMobile} />
     </div>
   );

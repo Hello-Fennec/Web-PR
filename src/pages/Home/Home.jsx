@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       {/* <PageAnimation> */}
-          <Logo />
+          {/* <Logo /> */}
       {/* </PageAnimation> */}
       {/* <ScrollLabel /> */}
     </>
