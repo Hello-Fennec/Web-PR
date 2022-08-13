@@ -81,8 +81,6 @@ export default function Content({ selectedTeam }) {
   };
 
   return (
-    <>
-      {width < BREAKPOINTS.mobile ? <MobileCourasel /> : <DesktopCarousel />}
-    </>
+    <>{width < BREAKPOINTS.mobile ? <></> : <DesktopCarousel />}</>
   );
 }
