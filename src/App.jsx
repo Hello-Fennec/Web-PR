@@ -15,7 +15,7 @@ function App() {
     ) ||
     (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0); // check if the device is mobile
 
-  const { pageInViews, pageRefs } = ref();
+  const { pageRefs } = ref();
   const [pageOnScreen, setPageOnScreen] = useState(0);
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
   useEffect(() => {
@@ -59,7 +59,6 @@ function App() {
       <BottomFixedLayout />
       <Navbar
         pageRefs={pageRefs}
-        pageInViews={pageInViews}
         scrollToRef={scrollToRef}
         pageOnScreen={pageOnScreen}
       />
