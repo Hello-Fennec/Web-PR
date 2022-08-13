@@ -16,6 +16,7 @@ function App() {
     (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0); // check if the device is mobile
 
   const { pageInViews, pageRefs } = ref();
+  const [pageOnScreen, setPageOnScreen] = useState(0);
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
   useEffect(() => {
     function parallax(e) {
@@ -26,7 +27,15 @@ function App() {
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
       });
     }
+    function currentPageInView(e) {
+      pageRefs.forEach((pageRef, index) => {
+        if (scrollY >= pageRef.current.offsetTop) {
+          setPageOnScreen(index);
+        }
+      });
+    }
     document.addEventListener("mousemove", parallax);
+    document.addEventListener("scroll", currentPageInView);
   }, []);
 
   return (
@@ -52,6 +61,7 @@ function App() {
         pageRefs={pageRefs}
         pageInViews={pageInViews}
         scrollToRef={scrollToRef}
+        pageOnScreen={pageOnScreen}
       />
       {/* <ScrollToTopBtn
         pageInViews={pageInViews}

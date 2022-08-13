@@ -6,7 +6,7 @@ import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Navbar = ({ pageInViews, pageRefs, scrollToRef }) => {
+const Navbar = ({ pageInViews, pageRefs, scrollToRef, pageOnScreen }) => {
   const { height, width } = useWindowDimensions();
 
   const toggleMobileNav = () => {
@@ -40,7 +40,7 @@ const Navbar = ({ pageInViews, pageRefs, scrollToRef }) => {
                       toggleMobileNav();
                     }}
                     className={
-                      (pageInViews[index] ? "text-red-500" : "text-black") +
+                      (pageOnScreen === index ? "text-red-500" : "text-black") +
                       " hover:text-gray-500 text-xl font-sans w-2/3"
                     }
                   >
@@ -88,7 +88,9 @@ const Navbar = ({ pageInViews, pageRefs, scrollToRef }) => {
                         scrollToRef(pageRefs[index]);
                       }}
                       className={
-                        (pageInViews[index] ? "text-red-500" : "text-black") +
+                        (pageOnScreen === index
+                          ? "text-red-500"
+                          : "text-black") +
                         " hover:text-gray-500 md:hover:text-black text-xl font-sans"
                       }
                     >
@@ -144,7 +146,7 @@ const Navbar = ({ pageInViews, pageRefs, scrollToRef }) => {
             animate={{ opacity: 1 }}
             exit={{
               opacity: 0,
-              transition: {  duration: 0.3, ease: "easeInOut" },
+              transition: { duration: 0.3, ease: "easeInOut" },
             }}
           >
             <Tag
