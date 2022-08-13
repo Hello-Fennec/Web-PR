@@ -120,7 +120,7 @@ const Navbar = ({ pageInViews, pageRefs, scrollToRef }) => {
             animate={{ opacity: 1 }}
             exit={{
               opacity: 0,
-              transition: { delay: 1, duration: 0.3, ease: "easeInOut" },
+              transition: { duration: 0.3, ease: "easeInOut" },
             }}
           >
             <Tag
@@ -144,7 +144,7 @@ const Navbar = ({ pageInViews, pageRefs, scrollToRef }) => {
             animate={{ opacity: 1 }}
             exit={{
               opacity: 0,
-              transition: { delay: 1, duration: 0.3, ease: "easeInOut" },
+              transition: {  duration: 0.3, ease: "easeInOut" },
             }}
           >
             <Tag

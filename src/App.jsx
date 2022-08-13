@@ -1,12 +1,12 @@
 import BottomFixedLayout from "./layout/BottomFixedLayout";
 import Navbar from "./layout/Navbar";
-import ReactFullpage from "@fullpage/react-fullpage";
 import PAGES from "./constants/PAGES";
 import PageContainer from "./components/PageContainer";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import ScrollContainer from "./components/ScrollContainer";
+import ref from "./constants/REFS";
 
 function App() {
   const isMobile =
@@ -15,37 +15,9 @@ function App() {
     ) ||
     (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0); // check if the device is mobile
 
-  const [pageOnScreen, setPageOnScreen] = useState(0); // 0 = home, 1 = about, 2 = teams, 3 = faqs, 4 = game
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const teamsRef = useRef(null);
-  const eventsRef = useRef(null);
-  const faqsRef = useRef(null);
-  const gameRef = useRef(null);
-
-  const homeInView = useIsInViewport(homeRef);
-  const aboutInView = useIsInViewport(aboutRef);
-  const teamsInView = useIsInViewport(teamsRef);
-  const eventsInView = useIsInViewport(eventsRef);
-  const faqsInView = useIsInViewport(faqsRef);
-  const gameInView = useIsInViewport(gameRef);
-
-  const pageRefs = [homeRef, aboutRef, teamsRef, eventsRef, faqsRef, gameRef];
-  const pageInViews = [
-    homeInView,
-    aboutInView,
-    teamsInView,
-    eventsInView,
-    faqsInView,
-    gameInView,
-  ];
+  const { pageInViews, pageRefs } = ref();
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
-  // When page is loaded
   useEffect(() => {
-    const watermarks = document.querySelectorAll(".fp-watermark");
-    watermarks.forEach((watermark) => {
-      watermark.style.display = "none";
-    }); // hide watermarks
     function parallax(e) {
       document.querySelectorAll(".mousemove").forEach((layer) => {
         const speed = layer.getAttribute("data-speed");
@@ -56,28 +28,6 @@ function App() {
     }
     document.addEventListener("mousemove", parallax);
   }, []);
-
-  function useIsInViewport(ref) {
-    const [isIntersecting, setIsIntersecting] = useState(false);
-
-    const observer = useMemo(
-      () =>
-        new IntersectionObserver(([entry]) =>
-          setIsIntersecting(entry.isIntersecting)
-        ),
-      []
-    );
-
-    useEffect(() => {
-      observer.observe(ref.current);
-
-      return () => {
-        observer.disconnect();
-      };
-    }, [ref, observer]);
-
-    return isIntersecting;
-  }
 
   return (
     <div className="App">
@@ -99,13 +49,12 @@ function App() {
       </ScrollContainer>
       <BottomFixedLayout />
       <Navbar
-        // pageOnScreen={pageOnScreen}
         pageRefs={pageRefs}
         pageInViews={pageInViews}
         scrollToRef={scrollToRef}
       />
       {/* <ScrollToTopBtn
-        // pageOnScreen={pageOnScreen}
+        pageInViews={pageInViews}
         pageRefs={pageRefs}
         scrollToRef={scrollToRef}
         isMobile={isMobile}
