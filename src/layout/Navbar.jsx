@@ -6,7 +6,7 @@ import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
+const Navbar = ({ pageInViews, pageRefs, scrollToRef }) => {
   const { height, width } = useWindowDimensions();
 
   const toggleMobileNav = () => {
@@ -40,7 +40,7 @@ const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
                       toggleMobileNav();
                     }}
                     className={
-                      // (pageOnScreen == index ? "text-red-500" : "text-black") +
+                      (pageInViews[index] ? "text-red-500" : "text-black") +
                       " hover:text-gray-500 text-xl font-sans w-2/3"
                     }
                   >
@@ -81,19 +81,21 @@ const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
           <ul className="flex mt-4 flex-row space-x-8 md:space-x-4 md:mt-3 md:text-xs md:font-medium">
             {PAGES.map((page, index) => {
               return (
-                <li className="flex items-center" key={index}>
-                  <button
-                    onClick={() => {
-                      scrollToRef(pageRefs[index]);
-                    }}
-                    className={
-                      // (pageOnScreen == index ? "text-red-500" : "text-black") +
-                      " hover:text-gray-500 md:hover:text-black text-xl font-sans"
-                    }
-                  >
-                    {page.name}
-                  </button>
-                </li>
+                index !== 0 && (
+                  <li className="flex items-center" key={index}>
+                    <button
+                      onClick={() => {
+                        scrollToRef(pageRefs[index]);
+                      }}
+                      className={
+                        (pageInViews[index] ? "text-red-500" : "text-black") +
+                        " hover:text-gray-500 md:hover:text-black text-xl font-sans"
+                      }
+                    >
+                      {page.name}
+                    </button>
+                  </li>
+                )
               );
             })}
           </ul>
@@ -111,30 +113,8 @@ const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
     >
       {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
 
-      {/* <AnimatePresence exitBeforeEnter>
-        {pageOnScreen === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{
-              opacity: 0,
-              transition: { delay: 1, duration: 0.3, ease: "easeInOut" },
-            }}
-          > */}
-      <SITTag
-        href="https://www.sit.kmutt.ac.th/"
-        target={"_blank"}
-        id="SITTag"
-        src={SITKMUTT_Tag}
-        color="white"
-        className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5 shadow-md "
-      />
-      {/* </motion.div>
-        )}
-      </AnimatePresence>
-
       <AnimatePresence exitBeforeEnter>
-        {pageOnScreen !== 0 && (
+        {pageInViews[0] && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -143,28 +123,51 @@ const Navbar = ({ pageOnScreen, pageRefs, scrollToRef }) => {
               transition: { delay: 1, duration: 0.3, ease: "easeInOut" },
             }}
           >
-            <SITTag
+            <Tag
+              onClick={(e) => {
+                e.preventDefault();
+                window.open("https://www.sit.kmutt.ac.th/", "_blank");
+              }}
+              id="SITTag"
+              src={SITKMUTT_Tag}
+              color="white"
+              className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence exitBeforeEnter>
+        {!pageInViews[0] && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{
+              opacity: 0,
+              transition: { delay: 1, duration: 0.3, ease: "easeInOut" },
+            }}
+          >
+            <Tag
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
               color="gray"
               id="SITTag"
               className="w-72 h-20  md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5  "
             />
           </motion.div>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </motion.div>
   );
 };
 
-const SITTag = styled.a`
+const Tag = styled.button`
   background-color: ${(props) => props.color};
   opacity: 1;
   position: fixed;
   top: 0;
   transition: all 0.2s ease-in-out;
-
-  :hover {
-    transform: translateY(-0.25rem);
-  }
 
   background-image: url(${(props) => props.src});
   background-size: contain;

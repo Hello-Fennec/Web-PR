@@ -5,7 +5,7 @@ import PAGES from "./constants/PAGES";
 import PageContainer from "./components/PageContainer";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import ScrollContainer from "./components/ScrollContainer";
 
 function App() {
@@ -23,7 +23,22 @@ function App() {
   const faqsRef = useRef(null);
   const gameRef = useRef(null);
 
+  const homeInView = useIsInViewport(homeRef);
+  const aboutInView = useIsInViewport(aboutRef);
+  const teamsInView = useIsInViewport(teamsRef);
+  const eventsInView = useIsInViewport(eventsRef);
+  const faqsInView = useIsInViewport(faqsRef);
+  const gameInView = useIsInViewport(gameRef);
+
   const pageRefs = [homeRef, aboutRef, teamsRef, eventsRef, faqsRef, gameRef];
+  const pageInViews = [
+    homeInView,
+    aboutInView,
+    teamsInView,
+    eventsInView,
+    faqsInView,
+    gameInView,
+  ];
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
   // When page is loaded
   useEffect(() => {
@@ -41,6 +56,28 @@ function App() {
     }
     document.addEventListener("mousemove", parallax);
   }, []);
+
+  function useIsInViewport(ref) {
+    const [isIntersecting, setIsIntersecting] = useState(false);
+
+    const observer = useMemo(
+      () =>
+        new IntersectionObserver(([entry]) =>
+          setIsIntersecting(entry.isIntersecting)
+        ),
+      []
+    );
+
+    useEffect(() => {
+      observer.observe(ref.current);
+
+      return () => {
+        observer.disconnect();
+      };
+    }, [ref, observer]);
+
+    return isIntersecting;
+  }
 
   return (
     <div className="App">
@@ -60,10 +97,11 @@ function App() {
           );
         })}
       </ScrollContainer>
-      <BottomFixedLayout isMobile={isMobile} />
+      <BottomFixedLayout />
       <Navbar
         // pageOnScreen={pageOnScreen}
         pageRefs={pageRefs}
+        pageInViews={pageInViews}
         scrollToRef={scrollToRef}
       />
       {/* <ScrollToTopBtn

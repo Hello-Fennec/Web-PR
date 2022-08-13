@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import TEAMS from "../../../constants/TEAMS";
 import { Carousel } from "@trendyol-js/react-carousel";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
@@ -81,6 +81,8 @@ export default function Content({ selectedTeam }) {
   };
 
   return (
-    <>{width < BREAKPOINTS.mobile ? <MobileCourasel /> : <DesktopCarousel />}</>
+    <>
+      {width < BREAKPOINTS.mobile ? <MobileCourasel /> : <DesktopCarousel />}
+    </>
   );
 }

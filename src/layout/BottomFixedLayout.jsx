@@ -1,8 +1,9 @@
-import AudioToggle from "../components/AudioToggle";
+// import AudioToggle from "../components/AudioToggle";
 import SocialMedia from "../components/SocialMedia";
 import { motion } from "framer-motion";
+import RegisterBtn from "../components/RegisterBtn";
 
-const BottomFixedLayout = ({ isMobile }) => {
+const BottomFixedLayout = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -11,6 +12,7 @@ const BottomFixedLayout = ({ isMobile }) => {
     >
       <SocialMedia />
       {/* {isMobile ? null : <AudioToggle />} */}
+      <RegisterBtn/>
     </motion.div>
   );
 };

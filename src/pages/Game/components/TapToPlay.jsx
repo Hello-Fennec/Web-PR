@@ -34,7 +34,7 @@ export default function TapToPlay() {
     </div>
   );
   return isMobile ? (
-    <Unplayable />
+      <Unplayable />
   ) : (
     <PageAnimation>
       <Playable />
