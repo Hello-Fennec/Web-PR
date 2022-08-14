@@ -9,20 +9,13 @@ function Teams({ pageIndex, pageOnScreen }) {
   const [selectedTeam, setselectedTeam] = useState(0);
 
   return (
-      <PageAnimation>
-      <div
-        id="PageContainer"
-        className="flex flex-col lg:flex-row lg:items-center justify-center items-center "
-      >
-        <Content
-          selectedTeam={selectedTeam}
-        />
-        <TeamSelector
-          selectedTeam={selectedTeam}
-          setselectedTeam={setselectedTeam}
-        />
-      </div>
-      </PageAnimation>
+    <div className="flex flex-col lg:flex-row lg:items-center  sm:justify-start ">
+      <Content selectedTeam={selectedTeam} />
+      <TeamSelector
+        selectedTeam={selectedTeam}
+        setselectedTeam={setselectedTeam}
+      />
+    </div>
   );
 }
 

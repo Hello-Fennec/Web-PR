@@ -6,8 +6,8 @@ import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
 import { AnimatePresence, motion } from "framer-motion";
 
-const Navbar = ({pageRefs, scrollToRef, pageOnScreen }) => {
-  const { height, width } = useWindowDimensions();
+const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
+  const { width } = useWindowDimensions();
 
   const toggleMobileNav = () => {
     const mobileNavbar = document.getElementById("mobileNav");
@@ -116,7 +116,7 @@ const Navbar = ({pageRefs, scrollToRef, pageOnScreen }) => {
       {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
 
       <AnimatePresence exitBeforeEnter>
-        {pageOnScreen===0 && (
+        {pageOnScreen === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -140,7 +140,7 @@ const Navbar = ({pageRefs, scrollToRef, pageOnScreen }) => {
       </AnimatePresence>
 
       <AnimatePresence exitBeforeEnter>
-        {!pageOnScreen===0 && (
+        {pageOnScreen !== 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
