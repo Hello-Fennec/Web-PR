@@ -11,9 +11,12 @@ export default function FaqsToggle({
   question,
   answer,
 }) {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   return (
-    <div className="flex sm:w-11/12 flex-col items-center">
+    <motion.div
+      className="flex sm:w-11/12 flex-col items-center"
+      exit={{ opacity: 0 }}
+    >
       <button
         onClick={() => (index === current ? setCurrent(-1) : setCurrent(index))}
         className={
@@ -28,6 +31,8 @@ export default function FaqsToggle({
         <motion.div
           initial={{ height: 0 }}
           animate={{ height: "8rem" }}
+          exit={{ height: 0 }}
+          key={index}
           id="ansContainer"
           className="sm:block hidden w-full p-2 bg-slate-300 mb-2 duration-300"
         >
@@ -41,6 +46,6 @@ export default function FaqsToggle({
           </motion.div>
         </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 }

@@ -24,12 +24,12 @@ const TEAMS = [
       "Game development is the process of creating a game that is visually appealing and easy to use. It is the process of creating a website that is visually appealing and easy to use.",
     image: GameDev,
   },
-  {
-    name: "Game design",
-    description:
-      "Game design is the process of creating a game that is visually appealing and easy to use. It is the process of creating a website that is visually appealing and easy to use.",
-    image: GameDesign,
-  },
+  // {
+  //   name: "Game design",
+  //   description:
+  //     "Game design is the process of creating a game that is visually appealing and easy to use. It is the process of creating a website that is visually appealing and easy to use.",
+  //   image: GameDesign,
+  // },
   {
     name: "Infrastructure",
     description:

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import PageAnimation from "../../components/PageAnimation";
 import BREAKPOINTS from "../../constants/BREAKPOINTS";
 import FAQS from "../../constants/FAQS";
@@ -8,23 +8,25 @@ import FaqsToggle from "./components/FaqsToggle";
 
 function Faqs() {
   const [current, setCurrent] = useState(0);
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   const MobileFaqs = () => {
     return (
       <div className="flex flex-col w-screen items-center ">
-        {FAQS.map((faq, index) => {
-          return (
-            <FaqsToggle
-              key={index}
-              index={index}
-              current={current}
-              setCurrent={setCurrent}
-              question={faq.question}
-              answer={faq.answer}
-            />
-          );
-        })}
+        <AnimatePresence exitBeforeEnter>
+          {FAQS.map((faq, index) => {
+            return (
+              <FaqsToggle
+                key={index}
+                index={index}
+                current={current}
+                setCurrent={setCurrent}
+                question={faq.question}
+                answer={faq.answer}
+              />
+            );
+          })}
+        </AnimatePresence>
       </div>
     );
   };

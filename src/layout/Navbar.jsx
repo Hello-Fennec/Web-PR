@@ -40,8 +40,8 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
                       toggleMobileNav();
                     }}
                     className={
-                      (pageOnScreen === index ? "text-red-500" : "text-black") +
-                      " hover:text-gray-500 text-xl font-sans w-2/3"
+                      // (pageOnScreen === index ? "text-red-500" : "text-black") +
+                      "text-black hover:text-gray-500 text-xl font-sans w-2/3"
                     }
                   >
                     {page.name}

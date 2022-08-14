@@ -9,7 +9,6 @@ import { motion } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function Content({ selectedTeam }) {
-  const { width } = useWindowDimensions();
 
   const MobileContents = () => {
     return (
@@ -57,7 +56,7 @@ export default function Content({ selectedTeam }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.1 } }}
         className="flex justify-center items-center mb-5 lg:flex-col lg:space-x-0 lg:space-y-5
-        sm:left-0 sm:translate-x-[2vw] sm:w-[70vw] sm:absolute duration-500 "
+        sm:left-3  sm:w-[70vw] sm:absolute duration-500 "
       >
         <div className="hidden text-4xl font-bold lg:block mb-10 sm:mb-0 sm:text-3xl">
           {TEAMS[selectedTeam].name}
