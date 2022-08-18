@@ -79,5 +79,5 @@ export default function Content({ selectedTeam }) {
     );
   };
 
-  return <>{<DesktopContents />}</>;
+  return <DesktopContents />
 }
