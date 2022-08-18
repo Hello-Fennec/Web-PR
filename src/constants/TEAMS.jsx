@@ -1,5 +1,5 @@
 import FrontEnd from '../assets/images/Teams/Front-end.png';
-import GameDesign from '../assets/images/Teams/GameDesign.png';
+// import GameDesign from '../assets/images/Teams/GameDesign.png';
 import GameDev from '../assets/images/Teams/GameDev.png';
 import Infra from '../assets/images/Teams/Infra.png';
 import WebDesign from '../assets/images/Teams/WebDesign.png';

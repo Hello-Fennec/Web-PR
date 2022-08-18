@@ -18,7 +18,7 @@ const Events = () => {
         <div className="w-full  flex flex-col space-y-7">
           <div
             className="w-1 h-[33rem] absolute
-            -z-10 ml-11"
+            -z-0 ml-11"
             style={{
               background:
                 "linear-gradient(0deg, rgba(107,114,128,0) 0%, rgba(107,114,128,1) 5%, rgba(107,114,128,1) 95%, rgba(107,114,128,0) 100%)",

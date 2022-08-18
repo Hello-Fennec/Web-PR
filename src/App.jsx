@@ -40,21 +40,35 @@ function App() {
 
   return (
     <div className="App">
-      <ScrollContainer isMobile={isMobile} scrollIntertia={70}>
+      <ScrollContainer isMobile={isMobile} scrollIntertia={50}>
         {PAGES.map((page, index) => {
           return (
-            <PageContainer
-              // src={page.background}
-              className="section"
-              key={index}
-              ref={pageRefs[index]}
-            >
-              <div className="flex flex-col justify-center items-center text-center ">
-                <div className="w-full h-full">{page.component}</div>
-              </div>
-            </PageContainer>
+            <>
+              <PageContainer
+                // src={page.background}
+                style={{ background: index % 2 == 0 ? "white" : "#d8d8d8" }}
+                className="section"
+                key={index}
+                ref={pageRefs[index]}
+              >
+                <div className="flex flex-col justify-center items-center text-center ">
+                  <div className="w-full h-full">{page.component}</div>
+                </div>
+              </PageContainer>
+              <div style={page.connector} />
+            </>
           );
         })}
+        {/* <PageContainer
+          // src={page.background}
+          style={{ background: 0 % 2 == 0 ? "white" : "#d8d8d8" }}
+          className="section"
+          ref={pageRefs[0]}
+        >
+          <div className="flex flex-col justify-center items-center text-center ">
+            <div className="w-full h-full">{PAGES[0].component}</div>
+          </div>
+        </PageContainer> */}
       </ScrollContainer>
       <BottomFixedLayout />
       <Navbar

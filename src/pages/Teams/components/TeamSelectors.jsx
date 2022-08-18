@@ -14,7 +14,9 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
         " w-24 h-24 sm:w-16 sm:h-16 cursor-pointer rounded-xl shadow-xl hover:-translate-y-1 duration-300 bg-white"
       }
     >
-      <ImgContainer src={TEAMS[index].image} className="w-full h-full" />
+      <ImgContainer style={{
+        backgroundSize: "cover",
+      }} src={TEAMS[index].image} className="w-full h-full m-auto " />
     </button>
   );
 

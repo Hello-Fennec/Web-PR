@@ -17,31 +17,66 @@ const PAGES = [
     name: "Home",
     component: <Home />,
     background: HomeBG,
+    connector: {
+      width: "100%",
+      height: "7vh",
+      background: "linear-gradient(to bottom, #ffffff, #d8d8d8)",
+      position: "absolute",
+    },
   },
   {
     name: "About us",
     component: <About />,
     background: AboutBG,
+    connector: {
+      width: "100%",
+      height: "5vh",
+      clipPath: "polygon(100% 0, 0 0, 0 100%)",
+      background: "#d8d8d8",
+      position: "absolute",
+    },
   },
   {
     name: "Teams",
     component: <Teams />,
     background: TeamsBG,
+    connector: {
+      width: "100%",
+      height: "5vh",
+      clipPath: "polygon(100% 0, 0 0%, 100% 100%)",
+      background: "white",
+      position: "absolute",
+    },
   },
   {
     name: "Events",
     component: <Events />,
     background: EventsBG,
+    connector: {
+      width: "100%",
+      height: "5vh",
+      clipPath: "polygon(100% 0, 0 0%, 100% 100%)",
+      background: "#d8d8d8",
+      position: "absolute",
+    },
   },
   {
     name: "FAQs",
     component: <Faqs />,
     background: FaqsBG,
+    connector: {
+      width: "100%",
+      height: "5vh",
+      clipPath: "polygon(100% 0, 0 0, 0 100%)",
+      background: "white",
+      position: "absolute",
+    },
   },
   {
     name: "Game",
     component: <Game />,
     background: GameBG,
+    connector: {},
   },
 ];
 

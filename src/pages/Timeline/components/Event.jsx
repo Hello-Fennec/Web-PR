@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Event({ date, month, title, description, isPassed }) {
   return (
-    <div className="flex">
+    <div className="flex z-10">
       <div
         className={
           (isPassed ? "bg-red-500" : "bg-gray-500") +
