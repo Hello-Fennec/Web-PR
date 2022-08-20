@@ -5,6 +5,8 @@ import PAGES from "../constants/PAGES";
 import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
 import { AnimatePresence, motion } from "framer-motion";
+import HelloFennecLogo from "../assets/images/HelloFennec-logo.png";
+
 
 const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
   const { width } = useWindowDimensions();
@@ -132,6 +134,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
               }}
               id="SITTag"
               src={SITKMUTT_Tag}
+              size={"contain"}
               color="white"
               className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1"
             />
@@ -153,9 +156,10 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
               onClick={() => {
                 window.scrollTo(0, 0);
               }}
-              color="gray"
+              src={HelloFennecLogo}
               id="SITTag"
-              className="w-72 h-20  md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl  left-10 md:left-5  "
+              size={"60%"}
+              className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 left-10 md:left-5"
             />
           </motion.div>
         )}
@@ -172,7 +176,8 @@ const Tag = styled.button`
   transition: all 0.2s ease-in-out;
 
   background-image: url(${(props) => props.src});
-  background-size: contain;
+  background-size: ${(props) => props.size};
+  background-position: left center;
   background-repeat: no-repeat;
 `;
 
