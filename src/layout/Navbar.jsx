@@ -174,6 +174,7 @@ const Tag = styled.button`
   position: fixed;
   top: 0;
   transition: all 0.2s ease-in-out;
+  z-index: 50;
 
   background-image: url(${(props) => props.src});
   background-size: ${(props) => props.size};
