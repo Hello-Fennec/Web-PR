@@ -24,7 +24,9 @@ function App() {
         const speed = layer.getAttribute("data-speed");
         const x = (window.innerWidth - e.pageX * speed) / 100;
         const y = (window.innerHeight - e.pageY * speed) / 100;
-        layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        layer.style.transform = `translateX(${x}px) translateY(${
+          y > -100 ? y : -100
+        }px)`;
       });
     }
     function currentPageInView(e) {
@@ -46,7 +48,7 @@ function App() {
             <>
               <PageContainer
                 // src={page.background}
-                style={{ background: index % 2 == 0 ? "white" : "#d8d8d8" }}
+                style={{ background: index % 2 == 0 ? "white" : "#F2E2BB" }}
                 className="section"
                 key={index}
                 ref={pageRefs[index]}
@@ -59,16 +61,6 @@ function App() {
             </>
           );
         })}
-        {/* <PageContainer
-          // src={page.background}
-          style={{ background: 0 % 2 == 0 ? "white" : "#d8d8d8" }}
-          className="section"
-          ref={pageRefs[0]}
-        >
-          <div className="flex flex-col justify-center items-center text-center ">
-            <div className="w-full h-full">{PAGES[0].component}</div>
-          </div>
-        </PageContainer> */}
       </ScrollContainer>
       <BottomFixedLayout />
       <Navbar

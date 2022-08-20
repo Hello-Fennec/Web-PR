@@ -12,6 +12,9 @@ import FaqsBG from "../assets/images/Backgrounds/Faqs.jpg";
 import GameBG from "../assets/images/Backgrounds/Game.jpg";
 import EventsBG from "../assets/images/Backgrounds/Game.jpg";
 
+const oddBG = "#ffffff";
+const evenBG = "#F2E2BB";
+
 const PAGES = [
   {
     name: "Home",
@@ -20,7 +23,7 @@ const PAGES = [
     connector: {
       width: "100%",
       height: "7vh",
-      background: "linear-gradient(to bottom, #ffffff, #d8d8d8)",
+      background: `linear-gradient(to bottom, #ffffff, ${evenBG} )`,
       position: "absolute",
     },
   },
@@ -32,7 +35,7 @@ const PAGES = [
       width: "100%",
       height: "5vh",
       clipPath: "polygon(100% 0, 0 0, 0 100%)",
-      background: "#d8d8d8",
+      background: evenBG,
       position: "absolute",
     },
   },
@@ -44,7 +47,7 @@ const PAGES = [
       width: "100%",
       height: "5vh",
       clipPath: "polygon(100% 0, 0 0%, 100% 100%)",
-      background: "white",
+      background: oddBG,
       position: "absolute",
     },
   },
@@ -56,7 +59,7 @@ const PAGES = [
       width: "100%",
       height: "5vh",
       clipPath: "polygon(100% 0, 0 0%, 100% 100%)",
-      background: "#d8d8d8",
+      background: evenBG,
       position: "absolute",
     },
   },
@@ -68,7 +71,7 @@ const PAGES = [
       width: "100%",
       height: "5vh",
       clipPath: "polygon(100% 0, 0 0, 0 100%)",
-      background: "white",
+      background: oddBG,
       position: "absolute",
     },
   },
