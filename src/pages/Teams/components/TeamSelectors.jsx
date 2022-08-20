@@ -18,7 +18,7 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
         style={{
           backgroundSize: "cover",
         }}
-        src={TEAMS[index].image}
+        src={TEAMS[index].thumbnail}
         className="w-full h-full m-auto "
       />
     </button>
