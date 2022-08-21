@@ -32,11 +32,9 @@ const ScrollLabel = () => {
           </Floating>
         </div>
       ) : (
-        <div
-          className={"ScrollDown top-[80%] -translate-y-1/2 " + scrollDownStyle}
-        >
+        <div className={"ScrollDown bottom-5  " + scrollDownStyle}>
           <Floating>
-            <CgArrowLongDown size="30" />
+            <BsChevronDown size="30" />
           </Floating>
         </div>
       )}

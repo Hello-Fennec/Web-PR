@@ -22,7 +22,7 @@ const FAQS = [
       "You can click on the team's name to get more information about it.",
   },
   {
-    title: "ลาได้บ่อยไหม",
+    title: "ข้อตกลงการเข้าร่วม",
     question: "จำเป็นต้องเข้ากิจกรรมทุกวันไหม?",
     answer:
       "You can click on the team's name to get more information about it.",

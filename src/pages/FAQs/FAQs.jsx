@@ -5,6 +5,7 @@ import BREAKPOINTS from "../../constants/BREAKPOINTS";
 import FAQS from "../../constants/FAQS";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import FaqsToggle from "./components/FaqsToggle";
+import SOCIALMEDIAS from "../../constants/SOCIALMEDIAS";
 
 function Faqs() {
   const [current, setCurrent] = useState(0);
@@ -63,7 +64,32 @@ function Faqs() {
             transition={{ delay: 0.1 }}
             className="text-2xl font-semibold"
           >
-            {current > -1 ? FAQS[current].answer : "Click to see"}
+            {current > -1 ? (
+              FAQS[current].answer
+            ) : (
+              <div className="flex flex-col space-y-3">
+                <h1>หากมีข้อสงสัยเพิ่มเติม สอบถามได้ที่</h1>
+                {SOCIALMEDIAS.map((item, index) => {
+                  return (
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.open(item.url, "_blank");
+                      }}
+                      className={
+                        "p-5 bg-black rounded-full text-white hover:shadow-lg hover:-translate-y-1 duration-200 "
+                      }
+                      style={{
+                        background: item.color,
+                      }}
+                    >
+                      {item.name}
+                    </button>
+                  );
+                })}
+                <h1 className="text-base">กดปุ่มทางซ้ายเพื่ออ่านรายละเอียดโครงการ</h1>
+              </div>
+            )}
           </motion.div>
         </div>
       </div>
