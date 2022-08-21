@@ -17,7 +17,7 @@ const FAQS = [
   },
   {
     title: "พื้นฐานก่อนเข้าร่วม",
-    question: "จำเป็นต้องมีพื้นฐานก่อนเข้าร่วมโครงการหรือไม่?",
+    question: "จำเป็นต้องมีพื้นฐานมาก่อนเข้าร่วมหรือไม่?",
     answer:
       "You can click on the team's name to get more information about it.",
   },
