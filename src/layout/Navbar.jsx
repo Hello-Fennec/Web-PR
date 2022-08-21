@@ -147,7 +147,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
               src={SITKMUTT_Tag}
               size={"contain"}
               color="white"
-              className="w-56 h-20 md:w-44 md:h-16 rounded-b-3xl md:rounded-b-2xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1"
+              className="w-56 h-[4.5rem] md:w-44 md:h-16 rounded-b-3xl md:rounded-b-2xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1"
             />
           </motion.div>
         )}
