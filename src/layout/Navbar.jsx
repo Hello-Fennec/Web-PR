@@ -54,7 +54,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
         </div>
 
         <button
-          className="flex flex-col fixed top-0 right-0 z-[51] pt-3 pr-6 z-20 justify-center items-center"
+          className="flex flex-col fixed top-0 right-0 z-[51] pt-3 pr-6  justify-center items-center"
           onClick={toggleMobileNav}
         >
           <NavBurger>
@@ -66,7 +66,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
         <button
           onClick={toggleMobileNav}
           id="navBackground"
-          className="bg-black w-full h-full absolute top-0 left-0 opacity-0 duration-500 ease-in-out hidden"
+          className="bg-black opacity-0 w-full h-full fixed top-0 left-0  duration-500 ease-in-out hidden"
         />
       </MobileNav>
     );
