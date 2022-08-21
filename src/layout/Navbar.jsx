@@ -43,8 +43,10 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
                       toggleMobileNav();
                     }}
                     className={
-                      // (pageOnScreen === index ? "text-red-500" : "text-black") +
-                      "text-black hover:text-gray-500 text-xl font-sans w-2/3"
+                      (pageOnScreen === index
+                        ? "text-[#df963a] "
+                        : "text-black") +
+                      " hover:text-[#a15d00] md:hover:text-black text-xl  duration-200"
                     }
                   >
                     {page.name}
@@ -78,7 +80,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
     return (
       <nav
         id="desktop-nav"
-        className="fixed top-0 duration-500 opacity-1 p-3 pr-5  right-0 items-start"
+        className="fixed top-0 duration-500 opacity-1 p-3 pr-5  right-0 items-start z-50"
       >
         <div className="block">
           <ul className="flex mt-4 flex-row space-x-4 md:space-x-4 md:mt-3 md:text-xs md:font-medium">
@@ -145,7 +147,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
               src={SITKMUTT_Tag}
               size={"contain"}
               color="white"
-              className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 rounded-b-3xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1"
+              className="w-56 h-20 md:w-44 md:h-16 rounded-b-3xl md:rounded-b-2xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1"
             />
           </motion.div>
         )}

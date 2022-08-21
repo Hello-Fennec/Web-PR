@@ -37,7 +37,8 @@ function App() {
       });
     }
     !isMobile && document.addEventListener("mousemove", parallax);
-    !isMobile && document.addEventListener("scroll", currentPageInView);
+    // {!isMobile && }
+    document.addEventListener("scroll", currentPageInView);
   }, []);
 
   return (
