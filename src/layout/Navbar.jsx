@@ -30,7 +30,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
       <MobileNav>
         <div
           id="mobileNav"
-          className="-translate-y-full opacity-0  transition-all duration-500 ease-in-out w-full trans fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/50  z-10 p-5 shadow-sm shadow-white/30"
+          className="-translate-y-full z-50 opacity-0  transition-all duration-500 ease-in-out w-full trans fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/50  p-5 shadow-sm shadow-white/30"
         >
           <ul className="flex mt-6 mb-12 flex-col space-y-12 ">
             {PAGES.map((page, index) => {
@@ -174,7 +174,7 @@ const Tag = styled.button`
   position: fixed;
   top: 0;
   transition: all 0.2s ease-in-out;
-  z-index: 50;
+  z-index: 49;
 
   background-image: url(${(props) => props.src});
   background-size: ${(props) => props.size};
