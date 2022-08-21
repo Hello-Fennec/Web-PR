@@ -3,6 +3,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 const SOCIALMEDIAS = [
   {
     name: "Facebook",
+    username:"SIT HelloWorld",
     url: "https://www.facebook.com/SITHelloWorld",
     icon: <FaFacebook size="40" />,
     color: "#1778F2",
@@ -10,6 +11,7 @@ const SOCIALMEDIAS = [
   },
   {
     name: "Instagram",
+    username:"sithelloworld",
     url: "https://www.instagram.com/",
     icon: <FaInstagram size="40" />,
     color:

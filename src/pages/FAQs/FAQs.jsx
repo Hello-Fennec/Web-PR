@@ -77,17 +77,24 @@ function Faqs() {
                         window.open(item.url, "_blank");
                       }}
                       className={
-                        "p-5 bg-black rounded-full text-white hover:shadow-lg hover:-translate-y-1 duration-200 "
+                        "p-2 bg-white rounded-full text-white hover:shadow-lg hover:-translate-y-1 duration-200 flex"
                       }
-                      style={{
-                        background: item.color,
-                      }}
                     >
-                      {item.name}
+                      <div
+                        className="rounded-full p-2 w-14"
+                        style={{
+                          background: item.color,
+                        }}
+                      >
+                        {item.icon}
+                      </div>
+                      <h1 className="text-black my-auto ml-5">{item.username}</h1>
                     </button>
                   );
                 })}
-                <h1 className="text-base">กดปุ่มทางซ้ายเพื่ออ่านรายละเอียดโครงการ</h1>
+                <h1 className="text-base">
+                  กดปุ่มทางซ้ายเพื่ออ่านรายละเอียดโครงการ
+                </h1>
               </div>
             )}
           </motion.div>
