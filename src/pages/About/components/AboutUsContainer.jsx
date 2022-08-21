@@ -10,7 +10,7 @@ export default function AboutUsContainer() {
   };
   return (
     <motion.div
-      initial={{ x: "-50%", skewX: 20 }}
+      initial={{ x: "-50%", skewX: -20 }}
       whileInView={{
         x: 0,
         skewX: 0,
