@@ -4,7 +4,7 @@ import PAGES from "./constants/PAGES";
 import PageContainer from "./components/PageContainer";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import ScrollContainer from "./components/ScrollContainer";
 import ref from "./constants/REFS";
 
