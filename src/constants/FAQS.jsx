@@ -1,35 +1,35 @@
 const FAQS = [
   {
-    title: "Purpose",
-    question: "What is the purpose of this website?",
+    title: "รูปแบบการสอน",
+    question: "รูปแบบการสอนของโครงการในปีนี้",
     answer:
       "This website is designed to help you find the best team for your project.",
   },
   {
-    title: "Get started",
-    question: "How do I get started?",
+    title: "สิทธิ์เข้าร่วมโครงการ",
+    question: "มีสิทธิ์เข้าร่วมโครงการทุกคนไหม?",
     answer: "You can sign up for an account and start searching for teams.",
   },
   {
-    title: "How to search",
-    question: "How do I search for teams?",
+    title: "อุปกรณ์ที่จำเป็น",
+    question: "มีอุปกรณ์อะไรบ้างที่จำเป็นอะไรบ้าง?",
     answer: "You can search for teams by their name, description, or tags.",
   },
   {
-    title: "Get team info",
-    question: "How do I get more information about a team?",
+    title: "พื้นฐานก่อนเข้าร่วม",
+    question: "จำเป็นต้องมีพื้นฐานก่อนเข้าร่วมโครงการหรือไม่?",
     answer:
       "You can click on the team's name to get more information about it.",
   },
   {
-    title: "Get team info",
-    question: "How do I get more information about a team?",
+    title: "ลาได้บ่อยไหม",
+    question: "จำเป็นต้องเข้ากิจกรรมทุกวันไหม?",
     answer:
       "You can click on the team's name to get more information about it.",
   },
   {
-    title: "Get project info",
-    question: "How do I get more information about a project?",
+    title: "จำนวนชั่วโมงกิจกรรม",
+    question: "ได้ชั่วโมงกิจกรรมไหม? ได้กี่ชั่วโมง?",
     answer:
       "You can click on the project's name to get more information about it.",
   },

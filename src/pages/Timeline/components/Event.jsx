@@ -5,7 +5,7 @@ export default function Event({ date, month, title, description, isPassed }) {
     <div className="flex z-10">
       <div
         className={
-          (isPassed ? "bg-red-500" : "bg-gray-500") +
+          (isPassed ? "bg-[#a15d00]" : "bg-gray-600") +
           " w-24 h-24 flex justify-center items-center rounded-full text-white"
         }
       >
@@ -16,8 +16,22 @@ export default function Event({ date, month, title, description, isPassed }) {
         </h1>
       </div>
       <div className="text-start ml-5 my-auto">
-        <h1 className="text-[1.5rem] font-bold">{title}</h1>
-        <p className="text-2xl text-gray-500">{description}</p>
+        <h1
+          className={
+            (isPassed ? "text-[#a15d00]" : "text-gray-600") +
+            " text-[1.5rem] font-bold"
+          }
+        >
+          {title}
+        </h1>
+        <p
+          className={
+            (isPassed ? "text-[#df963a]" : "text-gray-500") +
+            " text-2xl "
+          }
+        >
+          {description}
+        </p>
       </div>
     </div>
   );

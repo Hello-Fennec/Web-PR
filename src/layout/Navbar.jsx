@@ -5,7 +5,9 @@ import PAGES from "../constants/PAGES";
 import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
 import { AnimatePresence, motion } from "framer-motion";
-import HelloFennecLogo from "../assets/images/HelloFennec-logo.png";
+import HelloFennecTag from "../assets/images/HelloFennec-logo_shadowed.png";
+import ImgContainer from "../components/ImgContainer";
+import NavStone from "../assets/images/NavStone.png";
 
 const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
   const { width } = useWindowDimensions();
@@ -79,7 +81,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
         className="fixed top-0 duration-500 opacity-1 p-3 pr-5  right-0 items-start"
       >
         <div className="block">
-          <ul className="flex mt-4 flex-row space-x-8 md:space-x-4 md:mt-3 md:text-xs md:font-medium">
+          <ul className="flex mt-4 flex-row space-x-4 md:space-x-4 md:mt-3 md:text-xs md:font-medium">
             {PAGES.map((page, index) => {
               return (
                 index !== 0 && (
@@ -90,12 +92,20 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
                       }}
                       className={
                         (pageOnScreen === index
-                          ? "text-red-500"
+                          ? "text-[#df963a] "
                           : "text-black") +
-                        " hover:text-gray-500 md:hover:text-black text-xl font-sans"
+                        " hover:text-[#a15d00] md:hover:text-black text-xl font-bold duration-200"
                       }
                     >
                       {page.name}
+
+                      <ImgContainer
+                        src={NavStone}
+                        className={
+                          (pageOnScreen === index && `opacity-100`) +
+                          ` w-20 h-6 md:w-16 opacity-0 m-auto`
+                        }
+                      />
                     </button>
                   </li>
                 )
@@ -155,7 +165,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
               onClick={() => {
                 window.scrollTo(0, 0);
               }}
-              src={HelloFennecLogo}
+              src={HelloFennecTag}
               id="SITTag"
               size={"60%"}
               className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 left-10 md:left-5"

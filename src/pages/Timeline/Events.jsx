@@ -1,6 +1,7 @@
 import React from "react";
 import PageAnimation from "../../components/PageAnimation";
 import Event from "./components/Event";
+import ProgressBar from "../../assets/images/Events/ProgressBar.png";
 import {
   today,
   registerDay,
@@ -8,22 +9,25 @@ import {
   firstMeetDay,
   fennecDay,
   isPassed,
+  allEvents,
 } from "../../constants/EVENTS";
-
+const onEvent = allEvents.indexOf(today.toDateString()) + 1;
 const Events = () => {
   return (
     <>
       <div className="w-full  p-5 flex space-x-20 md:space-x-0 justify-center">
-        <div className="md:hidden w-[50vw] bg-gray-500 rounded-2xl" />
+        <div className="md:hidden w-[50vw] bg-[#a15d00] rounded-2xl" />
         <div className=" flex flex-col space-y-7 ">
           <div
             className="w-1 h-[33rem] absolute
-            -z-0 ml-11"
-            style={{
-              background:
-                "linear-gradient(0deg, rgba(107,114,128,0) 0%, rgba(107,114,128,1) 5%, rgba(107,114,128,1) 95%, rgba(107,114,128,0) 100%)",
-            }}
-          />
+            -z-0 ml-11 bg-gray-600"
+          >
+            <div
+              className={`bg-[#a15d00] w-full ${
+                onEvent == 4 ? `h-full` : `h-${onEvent}/${allEvents.length + 1}`
+              } bg-blend-overlay blend `}
+            />
+          </div>
           <Event
             date={15}
             month={"ต.ค."}
