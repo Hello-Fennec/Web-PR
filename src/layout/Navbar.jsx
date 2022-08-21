@@ -7,7 +7,6 @@ import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
 import { AnimatePresence, motion } from "framer-motion";
 import HelloFennecLogo from "../assets/images/HelloFennec-logo.png";
 
-
 const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
   const { width } = useWindowDimensions();
 
@@ -30,7 +29,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
       <MobileNav>
         <div
           id="mobileNav"
-          className="-translate-y-full z-50 opacity-0  transition-all duration-500 ease-in-out w-full trans fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/50  p-5 shadow-sm shadow-white/30"
+          className="-translate-y-full z-10 opacity-0  transition-all duration-500 ease-in-out w-full trans fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/50  p-5 shadow-sm shadow-white/30"
         >
           <ul className="flex mt-6 mb-12 flex-col space-y-12 ">
             {PAGES.map((page, index) => {
@@ -210,6 +209,8 @@ const NavBurger = styled.div`
 `;
 
 const MobileNav = styled.div`
+  z-index: 50;
+
   #mobileNav.on {
     transform: translateY(0%);
     opacity: 1;
