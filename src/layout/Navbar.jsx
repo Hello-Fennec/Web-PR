@@ -29,7 +29,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
       <MobileNav>
         <div
           id="mobileNav"
-          className="-translate-y-full z-10 opacity-0  transition-all duration-500 ease-in-out w-full trans fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/50  p-5 shadow-sm shadow-white/30"
+          className="-translate-y-full z-50 opacity-0  transition-all duration-500 ease-in-out w-full trans fixed top-0 left-0 rounded-b-3xl backdrop-blur-md bg-white/50  p-5 shadow-sm shadow-white/30"
         >
           <ul className="flex mt-6 mb-12 flex-col space-y-12 ">
             {PAGES.map((page, index) => {
@@ -54,7 +54,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
         </div>
 
         <button
-          className="flex flex-col fixed top-0 right-0  pt-3 pr-6 z-20 justify-center items-center"
+          className="flex flex-col fixed top-0 right-0 z-[51] pt-3 pr-6 z-20 justify-center items-center"
           onClick={toggleMobileNav}
         >
           <NavBurger>
@@ -209,8 +209,6 @@ const NavBurger = styled.div`
 `;
 
 const MobileNav = styled.div`
-  z-index: 50;
-
   #mobileNav.on {
     transform: translateY(0%);
     opacity: 1;
