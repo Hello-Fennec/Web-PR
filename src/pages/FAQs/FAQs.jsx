@@ -6,10 +6,16 @@ import FAQS from "../../constants/FAQS";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import FaqsToggle from "./components/FaqsToggle";
 import SOCIALMEDIAS from "../../constants/SOCIALMEDIAS";
+import styled from "styled-components";
 
 function Faqs() {
   const [current, setCurrent] = useState(0);
   const { width } = useWindowDimensions();
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) ||
+    (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0); // check if the device is mobile
 
   const MobileFaqs = () => {
     return (
@@ -50,19 +56,21 @@ function Faqs() {
           })}
         </div>
         <div className="w-[42rem] lg:w-[28rem]  md:w-96 bg-gray-300 ml-2 p-5 flex flex-col justify-center items-center rounded-lg ">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <FaqsText
+            // initial={!isMobile && { opacity: 0, y: 20 }}
+            // whileInView={!isMobile && { opacity: 1, y: 0 }}
+            // viewport={!isMobile && { once: true }}
             className="text-xl"
           >
             {current > -1 && FAQS[current].question}
-          </motion.div>
+          </FaqsText>
           <br />
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-2xl font-semibold"
+          <FaqsText
+            // initial={!isMobile && { opacity: 0, y: 20 }}
+            // whileInView={!isMobile && { opacity: 1, y: 0 }}
+            // viewport={!isMobile && { once: true }}
+            // transition={!isMobile && { delay: 0.1 }}
+            className="text-2xl font-semibold translate-y-0"
           >
             {current > -1 ? (
               FAQS[current].answer
@@ -88,7 +96,9 @@ function Faqs() {
                       >
                         {item.icon}
                       </div>
-                      <h1 className="text-black my-auto ml-5">{item.username}</h1>
+                      <h1 className="text-black my-auto ml-5">
+                        {item.username}
+                      </h1>
                     </button>
                   );
                 })}
@@ -97,7 +107,7 @@ function Faqs() {
                 </h1>
               </div>
             )}
-          </motion.div>
+          </FaqsText>
         </div>
       </div>
     );
@@ -110,3 +120,18 @@ function Faqs() {
 }
 
 export default Faqs;
+
+const FaqsText = styled.div`
+  animation: enter 0.3s;
+  transform: translateY(20);
+  @keyframes enter {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;

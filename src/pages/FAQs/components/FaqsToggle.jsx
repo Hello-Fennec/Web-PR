@@ -88,7 +88,7 @@ function MobileToggle(props) {
       {props.index === props.current && (
         <motion.div
           initial={{
-            height: "8rem",
+            height: 0,
           }}
           animate={{
             height: "8rem",
@@ -98,18 +98,15 @@ function MobileToggle(props) {
           className="sm:block hidden w-full p-2 bg-slate-300 mb-2 duration-300"
         >
           <motion.div
-            // initial={{
-            //   opacity: 0,
-            //   y: 20,
-            // }}
-            // animate={{
-            //   opacity: 1,
-            //   y: 0,
-            // }}
             initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            whileInView={{
               opacity: 1,
               y: 0,
             }}
+            viewport={{ once: true }}
             transition={{
               delay: 0.3,
             }}
@@ -134,13 +131,26 @@ export default function FaqsToggle({
   const { width } = useWindowDimensions();
 
   return (
-    <DesktopToggle
-      current={current}
-      setCurrent={setCurrent}
-      index={index}
-      title={title}
-      question={question}
-      answer={answer}
-    ></DesktopToggle>
+    <>
+      {width < BREAKPOINTS.mobile ? (
+        <MobileToggle
+          current={current}
+          setCurrent={setCurrent}
+          index={index}
+          title={title}
+          question={question}
+          answer={answer}
+        />
+      ) : (
+        <DesktopToggle
+          current={current}
+          setCurrent={setCurrent}
+          index={index}
+          title={title}
+          question={question}
+          answer={answer}
+        />
+      )}
+    </>
   );
 }

@@ -69,12 +69,6 @@ function App() {
         scrollToRef={scrollToRef}
         pageOnScreen={pageOnScreen}
       />
-      {/* <ScrollToTopBtn
-        pageInViews={pageInViews}
-        pageRefs={pageRefs}
-        scrollToRef={scrollToRef}
-        isMobile={isMobile}
-      /> */}
     </div>
   );
 }
