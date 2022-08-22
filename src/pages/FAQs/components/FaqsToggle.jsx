@@ -27,40 +27,7 @@ function DesktopToggle(props) {
         {props.title}
         {props.question}
       </button>
-      {props.index === props.current && (
-        <motion.div
-          initial={{
-            height: "8rem",
-          }}
-          animate={{
-            height: "8rem",
-          }}
-          key={props.index}
-          id="ansContainer"
-          className="sm:block hidden w-full p-2 bg-slate-300 mb-2 duration-300"
-        >
-          <motion.div
-            // initial={{
-            //   opacity: 0,
-            //   y: 20,
-            // }}
-            // animate={{
-            //   opacity: 1,
-            //   y: 0,
-            // }}
-            initial={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              delay: 0.3,
-            }}
-            className="relative h-full flex justify-center items-center "
-          >
-            {props.answer}
-          </motion.div>
-        </motion.div>
-      )}
+      
     </motion.div>
   );
 }
@@ -87,29 +54,28 @@ function MobileToggle(props) {
       </button>
       {props.index === props.current && (
         <motion.div
-          initial={{
-            height: 0,
-          }}
-          animate={{
-            height: "8rem",
-          }}
+          // initial={{
+          //   height: 0,
+          // }}
+          // animate={{
+          //   height: "8rem",
+          // }}
           key={props.index}
           id="ansContainer"
-          className="sm:block hidden w-full p-2 bg-slate-300 mb-2 duration-300"
+          className="sm:block hidden w-full p-2 bg-slate-300 mb-2 duration-300 h-32"
         >
           <motion.div
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 0.3,
-            }}
+            // initial={{
+            //   opacity: 0,
+            //   y: 20,
+            // }}
+            // whileInView={{
+            //   opacity: 1,
+            //   y: 0,
+            // }}
+            // transition={{
+            //   delay: 0.3,
+            // }}
             className="relative h-full flex justify-center items-center "
           >
             {props.answer}

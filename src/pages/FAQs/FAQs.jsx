@@ -56,20 +56,21 @@ function Faqs() {
           })}
         </div>
         <div className="w-[42rem] lg:w-[28rem]  md:w-96 bg-gray-300 ml-2 p-5 flex flex-col justify-center items-center rounded-lg ">
-          <FaqsText
-            // initial={!isMobile && { opacity: 0, y: 20 }}
-            // whileInView={!isMobile && { opacity: 1, y: 0 }}
-            // viewport={!isMobile && { once: true }}
+          <motion.div
+            initial={!isMobile && { opacity: 0, y: 20 }}
+            whileInView={!isMobile && { opacity: 1, y: 0 }}
+            viewport={!isMobile && { once: true }}
             className="text-xl"
           >
             {current > -1 && FAQS[current].question}
-          </FaqsText>
+          </motion.div>
           <br />
-          <FaqsText
-            // initial={!isMobile && { opacity: 0, y: 20 }}
-            // whileInView={!isMobile && { opacity: 1, y: 0 }}
-            // viewport={!isMobile && { once: true }}
-            // transition={!isMobile && { delay: 0.1 }}
+          <motion.div
+            initial={!isMobile && { opacity: 0, y: 20 }}
+            whileInView={!isMobile && { opacity: 1, y: 0 }}
+            viewport={!isMobile && { once: true }}
+            transition={!isMobile && { delay: 0.1 }}
+            delay={"0.1s"}
             className="text-2xl font-semibold translate-y-0"
           >
             {current > -1 ? (
@@ -107,7 +108,7 @@ function Faqs() {
                 </h1>
               </div>
             )}
-          </FaqsText>
+          </motion.div>
         </div>
       </div>
     );
@@ -120,18 +121,3 @@ function Faqs() {
 }
 
 export default Faqs;
-
-const FaqsText = styled.div`
-  animation: enter 0.3s;
-  transform: translateY(20);
-  @keyframes enter {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-`;
