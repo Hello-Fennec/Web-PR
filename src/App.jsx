@@ -19,7 +19,7 @@ function App() {
   const [pageOnScreen, setPageOnScreen] = useState(0);
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
   useEffect(() => {
-    function parallax(e) {
+    function mousemoveParallax(e) {
       document.querySelectorAll(".mousemove").forEach((layer) => {
         const speed = layer.getAttribute("data-speed");
         const x = (window.innerWidth - e.pageX * speed) / 100;
@@ -29,6 +29,21 @@ function App() {
         }px)`;
       });
     }
+    function scrollParallax(e) {
+      document.querySelectorAll(".scroll").forEach((layer) => {
+        const speed = layer.getAttribute("data-speed");
+        const value = window.scrollY * speed;
+        // const matrix = window
+        //   .getComputedStyle(layer)
+        //   .transform.match(/matrix.*\((.+)\)/)[1]
+        //   .split(", ");
+        // const x = parseFloat(matrix[4]);
+        // const y = parseFloat(matrix[5]);
+
+        layer.style.transform = `translateY(${value}px)`;
+        // layer.style.transform = `translateX(${x}px)`;
+      });
+    }
     function currentPageInView(e) {
       pageRefs.forEach((pageRef, index) => {
         if (scrollY >= pageRef.current.offsetTop) {
@@ -36,9 +51,10 @@ function App() {
         }
       });
     }
-    !isMobile && document.addEventListener("mousemove", parallax);
+    !isMobile && document.addEventListener("mousemove", mousemoveParallax);
     // {!isMobile && }
     document.addEventListener("scroll", currentPageInView);
+    document.addEventListener("scroll", scrollParallax);
   }, []);
 
   return (
@@ -49,7 +65,7 @@ function App() {
             <>
               <PageContainer
                 // src={page.background}
-                style={{ background: index % 2 == 0 ? "white" : "#F2E2BB" }}
+                style={{ background: index % 2 == 0 ? "" : "#F2E2BB" }}
                 className="section"
                 key={index}
                 ref={pageRefs[index]}
