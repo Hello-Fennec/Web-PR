@@ -20,11 +20,11 @@ function Home() {
         />
         <ImgContainer
           data-speed={-2}
-          className="mousemove absolute bottom-0 right-0 w-96 h-72 bg-gray-600 self-end"
+          className=" absolute bottom-0 right-0 w-96 h-72 bg-gray-600 self-end"
         />
         <ImgContainer
           data-speed={-2}
-          className="mousemove absolute bottom-0 left-0 w-96 h-72 bg-gray-600 self-end"
+          className=" absolute bottom-0 left-0 w-96 h-72 bg-gray-600 self-end"
         />
       </ImgContainer>
       <Logo className="-z-50" />

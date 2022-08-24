@@ -3,6 +3,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../constants/BREAKPOINTS";
 
+const isMobile =
+/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+  navigator.userAgent
+) ||
+(/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0); // check if the device is mobile
+
 function DesktopToggle(props) {
   return (
     <motion.div
@@ -21,7 +27,7 @@ function DesktopToggle(props) {
           (props.current === props.index
             ? "bg-red-500 sm:mb-0"
             : "bg-gray-500") +
-          " p-5 w-72 md:w-52 sm:w-full h-full rounded-lg sm:text-sm mb-2  hover:md:-translate-y-0 hover:-translate-y-1 duration-200 transition-all text-white"
+          ` p-5 w-72 md:w-52 sm:w-full h-full rounded-lg sm:text-sm mb-2  ${!isMobile && "hover:md:-translate-y-0 hover:-translate-y-1"} duration-200 transition-all text-white`
         }
       >
         {props.title}

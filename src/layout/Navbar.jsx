@@ -11,6 +11,11 @@ import NavStone from "../assets/images/NavStone.png";
 
 const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
   const { width } = useWindowDimensions();
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) ||
+    (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0); // check if the device is mobile
 
   const toggleMobileNav = () => {
     const mobileNavbar = document.getElementById("mobileNav");
@@ -46,7 +51,9 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
                       (pageOnScreen === index
                         ? "text-[#df963a] "
                         : "text-black") +
-                      " hover:text-[#a15d00] md:hover:text-black text-xl  duration-200"
+                      ` hover:text-[${
+                        !isMobile && "#a15d00"
+                      }] md:hover:text-black text-xl  duration-200`
                     }
                   >
                     {page.name}
