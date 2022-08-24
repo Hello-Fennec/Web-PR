@@ -32,7 +32,7 @@ function App() {
     function scrollParallax(e) {
       document.querySelectorAll(".scroll").forEach((layer) => {
         const speed = layer.getAttribute("data-speed");
-        const value = window.scrollY * speed;
+        const value = window.scrollY * speed / 10;
         // const matrix = window
         //   .getComputedStyle(layer)
         //   .transform.match(/matrix.*\((.+)\)/)[1]
