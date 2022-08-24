@@ -29,8 +29,8 @@ export default function TapToPlay() {
   );
 
   const Unplayable = () => (
-    <div className=" flex flex-col justify-center items-center">
-      <div className="w-[50rem] h-[32rem]  bg-gray-500"></div>
+    <div className="w-screen flex flex-col justify-center items-center">
+      <div className="w-[90%] max-w-[50rem] h-[32rem]  bg-gray-500"></div>
     </div>
   );
   return isMobile ? (
