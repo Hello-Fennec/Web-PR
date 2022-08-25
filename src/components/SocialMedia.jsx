@@ -2,7 +2,7 @@ import SOCIALMEDIAS from "../constants/SOCIALMEDIAS";
 
 const SocialMedia = () => {
   return (
-    <div className="SocialMedia z-50 fixed bottom-0 left-0 flex mb-10 ml-10 md:mb-5 md:ml-5 sm:mb-3 sm:ml-3 text-white space-x-4 sm:space-x-2">
+    <div className="SocialMedia z-50 fixed bottom-0 left-0 flex mb-10 ml-10 md:mb-5 md:ml-5 sm:mb-3 sm:ml-3 text-white space-x-4 sm:space-x-2 2xl:scale-150 origin-bottom-left">
       {SOCIALMEDIAS.map((item, index) => {
         return (
           <a

@@ -8,7 +8,8 @@ function Home() {
     <>
       {/* <PageAnimation> */}
       {/* </PageAnimation> */}
-      <ScrollLabel />
+        <ScrollLabel />
+
       <ImgContainer className="w-screen h-screen absolute top-0 left-0 -z-10">
         <ImgContainer
           data-speed={3}

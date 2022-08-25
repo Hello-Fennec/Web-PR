@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const ScrollLabel = () => {
   const { height, width } = useWindowDimensions();
   const scrollDownStyle =
-    " absolute w-full h flex flex-col items-center duration-300 -translate-x-1/2";
+    " absolute flex flex-col items-center duration-300 left-1/2 -translate-x-1/2";
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,11 +16,12 @@ const ScrollLabel = () => {
       transition={{
         delay: 2,
       }}
+      className="w-screen h-screen absolute top-0 left-0"
     >
       {width > BREAKPOINTS.mobile ? (
         <div
           className={
-            "ScrollDown my-10 text-black text-xl translate-y-52  " +
+            "ScrollDown bottom-10 text-black text-xl 2xl:scale-150 origin-bottom " +
             scrollDownStyle
           }
         >

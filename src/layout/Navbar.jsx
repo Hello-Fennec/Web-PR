@@ -87,7 +87,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
     return (
       <nav
         id="desktop-nav"
-        className="fixed top-0 duration-500 opacity-1 p-3 pr-5  right-0 items-start z-50"
+        className="fixed top-0 duration-500 opacity-1 p-3 pr-5 right-0 items-start z-50 2xl:scale-125 origin-top-right"
       >
         <div className="block">
           <ul className="flex mt-4 flex-row space-x-4 md:space-x-4 md:mt-3 md:text-xs md:font-medium">
@@ -154,7 +154,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
               src={SITKMUTT_Tag}
               size={"contain"}
               color="white"
-              className="w-56 h-[4.5rem] md:w-44 md:h-16 rounded-b-3xl md:rounded-b-2xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1"
+              className="w-56 h-[4.5rem] md:w-44 md:h-16 rounded-b-3xl md:rounded-b-2xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1 2xl:scale-150 origin-top-left"
             />
           </motion.div>
         )}
@@ -177,7 +177,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
               src={HelloFennecTag}
               id="SITTag"
               size={"60%"}
-              className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 left-10 md:left-5"
+              className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 left-10 md:left-5 2xl:scale-150 origin-top-left"
             />
           </motion.div>
         )}

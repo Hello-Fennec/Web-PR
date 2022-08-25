@@ -1,9 +1,6 @@
 import TeamSelector from "./components/TeamSelectors";
 import Content from "./components/Content";
 import { useEffect, useState } from "react";
-import RegisterBtn from "../../components/RegisterBtn";
-import styled from "styled-components";
-import PageAnimation from "../../components/PageAnimation";
 
 function Teams({ pageIndex, pageOnScreen }) {
   const [selectedTeam, setselectedTeam] = useState(0);

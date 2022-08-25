@@ -6,7 +6,7 @@ import Fennec from "../../assets/images/About/ProfessorFennec.png";
 function About() {
   return (
     <PageAnimation>
-      <div className="flex items-center h-screen space-x-3">
+      <div className="flex items-center h-screen space-x-3 2xl:scale-125">
         <AboutUsContainer />
         <ImgContainer
           src={Fennec}

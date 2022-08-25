@@ -15,7 +15,7 @@ const onEvent = allEvents.indexOf(today.toDateString()) + 1;
 const Events = () => {
   return (
     <>
-      <div className="w-full  p-5 flex space-x-20 md:space-x-0 justify-center">
+      <div className="w-full  p-5 flex space-x-20 md:space-x-0 justify-center 2xl:scale-125 ">
         <div className="md:hidden w-[50vw] bg-[#a15d00] rounded-2xl" />
         <div className=" flex flex-col space-y-7 ">
           <div
