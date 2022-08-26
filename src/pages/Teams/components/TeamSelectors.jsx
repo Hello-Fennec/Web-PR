@@ -11,7 +11,7 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
       }}
       className={
         (selectedTeam !== index && "grayscale") +
-        " w-24 h-24 sm:w-16 sm:h-16 cursor-pointer rounded-xl shadow-xl hover:-translate-y-1 duration-300 "
+        " w-24 h-24 sm:w-16 sm:h-16 cursor-pointer rounded-xl shadow-xl hover:-translate-y-1 duration-300 2xl:scale-150 origin-top"
       }
     >
       <ImgContainer
@@ -31,7 +31,7 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
       viewport={{ once: true }}
       className="selectorContainer flex flex-row justify-center items-end mt-8 space-x-5 
       lg:absolute lg:right-0 lg:flex-col lg:space-x-0 lg:space-y-5 lg:mr-5 lg:mt-0 
-      sm:flex-col sm:space-y-3"
+      sm:flex-col sm:space-y-3 2xl:space-x-20"
     >
       {TEAMS.map((team, index) => {
         return <Selector key={index} index={index} />;
