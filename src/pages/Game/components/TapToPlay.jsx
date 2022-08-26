@@ -23,14 +23,14 @@ export default function TapToPlay() {
           },
         }}
         href="#"
-        className="w-[36rem] h-80 bg-gray-500"
+        className="w-[36rem] h-80 bg-gray-500 2xl:scale-125"
       ></motion.a>
     </div>
   );
 
   const Unplayable = () => (
     <div className="w-screen flex flex-col justify-center items-center">
-      <div className="w-[90%] max-w-[50rem] h-[32rem]  bg-gray-500"></div>
+      <div className="w-[90%] max-w-[50rem] h-[32rem]  bg-gray-500  2xl:scale-125"></div>
     </div>
   );
   return isMobile ? (

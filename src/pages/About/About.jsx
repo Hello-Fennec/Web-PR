@@ -1,7 +1,7 @@
 import ImgContainer from "../../components/ImgContainer";
 import PageAnimation from "../../components/PageAnimation";
 import AboutUsContainer from "./components/AboutUsContainer";
-import Fennec from "../../assets/images/About/ProfessorFennec.png";
+import Fennec from "../../assets/images/Fennec_Mascot/Fennec_curious.png";
 
 function About() {
   return (
