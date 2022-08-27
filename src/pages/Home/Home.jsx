@@ -17,34 +17,30 @@ function Home() {
       {/* </PageAnimation> */}
       <ScrollLabel />
 
-      <ImgContainer
-        size="cover"
-        position="right bottom"
-        className="w-screen h-screen absolute top-0 left-0 -z-10 bg-[#F3E0B3]"
-      >
+      <div className="w-screen h-screen absolute top-0 left-0 -z-10 bg-gradient-to-b from-[#ffdd80] to-[#F3E0B3]">
         <ImgContainer
-          data-speed={2}
+          data-speed={3}
           src={Sun}
           size="cover"
           position="bottom"
           className="scroll absolute top-0 left-0 md:hidden w-96 h-96 2xl:scale-125"
         />
         <ImgContainer
-          data-speed={3}
+          data-speed={4}
           src={Dunes}
           size="cover"
           position="bottom"
           className="scroll absolute bottom-0 right-0 w-full h-[28rem] 2xl:h-[36rem] self-end "
         />
         <ImgContainer
-          data-speed={2}
+          data-speed={3}
           src={Floor}
           size="cover"
           position="bottom"
           className="scroll absolute bottom-0 right-0 w-full h-[23rem] 2xl:h-[30rem] self-end "
         />
         <ImgContainer
-          data-speed={1.5}
+          data-speed={2}
           src={Front_Floor}
           size="cover"
           position="bottom"
@@ -60,7 +56,7 @@ function Home() {
           position="left bottom"
           className=" absolute bottom-0 left-0 w-[34rem] h-[32rem] self-end -translate-x-28 translate-y-10"
         /> */}
-      </ImgContainer>
+      </div>
       <Logo className="-z-50" />
     </>
   );
