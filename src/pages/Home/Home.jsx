@@ -9,6 +9,7 @@ import Dunes from "../../assets/images/Home/Dunes.png";
 import Floor from "../../assets/images/Home/Floor.png";
 import Front_Floor from "../../assets/images/Home/Front-Floor.png";
 import Sun from "../../assets/images/Home/Sun.png";
+import FlyingBird from "../../assets/images/Home/FlyingBird.png"
 
 function Home() {
   return (
@@ -17,19 +18,26 @@ function Home() {
       {/* </PageAnimation> */}
       <ScrollLabel />
 
-      <div className="w-screen h-screen absolute top-0 left-0 -z-10 bg-gradient-to-b from-[#ffdd80] to-[#F3E0B3]">
+      <div className="w-screen h-screen absolute top-0 left-0 -z-10 bg-gradient-to-b from-[#ffc75f] to-[#ffe49b]">
         <ImgContainer
-          data-speed={3}
+          data-speed={6}
           src={Sun}
-          size="cover"
+          size="contain"
           position="bottom"
-          className="scroll absolute top-0 left-0 md:hidden w-96 h-96 2xl:scale-125"
+          className="scroll absolute top-0 left-0 md:top-10 md:-left-10 w-96 h-96 md:w-60 md:h-60 2xl:scale-125"
+        />
+        <ImgContainer
+          data-speed={6}
+          src={FlyingBird}
+          size="contain"
+          position="bottom"
+          className="scroll absolute top-[10vh] right-[10vw] md:hidden w-32 h-32 2xl:scale-125"
         />
         <ImgContainer
           data-speed={4}
           src={Dunes}
           size="cover"
-          position="bottom"
+          position="bottom left"
           className="scroll absolute bottom-0 right-0 w-full h-[28rem] 2xl:h-[36rem] self-end "
         />
         <ImgContainer

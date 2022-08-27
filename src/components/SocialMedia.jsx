@@ -17,7 +17,7 @@ const SocialMedia = () => {
 
             <div
               className={
-                "opacity-0 hover:opacity-100 h-20 w-20 absolute top-0 flex justify-center items-center rounded-full duration-200 transition-all " +
+                "opacity-0 hover:opacity-100 h-20 w-20 absolute top-0 flex justify-center items-center rounded-full duration-200 transition-all md:h-16 md:w-16 sm:h-14 sm:w-14 " +
                 item.hoverColor
               }
             >
