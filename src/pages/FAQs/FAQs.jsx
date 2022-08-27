@@ -8,7 +8,6 @@ import FaqsToggle from "./components/FaqsToggle";
 import SOCIALMEDIAS from "../../constants/SOCIALMEDIAS";
 import StoneSlap from "../../assets/images/FAQs/StoneSlap.png";
 
-
 function Faqs() {
   const [current, setCurrent] = useState(0);
   const { width } = useWindowDimensions();
@@ -110,8 +109,13 @@ function Faqs() {
               </div>
             )}
           </motion.div>
-          <img src={StoneSlap} className="w-full h-full absolute -z-10 top-0 left-0" />
-
+          <img
+            src={StoneSlap}
+            className={
+              (current === -1 && "grayscale") +
+              " w-full h-full absolute -z-10 top-0 left-0"
+            }
+          />
         </div>
       </div>
     );
