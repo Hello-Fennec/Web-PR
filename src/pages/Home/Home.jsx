@@ -9,7 +9,7 @@ import Dunes from "../../assets/images/Home/Dunes.png";
 import Floor from "../../assets/images/Home/Floor.png";
 import Front_Floor from "../../assets/images/Home/Front-Floor.png";
 import Sun from "../../assets/images/Home/Sun.png";
-import FlyingBird from "../../assets/images/Home/FlyingBird.png"
+import FlyingBird from "../../assets/images/Home/FlyingBird.png";
 
 function Home() {
   return (
@@ -27,11 +27,11 @@ function Home() {
           className="scroll absolute top-0 left-0 md:top-10 md:-left-10 w-96 h-96 md:w-60 md:h-60 2xl:scale-125"
         />
         <ImgContainer
-          data-speed={6}
+          data-speed={7}
           src={FlyingBird}
           size="contain"
           position="bottom"
-          className="scroll absolute top-[10vh] right-[10vw] md:hidden w-32 h-32 2xl:scale-125"
+          className="scroll absolute top-[10vh] right-[10vw] md:hidden w-24 h-24 2xl:scale-125"
         />
         <ImgContainer
           data-speed={4}
