@@ -19,7 +19,7 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
           backgroundSize: "cover",
         }}
         src={TEAMS[index].thumbnail}
-        className="w-full h-full m-auto "
+        className="w-full h-full m-auto rounded-xl"
       />
     </button>
   );

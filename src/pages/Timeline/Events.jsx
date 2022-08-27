@@ -6,10 +6,10 @@ import {
   today,
   registerDay,
   announceDay,
-  firstMeetDay,
   fennecDay,
   isPassed,
   allEvents,
+  graduationDay,
 } from "../../constants/EVENTS";
 const onEvent = allEvents.indexOf(today.toDateString()) + 1;
 const Events = () => {
@@ -45,16 +45,16 @@ const Events = () => {
           <Event
             date={29}
             month={"ต.ค."}
-            title={"First meet"}
-            description={"description"}
-            isPassed={isPassed(today, firstMeetDay)}
-          />
-          <Event
-            date={2}
-            month={"พ.ย."}
             title={"Fennec day"}
             description={"description"}
             isPassed={isPassed(today, fennecDay)}
+          />
+          <Event
+            date={25}
+            month={"พ.ย."}
+            title={"Graduation"}
+            description={"description"}
+            isPassed={isPassed(today, graduationDay)}
           />
         </div>
       </div>
