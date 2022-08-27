@@ -6,7 +6,8 @@ import FAQS from "../../constants/FAQS";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import FaqsToggle from "./components/FaqsToggle";
 import SOCIALMEDIAS from "../../constants/SOCIALMEDIAS";
-import styled from "styled-components";
+import StoneSlap from "../../assets/images/FAQs/StoneSlap.png";
+
 
 function Faqs() {
   const [current, setCurrent] = useState(0);
@@ -40,7 +41,7 @@ function Faqs() {
 
   const DesktopFaqs = () => {
     return (
-      <div className=" flex flex-row justify-center  2xl:scale-150 ">
+      <div className=" flex flex-row justify-center  2xl:scale-150 text-white">
         <div className="flex flex-col justify-between">
           {/*toggle col*/}
           {FAQS.map((faq, index) => {
@@ -55,7 +56,7 @@ function Faqs() {
             );
           })}
         </div>
-        <div className="w-[42rem] lg:w-[28rem]  md:w-96 bg-gray-300 ml-2 p-5 flex flex-col justify-center items-center rounded-lg ">
+        <div className="w-[42rem] lg:w-[28rem]  md:w-96 ml-2 p-10 flex flex-col justify-center items-center rounded-lg translate-y-0">
           <motion.div
             initial={!isMobile && { opacity: 0, y: 20 }}
             whileInView={!isMobile && { opacity: 1, y: 0 }}
@@ -109,6 +110,8 @@ function Faqs() {
               </div>
             )}
           </motion.div>
+          <img src={StoneSlap} className="w-full h-full absolute -z-10 top-0 left-0" />
+
         </div>
       </div>
     );
