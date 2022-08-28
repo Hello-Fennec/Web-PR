@@ -6,7 +6,7 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import { motion } from "framer-motion";
 
 const ScrollLabel = () => {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const scrollDownStyle =
     " absolute flex flex-col items-center duration-300 left-1/2 -translate-x-1/2";
   return (
@@ -33,7 +33,7 @@ const ScrollLabel = () => {
           </Floating>
         </div>
       ) : (
-        <div className={"ScrollDown bottom-5  " + scrollDownStyle}>
+        <div className={"ScrollDown bottom-24 " + scrollDownStyle}>
           <Floating>
             <BsChevronDown size="30" />
           </Floating>
