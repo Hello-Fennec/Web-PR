@@ -97,7 +97,7 @@ function Faqs() {
                       >
                         {item.icon}
                       </div>
-                      <h1 className="text-black my-auto ml-5">
+                      <h1 className="text-black my-auto ml-5 font-bold">
                         {item.username}
                       </h1>
                     </button>

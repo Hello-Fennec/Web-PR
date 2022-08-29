@@ -61,7 +61,7 @@ function MobileToggle(props) {
         className={
           (props.current === props.index
             ? "bg-[#a15d00] sm:mb-0 rounded-t-lg"
-            : "bg-gray-700 rounded-lg ") +
+            : "bg-gray-600 rounded-lg ") +
           " p-5 w-72 md:w-52 sm:w-full h-full mb-2 duration-200 transition-all text-white"
         }
       >
