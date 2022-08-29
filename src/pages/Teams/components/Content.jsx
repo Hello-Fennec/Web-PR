@@ -28,7 +28,7 @@ export default function Content({ selectedTeam }) {
           />
         </Floating>
         <div className="h-80 w-[38%] max-w-7xl flex flex-col lg:h-36 lg:w-96 sm:w-full 2xl:scale-125 origin-bottom-left">
-          <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold ">
+          <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold text-[#a15d00]">
             {TEAMS[selectedTeam].name}
           </div>
           <div className="h-full w-full bg-[#ffffff50] px-5 py-3 rounded-2xl text-left lg:h-auto lg:text-center text-lg sm:text-sm ">

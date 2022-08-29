@@ -29,10 +29,9 @@ function DesktopToggle(props) {
           // (props.current === props.index
           //   ? "bg-red-500 sm:mb-0"
           //   : "bg-gray-500") +
-          ` h-16 w-72 md:w-52 sm:w-full rounded-lg sm:text-sm mb-2  ${
-            !isMobile &&
-            "hover:md:-translate-y-0 hover:-translate-y-1 translate-y-0"
-          } duration-200 transition-all text-white flex justify-center items-center`
+          ` h-16 w-72 md:w-52 sm:w-full rounded-lg sm:text-sm mb-2
+            hover:md:-translate-y-0 hover:-translate-y-1 translate-y-0
+           duration-200 transition-all text-white flex justify-center items-center`
         }
       >
         {props.title}
@@ -61,14 +60,15 @@ function MobileToggle(props) {
         }}
         className={
           (props.current === props.index
-            ? "bg-red-500 sm:mb-0"
-            : "bg-gray-500") +
-          " p-5 w-72 md:w-52 sm:w-full h-full rounded-lg sm:text-sm mb-2  hover:md:-translate-y-0 hover:-translate-y-1 duration-200 transition-all"
+            ? "bg-[#a15d00] sm:mb-0 rounded-t-lg"
+            : "bg-gray-700 rounded-lg ") +
+          " p-5 w-72 md:w-52 sm:w-full h-full mb-2 duration-200 transition-all text-white"
         }
       >
         {props.title}
         {props.question}
       </button>
+
       {props.index === props.current && (
         <motion.div
           // initial={{
@@ -79,7 +79,7 @@ function MobileToggle(props) {
           // }}
           key={props.index}
           id="ansContainer"
-          className="sm:block hidden w-full p-2 bg-slate-300 mb-2 duration-300 h-32"
+          className="sm:block hidden w-full h-auto py-6 px-3 bg-[#F2E2BB] mb-2 duration-300 overflow-auto rounded-b-xl"
         >
           <motion.div
             // initial={{
