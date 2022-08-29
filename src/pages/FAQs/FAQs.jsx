@@ -55,12 +55,12 @@ function Faqs() {
             );
           })}
         </div>
-        <div className="w-[42rem] lg:w-[28rem]  md:w-96 ml-2 p-10 flex flex-col justify-center items-center rounded-lg translate-y-0">
+        <div className="w-[42rem] lg:w-[28rem]  md:w-96 ml-2 px-16 lg:px-12 flex flex-col justify-center items-center rounded-lg translate-y-0">
           <motion.div
             initial={!isMobile && { opacity: 0, y: 20 }}
             whileInView={!isMobile && { opacity: 1, y: 0 }}
             viewport={!isMobile && { once: true }}
-            className="text-xl"
+            className="text-base lg:text-sm"
           >
             {current > -1 && FAQS[current].question}
           </motion.div>
@@ -71,7 +71,7 @@ function Faqs() {
             viewport={!isMobile && { once: true }}
             transition={!isMobile && { delay: 0.1 }}
             delay={"0.1s"}
-            className="text-2xl font-semibold translate-y-0"
+            className="text-xl lg:text-base font-medium translate-y-0"
           >
             {current > -1 ? (
               FAQS[current].answer

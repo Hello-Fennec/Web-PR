@@ -24,14 +24,14 @@ export default function Content({ selectedTeam }) {
         <Floating>
           <ImgContainer
             src={TEAMS[selectedTeam].image}
-            className="h-80 w-80  rounded-xl sm:h-64 sm:w-64 mr-2 2xl:scale-125 origin-bottom-right"
+            className="h-80 w-80 rounded-xl sm:h-64 sm:w-64 mr-5 2xl:scale-125 origin-bottom-right"
           />
         </Floating>
-        <div className="h-80 w-1/3 flex flex-col lg:h-36 lg:w-96 sm:w-full 2xl:scale-125 origin-bottom-left">
+        <div className="h-80 w-[38%] max-w-7xl flex flex-col lg:h-36 lg:w-96 sm:w-full 2xl:scale-125 origin-bottom-left">
           <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold ">
             {TEAMS[selectedTeam].name}
           </div>
-          <div className="h-full w-full bg-[#a1a1a144] p-3  rounded-lg text-left lg:h-auto lg:text-center text-lg sm:text-sm ">
+          <div className="h-full w-full bg-[#ffffff50] px-5 py-3 rounded-2xl text-left lg:h-auto lg:text-center text-lg sm:text-sm ">
             {TEAMS[selectedTeam].description}
           </div>
         </div>

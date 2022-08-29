@@ -102,6 +102,8 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
                       className={
                         (pageOnScreen === index
                           ? "text-[#df963a] "
+                          : pageOnScreen === 4
+                          ? "text-[#F2E2BB]"
                           : "text-black") +
                         " hover:text-[#a15d00] md:hover:text-black text-xl font-bold duration-200"
                       }

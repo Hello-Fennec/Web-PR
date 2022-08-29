@@ -11,7 +11,7 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
       }}
       className={
         (selectedTeam !== index && "grayscale") +
-        " w-24 h-24 sm:w-16 sm:h-16 cursor-pointer rounded-xl shadow-xl hover:-translate-y-1 duration-300 2xl:scale-150 origin-top"
+        " w-24 h-24 sm:w-16 sm:h-16 bg-[#F2E2BB] cursor-pointer rounded-xl shadow-xl hover:-translate-y-1 duration-300 2xl:scale-150 origin-top"
       }
     >
       <ImgContainer

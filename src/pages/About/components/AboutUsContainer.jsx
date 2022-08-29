@@ -3,7 +3,6 @@ import ImgContainer from "../../../components/ImgContainer";
 import ABOUTUS from "../../../constants/ABOUTUS";
 
 export default function AboutUsContainer() {
-
   const textFading = {
     hidden: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0, transition: { delay: 1.2 } },
@@ -15,7 +14,7 @@ export default function AboutUsContainer() {
         x: 0,
         skewX: 0,
         transition: {
-          duration: 1.2,
+          duration: 0.9,
           type: "tween",
           ease: "easeInOut",
         },
