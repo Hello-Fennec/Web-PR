@@ -129,7 +129,7 @@ const Collapse = styled.div`
   }
 
   .collapse.show {
-    height: 9rem;
+    height: 13rem;
   }
 `;
 

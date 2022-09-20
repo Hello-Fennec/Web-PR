@@ -65,7 +65,7 @@ function App() {
             <>
               <PageContainer
                 src={page.background}
-                style={{ background: index % 2 == 0 ? "" : "#F2E2BB" }}
+                style={{ background: index % 2 == 0 ? "" : "#ffe394" }}
                 className="section"
                 key={index}
                 ref={pageRefs[index]}

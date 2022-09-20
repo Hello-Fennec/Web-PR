@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Content({ selectedTeam }) {
 
-  const DesktopContents = () => {
+  const Contents = () => {
     return (
       <motion.div
         initial={{ opacity: 0 }}
@@ -20,14 +20,15 @@ export default function Content({ selectedTeam }) {
         <Floating>
           <ImgContainer
             src={TEAMS[selectedTeam].image}
-            className="h-80 w-80 rounded-xl sm:h-64 sm:w-64 mr-5 2xl:scale-125 origin-bottom-right"
+            className="h-80 w-80 rounded-xl sm:mr-0 sm:h-52 sm:w-52 mr-5 2xl:scale-125 origin-bottom-right"
           />
         </Floating>
         <div className="h-80 w-[55%] max-w-5xl flex flex-col lg:h-36 lg:w-96 sm:w-full 2xl:scale-125 origin-bottom-left">
           <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold text-[#a15d00]">
             {TEAMS[selectedTeam].name}
           </div>
-          <div className="h-full w-full bg-[#ffffff50] px-7 py-5 rounded-2xl text-left lg:h-auto lg:text-center text-lg sm:text-sm ">
+          <div className="h-full w-full bg-[#ffffff50] px-7 py-5 rounded-2xl text-left lg:h-auto lg:text-center text-lg 
+          sm:text-sm sm:px-3 sm:py-4 sm:rounded-md">
             {TEAMS[selectedTeam].description}
           </div>
         </div>
@@ -35,5 +36,5 @@ export default function Content({ selectedTeam }) {
     );
   };
 
-  return <DesktopContents />;
+  return <Contents />;
 }

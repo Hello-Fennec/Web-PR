@@ -11,11 +11,6 @@ import StoneSlap from "../../assets/images/FAQs/StoneSlap.png";
 function Faqs() {
   const [current, setCurrent] = useState(0);
   const { width } = useWindowDimensions();
-  const isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    ) ||
-    (/Macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 0); // check if the device is mobile
 
   const MobileFaqs = () => {
     return (
@@ -57,19 +52,19 @@ function Faqs() {
         </div>
         <div className="w-[42rem] lg:w-[28rem]  md:w-96 ml-2 px-16 lg:px-12 flex flex-col justify-center items-center rounded-lg translate-y-0">
           <motion.div
-            initial={!isMobile && { opacity: 0, y: 20 }}
-            whileInView={!isMobile && { opacity: 1, y: 0 }}
-            viewport={!isMobile && { once: true }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-base lg:text-sm"
           >
             {current > -1 && FAQS[current].question}
           </motion.div>
           <br />
           <motion.div
-            initial={!isMobile && { opacity: 0, y: 20 }}
-            whileInView={!isMobile && { opacity: 1, y: 0 }}
-            viewport={!isMobile && { once: true }}
-            transition={!isMobile && { delay: 0.1 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
             delay={"0.1s"}
             className="text-xl lg:text-base font-medium translate-y-0"
           >
@@ -121,7 +116,7 @@ function Faqs() {
     );
   };
   return (
-    <PageAnimation >
+    <PageAnimation>
       {width < BREAKPOINTS.mobile ? <MobileFaqs /> : <DesktopFaqs />}
     </PageAnimation>
   );

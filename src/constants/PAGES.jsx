@@ -13,7 +13,7 @@ import FaqsBG from "../assets/images/Backgrounds/Faqs.png";
 // import EventsBG from "../assets/images/Backgrounds/Game.jpg";
 
 const oddBG = "#ffffff";
-const evenBG = "#F2E2BB";
+const evenBG = "#ffe394";
 
 const PAGES = [
   {

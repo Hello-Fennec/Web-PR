@@ -14,7 +14,7 @@ export default function AboutUsContainer() {
     >
       <ImgContainer
         data-speed={3}
-        className="mousemove h-auto w-[95%] min-h-[24rem] max-w-[44rem] sm:px-4 p-8 pb-14 bg-[#a1a1a144] rounded-lg"
+        className="mousemove h-auto w-[95%] min-h-[24rem] max-w-[44rem] sm:px-4 p-8 pb-14 bg-[#ffffff3f] rounded-lg"
       >
         <motion.div
           // initial={"hidden"}
