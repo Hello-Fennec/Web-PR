@@ -27,11 +27,11 @@ export default function Content({ selectedTeam }) {
             className="h-80 w-80 rounded-xl sm:h-64 sm:w-64 mr-5 2xl:scale-125 origin-bottom-right"
           />
         </Floating>
-        <div className="h-80 w-[38%] max-w-7xl flex flex-col lg:h-36 lg:w-96 sm:w-full 2xl:scale-125 origin-bottom-left">
+        <div className="h-80 w-[55%] max-w-5xl flex flex-col lg:h-36 lg:w-96 sm:w-full 2xl:scale-125 origin-bottom-left">
           <div className="lg:hidden h-1/4 w-full text-4xl text-left font-bold text-[#a15d00]">
             {TEAMS[selectedTeam].name}
           </div>
-          <div className="h-full w-full bg-[#ffffff50] px-5 py-3 rounded-2xl text-left lg:h-auto lg:text-center text-lg sm:text-sm ">
+          <div className="h-full w-full bg-[#ffffff50] px-7 py-5 rounded-2xl text-left lg:h-auto lg:text-center text-lg sm:text-sm ">
             {TEAMS[selectedTeam].description}
           </div>
         </div>

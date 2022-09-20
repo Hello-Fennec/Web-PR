@@ -4,7 +4,7 @@ import PageAnimation from "../../components/PageAnimation";
 import ImgContainer from "../../components/ImgContainer";
 import L_Boulder from "../../assets/images/Home/L-Boulder.png";
 import R_Boulder from "../../assets/images/Home/R-Boulder.png";
-import Background from "../../assets/images/Home/Background.png";
+// import Background from "../../assets/images/Home/Background.png";
 import Dunes from "../../assets/images/Home/Dunes.png";
 import Floor from "../../assets/images/Home/Floor.png";
 import Front_Floor from "../../assets/images/Home/Front-Floor.png";
@@ -20,35 +20,35 @@ function Home() {
 
       <div className="w-screen h-screen absolute top-0 left-0 -z-10 bg-gradient-to-b from-[#ffc75f] to-[#ffe49b]">
         <ImgContainer
-          data-speed={6}
+          data-speed={7}
           src={Sun}
           size="contain"
           position="bottom"
           className="scroll absolute top-0 left-0 md:top-10 md:-left-10 w-96 h-96 md:w-60 md:h-60 2xl:scale-125"
         />
         <ImgContainer
-          data-speed={7}
+          data-speed={8}
           src={FlyingBird}
           size="contain"
           position="bottom"
           className="scroll absolute top-[10vh] right-[10vw] md:hidden w-24 h-24 2xl:scale-125"
         />
         <ImgContainer
-          data-speed={4}
+          data-speed={5}
           src={Dunes}
           size="cover"
           position="bottom left"
           className="scroll absolute bottom-0 right-0 w-full h-[28rem] 2xl:h-[36rem] self-end "
         />
         <ImgContainer
-          data-speed={3}
+          data-speed={4}
           src={Floor}
           size="cover"
           position="bottom"
           className="scroll absolute bottom-0 right-0 w-full h-[23rem] 2xl:h-[30rem] self-end "
         />
         <ImgContainer
-          data-speed={2}
+          data-speed={3}
           src={Front_Floor}
           size="cover"
           position="bottom"

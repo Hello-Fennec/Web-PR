@@ -19,7 +19,7 @@ function Faqs() {
 
   const MobileFaqs = () => {
     return (
-      <div className="flex flex-col w-screen items-center ">
+      <div className="flex flex-col w-screen items-center">
         <AnimatePresence exitBeforeEnter>
           {FAQS.map((faq, index) => {
             return (
@@ -121,7 +121,7 @@ function Faqs() {
     );
   };
   return (
-    <PageAnimation>
+    <PageAnimation >
       {width < BREAKPOINTS.mobile ? <MobileFaqs /> : <DesktopFaqs />}
     </PageAnimation>
   );

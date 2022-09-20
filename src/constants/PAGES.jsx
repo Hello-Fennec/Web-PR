@@ -5,12 +5,12 @@ import Faqs from "../pages/FAQs/FAQs";
 import Game from "../pages/Game/Game";
 import Events from "../pages/Timeline/Events";
 
-import HomeBG from "../assets/images/Backgrounds/Home.jpg";
-import AboutBG from "../assets/images/Backgrounds/About.jpg";
+// import HomeBG from "../assets/images/Backgrounds/Home.jpg";
+// import AboutBG from "../assets/images/Backgrounds/About.jpg";
 import TeamsBG from "../assets/images/Backgrounds/Teams.png";
 import FaqsBG from "../assets/images/Backgrounds/Faqs.png";
-import GameBG from "../assets/images/Backgrounds/Game.jpg";
-import EventsBG from "../assets/images/Backgrounds/Game.jpg";
+// import GameBG from "../assets/images/Backgrounds/Game.jpg";
+// import EventsBG from "../assets/images/Backgrounds/Game.jpg";
 
 const oddBG = "#ffffff";
 const evenBG = "#F2E2BB";
@@ -23,7 +23,7 @@ const PAGES = [
     connector: {
       width: "100%",
       height: "7vh",
-      background: `linear-gradient(to bottom, #DA9E48, ${evenBG} )`,
+      background: `linear-gradient(to bottom, #e6a45a, ${evenBG} )`,
       position: "absolute",
     },
   },
@@ -54,7 +54,7 @@ const PAGES = [
   {
     name: "Events",
     component: <Events />,
-    background: EventsBG,
+    background: "",
     connector: {
       width: "100%",
       height: "5vh",

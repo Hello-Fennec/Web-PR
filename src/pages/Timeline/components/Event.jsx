@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Event({ date, month, title, description, isPassed }) {
+export default function Event({ date, month, title, description,descriptionLine2, isPassed }) {
   return (
     <div className="flex z-10">
       <div
@@ -19,7 +19,7 @@ export default function Event({ date, month, title, description, isPassed }) {
         <h1
           className={
             (isPassed ? "text-[#a15d00]" : "text-gray-600") +
-            " text-[1.5rem] font-bold"
+            " text-[1.5rem] font-bold mb-2"
           }
         >
           {title}
@@ -27,10 +27,11 @@ export default function Event({ date, month, title, description, isPassed }) {
         <p
           className={
             (isPassed ? "text-[#df963a]" : "text-gray-500") +
-            " text-2xl "
+            " text-lg md:text-base"
           }
         >
-          {description}
+          {description}<br/>
+          {descriptionLine2}
         </p>
       </div>
     </div>

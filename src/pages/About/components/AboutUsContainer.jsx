@@ -9,16 +9,6 @@ export default function AboutUsContainer() {
   };
   return (
     <motion.div
-      initial={{ x: "-50%", skewX: -20 }}
-      whileInView={{
-        x: 0,
-        skewX: 0,
-        transition: {
-          duration: 0.9,
-          type: "tween",
-          ease: "easeInOut",
-        },
-      }}
       viewport={{ once: true }}
       className="flex flex-col justify-center items-center"
     >
@@ -27,20 +17,20 @@ export default function AboutUsContainer() {
         className="mousemove h-auto w-[95%] min-h-[24rem] max-w-[44rem] sm:px-4 p-8 pb-14 bg-[#a1a1a144] rounded-lg"
       >
         <motion.div
-          initial={"hidden"}
-          whileInView={"visible"}
-          viewport={{ once: true }}
-          variants={textFading}
+          // initial={"hidden"}
+          // whileInView={"visible"}
+          // viewport={{ once: true }}
+          // variants={textFading}
           className="text-2xl font-bold mb-5"
         >
           {ABOUTUS.title}
         </motion.div>
         <motion.div
-          initial={"hidden"}
-          whileInView={{ opacity: 1, y: 0, transition: { delay: 1.5 } }}
-          viewport={{ once: true }}
-          variants={textFading}
-          className="text-left text-xl whitespace-pre-wrap"
+          // initial={"hidden"}
+          // whileInView={{ opacity: 1, y: 0, transition: { delay: 1.5 } }}
+          // viewport={{ once: true }}
+          // variants={textFading}
+          className="text-left whitespace-pre-wrap"
         >
           {ABOUTUS.content}
         </motion.div>

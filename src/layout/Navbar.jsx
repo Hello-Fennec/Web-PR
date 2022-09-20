@@ -87,7 +87,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
     return (
       <nav
         id="desktop-nav"
-        className="fixed top-0 duration-500 opacity-1 p-3 pr-5 right-0 items-start z-50 2xl:scale-125 origin-top-right"
+        className="fixed top-0 duration-500 opacity-1 p-3 pr-5 right-0 items-start z-50 2xl:scale-125 origin-top-right "
       >
         <div className="block">
           <ul className="flex mt-4 flex-row space-x-4 md:space-x-4 md:mt-3 md:text-xs md:font-medium">
@@ -103,12 +103,12 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
                         (pageOnScreen === index
                           ? "text-[#df963a] "
                           : pageOnScreen === 4
-                          ? "text-[#F2E2BB]"
+                          ? "text-white"
                           : "text-black") +
                         " hover:text-[#a15d00] md:hover:text-black text-xl font-bold duration-200"
                       }
                     >
-                      {page.name}
+                      <h1 className="drop-shadow-md">{page.name}</h1>
 
                       <ImgContainer
                         src={NavStone}
@@ -195,6 +195,7 @@ const Tag = styled.button`
   top: 0;
   transition: all 0.2s ease-in-out;
   z-index: 49;
+  text-shadow: 0 0 20px #000000;
 
   background-image: url(${(props) => props.src});
   background-size: ${(props) => props.size};
