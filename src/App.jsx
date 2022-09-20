@@ -71,7 +71,7 @@ function App() {
                 ref={pageRefs[index]}
               >
                 <div className="flex flex-col justify-center items-center text-center ">
-                  <div className="w-full h-full">{page.component}</div>
+                  <div className={index === 4?"w-full h-[200%]":"w-full h-full"}>{page.component}</div>
                 </div>
               </PageContainer>
               <div style={page.connector} />

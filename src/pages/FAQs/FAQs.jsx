@@ -7,6 +7,7 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 import FaqsToggle from "./components/FaqsToggle";
 import SOCIALMEDIAS from "../../constants/SOCIALMEDIAS";
 import StoneSlap from "../../assets/images/FAQs/StoneSlap.png";
+import { CCollapse } from '@coreui/react'
 
 function Faqs() {
   const [current, setCurrent] = useState(0);

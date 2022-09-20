@@ -4,6 +4,9 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../constants/BREAKPOINTS";
 import ImgContainer from "../../../components/ImgContainer";
 import StoneStick from "../../../assets/images/FAQs/StoneStick.png";
+import { CCard, CCollapse } from "@coreui/react";
+import styled from "styled-components";
+import { useState } from "react";
 
 const isMobile =
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -48,58 +51,37 @@ function DesktopToggle(props) {
   );
 }
 function MobileToggle(props) {
-  const answerContainer = document.getElementById("ansContainer");
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    setVisible(props.index === props.current);
+  }, [props.current]);
   return (
-    <motion.div className="flex sm:w-11/12 flex-col items-center">
+    <ToggleBar className="flex sm:w-11/12 flex-col items-center">
       <button
         onClick={() => {
-          props.index === props.current
-            ? props.setCurrent(-1)
-            : props.setCurrent(props.index);
-          answerContainer.classList.toggle("active");
+          visible ? props.setCurrent(-1) : props.setCurrent(props.index);
         }}
         className={
-          (props.current === props.index
-            ? "bg-[#a15d00] sm:mb-0 rounded-t-lg"
-            : "bg-gray-600 rounded-lg ") +
-          " p-5 w-72 md:w-52 sm:w-full h-full mb-2 duration-200 transition-all text-white"
+          (visible ? "toggleBar active" : "toggleBar") +
+          " p-4 w-72  sm:mb-0  md:w-52 sm:w-full h-full mb-1 duration-200 transition-all text-white text-sm"
         }
       >
-        {props.title}
         {props.question}
       </button>
-
-      {props.index === props.current && (
-        <motion.div
-          // initial={{
-          //   height: 0,
-          // }}
-          // animate={{
-          //   height: "8rem",
-          // }}
+      <Collapse>
+        <div
           key={props.index}
-          id="ansContainer"
-          className="sm:block hidden w-full h-auto py-6 px-3 bg-[#F2E2BB] mb-2 duration-300 overflow-auto rounded-b-xl"
+          className={
+            (visible ? "collapse show" : "collapse") +
+            " hidden sm:block bg-[#F2E2BB] rounded-b-xl"
+          }
         >
-          <motion.div
-            // initial={{
-            //   opacity: 0,
-            //   y: 20,
-            // }}
-            // whileInView={{
-            //   opacity: 1,
-            //   y: 0,
-            // }}
-            // transition={{
-            //   delay: 0.3,
-            // }}
-            className="relative h-full flex justify-center items-center "
-          >
+          <div className="relative w-[90%] h-full flex items-center m-auto text-sm">
             {props.answer}
-          </motion.div>
-        </motion.div>
-      )}
-    </motion.div>
+          </div>
+        </div>
+      </Collapse>
+    </ToggleBar>
   );
 }
 
@@ -137,3 +119,28 @@ export default function FaqsToggle({
     </>
   );
 }
+
+const Collapse = styled.div`
+  .collapse {
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    transition: height 0.5s ease;
+  }
+
+  .collapse.show {
+    height: 13rem;
+  }
+`;
+
+const ToggleBar = styled.div`
+  .toggleBar {
+    background: gray;
+    border-radius: 0.5rem;
+  }
+  .toggleBar.active {
+    border-radius: 0.5rem 0.5rem 0 0 ;
+    background-color: #a15d00;
+  }
+`;

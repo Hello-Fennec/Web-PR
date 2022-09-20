@@ -1,12 +1,8 @@
 import React from "react";
 import TEAMS from "../../../constants/TEAMS";
-import { Carousel } from "@trendyol-js/react-carousel";
-import useWindowDimensions from "../../../hooks/useWindowDimensions";
-import BREAKPOINTS from "../../../constants/BREAKPOINTS";
 import ImgContainer from "../../../components/ImgContainer";
 import Floating from "../../../components/Floating";
 import { motion } from "framer-motion";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function Content({ selectedTeam }) {
 
