@@ -22,7 +22,8 @@ export default function TapToPlay() {
             repeatType: "reverse",
           },
         }}
-        href="#"
+        href="
+        http://game-helloworldfennec.sit.kmutt.ac.th/"
         className="w-[36rem] h-80 bg-gray-500 2xl:scale-125"
       ></motion.a>
     </div>
@@ -34,7 +35,7 @@ export default function TapToPlay() {
     </div>
   );
   return isMobile ? (
-      <Unplayable />
+    <Unplayable />
   ) : (
     <PageAnimation>
       <Playable />
