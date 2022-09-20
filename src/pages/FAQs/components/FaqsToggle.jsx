@@ -4,7 +4,6 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../constants/BREAKPOINTS";
 import ImgContainer from "../../../components/ImgContainer";
 import StoneStick from "../../../assets/images/FAQs/StoneStick.png";
-import { CCard, CCollapse } from "@coreui/react";
 import styled from "styled-components";
 import { useState } from "react";
 
@@ -63,7 +62,7 @@ function MobileToggle(props) {
         }}
         className={
           (visible ? "toggleBar active" : "toggleBar") +
-          " p-4 w-72  sm:mb-0  md:w-52 sm:w-full h-full mb-1 duration-200 transition-all text-white text-sm"
+          " p-4 w-72  sm:mb-0  md:w-52 sm:w-full  mb-1 duration-200 transition-all text-white text-sm"
         }
       >
         {props.question}
@@ -73,7 +72,7 @@ function MobileToggle(props) {
           key={props.index}
           className={
             (visible ? "collapse show" : "collapse") +
-            " hidden sm:block bg-[#F2E2BB] rounded-b-xl"
+            " hidden sm:block bg-[#F2E2BB] rounded-b-[0.375rem]"
           }
         >
           <div className="relative w-[90%] h-full flex items-center m-auto text-sm">
@@ -130,17 +129,17 @@ const Collapse = styled.div`
   }
 
   .collapse.show {
-    height: 13rem;
+    height: 9rem;
   }
 `;
 
 const ToggleBar = styled.div`
   .toggleBar {
-    background: gray;
-    border-radius: 0.5rem;
+    background: #585858;
+    border-radius: 0.375rem;
   }
   .toggleBar.active {
-    border-radius: 0.5rem 0.5rem 0 0 ;
+    border-radius: 0.375rem 0.375rem 0 0 ;
     background-color: #a15d00;
   }
 `;
