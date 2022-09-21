@@ -156,7 +156,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
               src={SITKMUTT_Tag}
               size={"contain"}
               color="white"
-              className="w-56 h-[4.5rem] md:w-44 md:h-16 rounded-b-3xl md:rounded-b-2xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1 2xl:scale-150 origin-top-left"
+              className="w-56 h-[4.5rem] md:w-44 md:h-16 rounded-b-3xl md:rounded-b-2xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1 2xl:scale-125 origin-top-left"
             />
           </motion.div>
         )}
@@ -179,7 +179,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
               src={HelloFennecTag}
               id="SITTag"
               size={"60%"}
-              className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 left-10 md:left-5 2xl:scale-150 origin-top-left"
+              className="w-72 h-20 md:w-56 md:h-16 sm:w-44 sm:h-12 left-10 md:left-5 2xl:scale-125 origin-top-left"
             />
           </motion.div>
         )}

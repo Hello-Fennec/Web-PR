@@ -35,7 +35,7 @@ function Faqs() {
 
   const DesktopFaqs = () => {
     return (
-      <div className=" flex flex-row justify-center  2xl:scale-150 text-white">
+      <div className=" flex flex-row justify-center  2xl:scale-125 text-white">
         <div className="flex flex-col justify-between">
           {/*toggle col*/}
           {FAQS.map((faq, index) => {

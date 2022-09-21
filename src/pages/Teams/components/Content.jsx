@@ -20,7 +20,7 @@ export default function Content({ selectedTeam }) {
         <Floating>
           <ImgContainer
             src={TEAMS[selectedTeam].image}
-            className="h-80 w-80 rounded-xl sm:mr-0 sm:h-52 sm:w-52 mr-5 2xl:scale-125 origin-bottom-right"
+            className="h-80 w-80 rounded-xl sm:mr-0 sm:h-52 sm:w-52 mr-5 2xl:scale-110 origin-bottom-right"
           />
         </Floating>
         <div className="h-80 w-[55%] max-w-5xl flex flex-col lg:h-36 lg:w-96 sm:w-full 2xl:scale-125 origin-bottom-left">

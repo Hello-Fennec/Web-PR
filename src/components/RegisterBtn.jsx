@@ -3,7 +3,7 @@ import { TbEdit } from "react-icons/tb";
 
 const RegisterBtn = () => {
   return (
-    <div className="SocialMedia fixed bottom-0 right-0 flex mb-10 mr-10 md:mb-5 md:mr-5 sm:mb-3 sm:mr-3 text-white space-x-4 sm:space-x-2 z-50 2xl:scale-150 origin-bottom-right">
+    <div className="SocialMedia fixed bottom-0 right-0 flex mb-10 mr-10 md:mb-5 md:mr-5 sm:mb-3 sm:mr-3 text-white space-x-4 sm:space-x-2 z-50 2xl:scale-125 origin-bottom-right">
       <a
         href="#"
         target="_blank"

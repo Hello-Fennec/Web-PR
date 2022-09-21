@@ -21,7 +21,7 @@ const ScrollLabel = () => {
       {width > BREAKPOINTS.mobile ? (
         <div
           className={
-            "ScrollDown bottom-10 text-black text-xl 2xl:scale-150 origin-bottom " +
+            "ScrollDown bottom-10 text-black text-xl 2xl:scale-125 origin-bottom " +
             scrollDownStyle
           }
         >
