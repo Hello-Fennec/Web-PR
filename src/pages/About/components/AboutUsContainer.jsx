@@ -10,7 +10,7 @@ export default function AboutUsContainer() {
   return (
     <motion.div
       viewport={{ once: true }}
-      className="flex flex-col justify-center items-center"
+      className="flex flex-col justify-center items-center "
     >
       <ImgContainer
         data-speed={3}

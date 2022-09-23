@@ -1,9 +1,6 @@
 import ScrollLabel from "./components/ScrollLabel";
 import Logo from "./components/Logo";
-import PageAnimation from "../../components/PageAnimation";
 import ImgContainer from "../../components/ImgContainer";
-import L_Boulder from "../../assets/images/Home/L-Boulder.png";
-import R_Boulder from "../../assets/images/Home/R-Boulder.png";
 // import Background from "../../assets/images/Home/Background.png";
 import Dunes from "../../assets/images/Home/Dunes.png";
 import Floor from "../../assets/images/Home/Floor.png";
@@ -18,7 +15,7 @@ function Home() {
       {/* </PageAnimation> */}
       <ScrollLabel />
 
-      <div className="w-screen h-screen absolute top-0 left-0 -z-10 bg-gradient-to-b from-[#ffc75f] to-[#ffe49b]">
+      <div className="w-screen h-screen absolute top-0 left-0 -z-10 bg-gradient-to-b from-[#ffba5f] to-[#ffe49b]">
         <ImgContainer
           data-speed={7}
           src={Sun}
@@ -38,21 +35,21 @@ function Home() {
           src={Dunes}
           size="cover"
           position="bottom left"
-          className="scroll absolute bottom-0 right-0 w-full h-[28rem] 2xl:h-[36rem] self-end "
+          className="scroll absolute bottom-0 right-0 w-full h-[36vw] min-h-[28rem] max-h-[42rem]  self-end "
         />
         <ImgContainer
           data-speed={4}
           src={Floor}
           size="cover"
           position="bottom"
-          className="scroll absolute bottom-0 right-0 w-full h-[23rem] 2xl:h-[30rem] self-end "
+          className="scroll absolute bottom-0 right-0 w-full h-[30vw] min-h-[22rem] max-h-[32rem]  self-end "
         />
         <ImgContainer
           data-speed={3}
           src={Front_Floor}
           size="cover"
           position="bottom"
-          className="scroll absolute bottom-0 right-0 w-full h-[23rem] 2xl:h-[28rem] self-end "
+          className="scroll absolute bottom-0 right-0 w-full h-[35vw] min-h-[26rem] max-h-[37rem] max-w-[117rem]  self-end "
         />
         {/* <ImgContainer
           src={R_Boulder}
