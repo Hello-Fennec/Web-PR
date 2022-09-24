@@ -10,23 +10,16 @@ import {
   allEvents,
   graduationDay,
 } from "../../constants/EVENTS";
-const onEvent = allEvents.indexOf(today.toDateString()) + 1;
 const Events = () => {
   return (
-    <>
-      <div className="w-full  p-5 flex space-x-20 md:space-x-0 justify-center 2xl:scale-110  ">
+    <PageAnimation>
+      <div className="w-full  p-5 flex space-x-20 lg:space-x-0 justify-center 2xl:scale-110  ">
         <div className="lg:hidden w-[50vw] bg-[#a15d00] rounded-2xl" />
-        <div className=" flex flex-col space-y-7 ">
+        <div className=" flex flex-col space-y-7 lg:scale-125 md:scale-100 origin-center">
           <div
-            className="w-1 h-[33rem] absolute
+            className="w-[2px] h-[33rem] absolute
             -z-0 ml-11 bg-gray-600"
-          >
-            <div
-              className={`bg-[#a15d00] w-full ${
-                onEvent == 4 ? `h-full` : `h-${onEvent}/${allEvents.length + 1}`
-              } bg-blend-overlay blend `}
-            />
-          </div>
+          ></div>
           <Event
             date={15}
             month={"ต.ค."}
@@ -60,7 +53,7 @@ const Events = () => {
           />
         </div>
       </div>
-    </>
+    </PageAnimation>
   );
 };
 
