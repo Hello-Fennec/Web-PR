@@ -40,16 +40,16 @@ export default function TapToPlay() {
     <div className="w-screen flex flex-col justify-center items-center">
       <img
           src={WoodenPlank}
-          className="w-[90%] max-w-[50rem] h-[28rem] absolute "
+          className="w-[90%] max-w-[50rem] h-[28rem] absolute -rotate-3"
         />
-      <div className="w-[90%] max-w-[50rem] h-[28rem]  ">
+      <div className="w-[90%] max-w-[50rem] h-[28rem]">
         <ImgContainer
           src={Fennec1}
-          className="w-[10rem] h-[10rem] absolute right-0 translate-y-80"
+          className="w-[10rem] h-[10rem] absolute left-[75vw] md:left-auto md:right-0  translate-y-80 "
         />
         <ImgContainer
           src={Fennec2}
-          className="w-[10rem] h-[10rem] absolute left-0 -translate-y-16"
+          className="w-[10rem] h-[10rem] absolute left-15 md:left-5 -translate-y-16"
         />
         
         <div className="w-full h-full flex flex-col p-10 items-center justify-center text-white">
