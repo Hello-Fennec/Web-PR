@@ -5,7 +5,7 @@ import PAGES from "../constants/PAGES";
 import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
 import { AnimatePresence, motion } from "framer-motion";
-import HelloFennecTag from "../assets/images/HelloFennec-logo_shadowed.png";
+import HelloFennecTag from "../assets/images/HelloFennec-logo.png";
 import ImgContainer from "../components/ImgContainer";
 import NavStone from "../assets/images/NavStone.png";
 

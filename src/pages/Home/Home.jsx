@@ -15,7 +15,7 @@ function Home() {
       {/* </PageAnimation> */}
       <ScrollLabel />
 
-      <div className="w-screen h-screen absolute top-0 left-0 -z-10 bg-gradient-to-b from-[#ffba5f] to-[#ffe49b]">
+      <div className="w-screen h-screen absolute top-0 left-0 -z-10 bg-gradient-to-b from-[#ffc956] via-[#ffa459] to-[#ff7525]">
         <ImgContainer
           data-speed={7}
           src={Sun}
