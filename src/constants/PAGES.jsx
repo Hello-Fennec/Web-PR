@@ -9,6 +9,7 @@ import Events from "../pages/Timeline/Events";
 // import AboutBG from "../assets/images/Backgrounds/About.jpg";
 import TeamsBG from "../assets/images/Backgrounds/Teams.png";
 import FaqsBG from "../assets/images/Backgrounds/Faqs.png";
+import FennecPattern from "../assets/images/Backgrounds/FennecPattern.png";
 // import GameBG from "../assets/images/Backgrounds/Game.jpg";
 // import EventsBG from "../assets/images/Backgrounds/Game.jpg";
 
@@ -30,7 +31,7 @@ const PAGES = [
   {
     name: "About us",
     component: <About />,
-    // background: AboutBG,
+    background: FennecPattern,
     connector: {
       width: "100%",
       height: "5vh",
@@ -54,7 +55,7 @@ const PAGES = [
   {
     name: "Events",
     component: <Events />,
-    background: "",
+    background: FennecPattern,
     connector: {
       width: "100%",
       height: "5vh",
@@ -78,6 +79,7 @@ const PAGES = [
   {
     name: "Game",
     component: <Game />,
+    background: FennecPattern,
     // background: GameBG,
     connector: {},
   },
