@@ -2,11 +2,13 @@ import { motion } from "framer-motion";
 import ABOUTUS from "../../../constants/ABOUTUS";
 import Textbox from "../../../assets/images/About/StoneSlab.png";
 
+// const textFading = {
+//   hiddeni: { opacity: 0, y: 10 },
+//   visible: { opacity: 1, y: 0, transition: { delay: 1.2 } },
+// };
+
 export default function AboutUsContainer() {
-  const textFading = {
-    hiddeni: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { delay: 1.2 } },
-  };
+
   return (
     <motion.div
       viewport={{ once: true }}
@@ -21,7 +23,7 @@ export default function AboutUsContainer() {
           // whileInView={"visible"}
           // viewport={{ once: true }}
           // variants={textFading}
-          className="text-2xl font-bold mb-5"
+        className="text-2xl font-bold mb-5"
         >
           {ABOUTUS.title}
         </motion.div>
