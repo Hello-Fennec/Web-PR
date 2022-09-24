@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import PageAnimation from "../../../components/PageAnimation";
 import ImgContainer from "../../../components/ImgContainer";
 import TapToPlayBtn from "../../../assets/images/Game/TapToPlayBtn.png";
+import Fennec1 from "../../../assets/images/Game/IMG_5392.png";
+import Fennec2 from "../../../assets/images/Game/IMG_5391.png";
+import WoodenPlank from "../../../assets/images/Game/WoodenPlank.png";
 
 export default function TapToPlay() {
   const isMobile =
@@ -35,7 +38,27 @@ export default function TapToPlay() {
   );
   const Unplayable = () => (
     <div className="w-screen flex flex-col justify-center items-center">
-      <div className="w-[90%] max-w-[50rem] h-[32rem] bg-gray-500  "></div>
+      <img
+          src={WoodenPlank}
+          className="w-[90%] max-w-[50rem] h-[28rem] absolute "
+        />
+      <div className="w-[90%] max-w-[50rem] h-[28rem]  ">
+        <ImgContainer
+          src={Fennec1}
+          className="w-[10rem] h-[10rem] absolute right-0 translate-y-80"
+        />
+        <ImgContainer
+          src={Fennec2}
+          className="w-[10rem] h-[10rem] absolute left-0 -translate-y-16"
+        />
+        
+        <div className="w-full h-full flex flex-col p-10 items-center justify-center text-white">
+          <h1 className="text-2xl font-bold mb-5 z-10">แจ้งข่าวเกี่ยวกับเกมของเว็บไซต์ค่าย</h1>
+          <p className="z-10">เกมนี้สามารถเล่นได้ในเครื่องคอมพิวเตอร์ หรือโน้ตบุ๊คเท่านั้น</p>
+          <br />
+          <p className="z-10">ขออภัยในความไม่สะดวกน้าาา</p>
+        </div>
+      </div>
     </div>
   );
   return isMobile ? (
