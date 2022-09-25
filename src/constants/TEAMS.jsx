@@ -1,13 +1,13 @@
-import FrontEnd from "../assets/images/Teams/Front-end.png";
-// import GameDesign from '../assets/images/Teams/GameDesign.png';
-import GameDev from "../assets/images/Teams/GameDev.png";
-import Infra from "../assets/images/Teams/Infra.png";
-import WebDesign from "../assets/images/Teams/WebDesign.png";
+import FrontEnd from "../assets/images/Teams/Front-end.webp";
+// import GameDesign from '../assets/images/Teams/GameDesign.webp';
+import GameDev from "../assets/images/Teams/GameDev.webp";
+import Infra from "../assets/images/Teams/Infra.webp";
+import WebDesign from "../assets/images/Teams/WebDesign.webp";
 
-import FrontEndThumbnail from "../assets/images/Teams/Front-endThumbnail.png";
-import GameDevThumbnail from "../assets/images/Teams/GameDevThumbnail.png";
-import InfraThumbnail from "../assets/images/Teams/InfraThumbnail.png";
-import WebDesignThumbnail from "../assets/images/Teams/WebDesignThumbnail.png";
+import FrontEndThumbnail from "../assets/images/Teams/Front-endThumbnail.webp";
+import GameDevThumbnail from "../assets/images/Teams/GameDevThumbnail.webp";
+import InfraThumbnail from "../assets/images/Teams/InfraThumbnail.webp";
+import WebDesignThumbnail from "../assets/images/Teams/WebDesignThumbnail.webp";
 
 const TEAMS = [
   {

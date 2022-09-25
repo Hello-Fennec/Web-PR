@@ -6,7 +6,7 @@ import FAQS from "../../constants/FAQS";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import FaqsToggle from "./components/FaqsToggle";
 import SOCIALMEDIAS from "../../constants/SOCIALMEDIAS";
-import StoneSlap from "../../assets/images/FAQs/StoneSlap.png";
+import StoneSlap from "../../assets/images/FAQs/StoneSlap.webp";
 
 function Faqs() {
   const [current, setCurrent] = useState(0);
@@ -110,6 +110,7 @@ function Faqs() {
               (current === -1 && "grayscale") +
               " w-full h-full absolute -z-10 top-0 left-0"
             }
+            loading="lazy"
           />
         </div>
       </div>

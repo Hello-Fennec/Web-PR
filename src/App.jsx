@@ -32,16 +32,8 @@ function App() {
     function scrollParallax(e) {
       document.querySelectorAll(".scroll").forEach((layer) => {
         const speed = layer.getAttribute("data-speed");
-        const value = window.scrollY * speed / 10;
-        // const matrix = window
-        //   .getComputedStyle(layer)
-        //   .transform.match(/matrix.*\((.+)\)/)[1]
-        //   .split(", ");
-        // const x = parseFloat(matrix[4]);
-        // const y = parseFloat(matrix[5]);
-
+        const value = (window.scrollY * speed) / 10;
         layer.style.transform = `translateY(${value}px)`;
-        // layer.style.transform = `translateX(${x}px)`;
       });
     }
     function currentPageInView(e) {
@@ -51,11 +43,12 @@ function App() {
         }
       });
     }
-    !isMobile && document.addEventListener("mousemove", mousemoveParallax);
+    // !isMobile && document.addEventListener("mousemove", mousemoveParallax);
     // {!isMobile && }
     document.addEventListener("scroll", currentPageInView);
     document.addEventListener("scroll", scrollParallax);
-  }, []);
+    
+  }, );
 
   return (
     <div className="App">
@@ -65,6 +58,7 @@ function App() {
             <>
               <PageContainer
                 src={page.background}
+                position={page.name === "Teams" && "right"}
                 className="section"
                 key={index}
                 ref={pageRefs[index]}

@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import PageAnimation from "../../../components/PageAnimation";
 import ImgContainer from "../../../components/ImgContainer";
-import TapToPlayBtn from "../../../assets/images/Game/TapToPlayBtn.png";
-import Fennec1 from "../../../assets/images/Game/IMG_5392.png";
-import Fennec2 from "../../../assets/images/Game/IMG_5391.png";
-import WoodenPlank from "../../../assets/images/Game/WoodenPlank.png";
+import TapToPlayBtn from "../../../assets/images/Game/TapToPlayBtn.webp";
+import Fennec1 from "../../../assets/images/Game/IMG_5392.webp";
+import Fennec2 from "../../../assets/images/Game/IMG_5391.webp";
+import WoodenPlank from "../../../assets/images/Game/WoodenPlank.webp";
 
 export default function TapToPlay() {
   const isMobile =
@@ -30,7 +30,7 @@ export default function TapToPlay() {
         href="
         http://game-helloworldfennec.sit.kmutt.ac.th/"
         target="_blank"
-        className="w-[50rem] h-[30rem]  2xl:scale-125"
+        className="w-[50rem] h-[30rem]  "
       >
         <ImgContainer src={TapToPlayBtn} className="w-full h-full" />
       </motion.a>
@@ -39,9 +39,9 @@ export default function TapToPlay() {
   const Unplayable = () => (
     <div className="w-screen flex flex-col justify-center items-center">
       <img
-          src={WoodenPlank}
-          className="w-[90%] max-w-[50rem] h-[28rem] absolute -rotate-3"
-        />
+        src={WoodenPlank}
+        className="w-[90%] max-w-[50rem] h-[28rem] absolute -rotate-3"
+      />
       <div className="w-[90%] max-w-[50rem] h-[28rem]">
         <ImgContainer
           src={Fennec1}
@@ -51,10 +51,14 @@ export default function TapToPlay() {
           src={Fennec2}
           className="w-[10rem] h-[10rem] absolute left-15 md:left-5 -translate-y-16"
         />
-        
+
         <div className="w-full h-full flex flex-col p-10 items-center justify-center text-white">
-          <h1 className="text-2xl font-bold mb-5 z-10">แจ้งข่าวเกี่ยวกับเกมของเว็บไซต์ค่าย</h1>
-          <p className="z-10">เกมนี้สามารถเล่นได้ในเครื่องคอมพิวเตอร์ หรือโน้ตบุ๊คเท่านั้น</p>
+          <h1 className="text-2xl font-bold mb-5 z-10">
+            แจ้งข่าวเกี่ยวกับเกมของเว็บไซต์ค่าย
+          </h1>
+          <p className="z-10">
+            เกมนี้สามารถเล่นได้ในเครื่องคอมพิวเตอร์ หรือโน้ตบุ๊คเท่านั้น
+          </p>
           <br />
           <p className="z-10">ขออภัยในความไม่สะดวกน้าาา</p>
         </div>

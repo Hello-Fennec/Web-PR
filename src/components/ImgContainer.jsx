@@ -1,10 +1,26 @@
-import styled from "styled-components";
+import { useState } from "react";
+import { useEffect } from "react";
 
-const ImgContainer = styled.div`
-  background-image: url(${(props) => props.src});
-  background-size: ${(props) => (props.size ? props.size : "contain")};
-  background-position: ${(props) => (props.position ? props.position : "center")};
-  background-repeat: no-repeat;
-`;
+function ImgContainer({ src, className, position, size, ...props }) {
+  const [source, setSource] = useState("");
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = src;
+    img.onload = () => setSource(src);
+  }, [src]);
+  return (
+    <div
+      className={className}
+      data-speed={props["data-speed"]}
+      style={{
+        backgroundImage: `url(${source})`,
+        backgroundPosition: position || "center",
+        backgroundSize: size || "contain",
+        backgroundRepeat: "no-repeat",
+      }}
+    ></div>
+  );
+}
 
 export default ImgContainer;

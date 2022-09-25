@@ -3,11 +3,11 @@ import useWindowDimensions from "../hooks/useWindowDimensions";
 import BREAKPOINTS from "../constants/BREAKPOINTS";
 import PAGES from "../constants/PAGES";
 import styled from "styled-components";
-import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.png";
+import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.webp";
 import { AnimatePresence, motion } from "framer-motion";
 import HelloFennecTag from "../assets/images/HelloFennec-logo.png";
 import ImgContainer from "../components/ImgContainer";
-import NavStone from "../assets/images/NavStone.png";
+import NavStone from "../assets/images/NavStone.webp";
 
 const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
   const { width } = useWindowDimensions();
@@ -102,7 +102,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
                       className={
                         (pageOnScreen === index
                           ? "text-[#df963a] "
-                          : pageOnScreen === 4
+                          : PAGES[pageOnScreen].name === "FAQs"
                           ? "text-white"
                           : "text-black") +
                         " hover:text-[#a15d00] md:hover:text-black text-xl font-bold duration-200"
@@ -209,11 +209,11 @@ const Bar = styled.div`
   margin: 0.25rem 0;
   border-radius: 9999px;
   background-color: #303030;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
-  -webkit-transition: 0.1s;
-  -moz-transition: 0.1s;
-  -o-transition: 0.1s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
 `;
 
 const NavBurger = styled.div`

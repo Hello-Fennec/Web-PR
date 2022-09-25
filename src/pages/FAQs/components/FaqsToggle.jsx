@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 import BREAKPOINTS from "../../../constants/BREAKPOINTS";
 import ImgContainer from "../../../components/ImgContainer";
-import StoneStick from "../../../assets/images/FAQs/StoneStick.png";
+import StoneStick from "../../../assets/images/FAQs/StoneStick.webp";
 import styled from "styled-components";
 import { useState } from "react";
 
@@ -44,6 +44,7 @@ function DesktopToggle(props) {
             (props.index !== props.current && "grayscale") +
             " w-full h-full absolute -z-10 "
           }
+          loading="lazy"
         />
       </button>
     </motion.div>

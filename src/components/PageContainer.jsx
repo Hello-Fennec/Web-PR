@@ -5,6 +5,7 @@ const Background = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-position: ${(props) => props.position};
   height: 100vh;
   display: flex;
   justify-content: center;
