@@ -23,7 +23,7 @@ function MobileToggle(props) {
       <img
         src={StoneStick}
         className={
-          (props.index === props.current ? "grayscale" : "") +
+          (props.index !== props.current ? "grayscale" : "") +
           " absolute h-14 w-[95%]"
         }
       />
