@@ -23,7 +23,7 @@ const PAGES = [
     connector: {
       width: "100%",
       height: "7vh",
-      background: `linear-gradient(to bottom, #e6a45a, ${evenBG} )`,
+      background: `linear-gradient(to bottom, #ec9f43, ${evenBG} )`,
       position: "absolute",
     },
   },
