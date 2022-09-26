@@ -20,7 +20,13 @@ function MobileToggle(props) {
       >
         {props.question}
       </button>
-      <img src={StoneStick} className="absolute h-14 w-[95%]" />
+      <img
+        src={StoneStick}
+        className={
+          (props.index === props.current ? "grayscale" : "") +
+          " absolute h-14 w-[95%]"
+        }
+      />
 
       <Collapse>
         <div
