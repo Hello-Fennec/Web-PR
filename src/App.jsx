@@ -2,7 +2,7 @@ import BottomFixedLayout from "./layout/BottomFixedLayout";
 import Navbar from "./layout/Navbar";
 import PAGES from "./constants/PAGES";
 import PageContainer from "./components/PageContainer";
-import ScrollToTopBtn from "./components/ScrollToTopBtn";
+// import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
 import { useEffect, useState } from "react";
 import ScrollContainer from "./components/ScrollContainer";
@@ -29,13 +29,7 @@ function App() {
         }px)`;
       });
     }
-    function scrollParallax(e) {
-      document.querySelectorAll(".scroll").forEach((layer) => {
-        const speed = layer.getAttribute("data-speed");
-        const value = (window.scrollY * speed) / 10;
-        layer.style.transform = `translateY(${value}px)`;
-      });
-    }
+
     function currentPageInView(e) {
       pageRefs.forEach((pageRef, index) => {
         if (scrollY >= pageRef.current.offsetTop) {
@@ -46,9 +40,21 @@ function App() {
     // !isMobile && document.addEventListener("mousemove", mousemoveParallax);
     // {!isMobile && }
     document.addEventListener("scroll", currentPageInView);
-    document.addEventListener("scroll", scrollParallax);
-    
-  }, );
+  });
+
+  useEffect(() => {
+    function scrollParallax(e) {
+      document.querySelectorAll(".scroll").forEach((layer) => {
+        const speed = layer.getAttribute("data-speed");
+        const value = (window.scrollY * speed) / 10;
+        layer.style.transform = `translateY(${value}px)`;
+      });
+    }
+    pageOnScreen === 0 && document.addEventListener("scroll", scrollParallax);
+    return () => {
+      document.removeEventListener("scroll", scrollParallax);
+    };
+  }, [pageOnScreen]);
 
   return (
     <div className="App">

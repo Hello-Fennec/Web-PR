@@ -4,10 +4,10 @@ import GameDev from "../assets/images/Teams/GameDev.webp";
 import Infra from "../assets/images/Teams/Infra.webp";
 import WebDesign from "../assets/images/Teams/WebDesign.webp";
 
-import FrontEndThumbnail from "../assets/images/Teams/Front-endThumbnail.webp";
-import GameDevThumbnail from "../assets/images/Teams/GameDevThumbnail.webp";
-import InfraThumbnail from "../assets/images/Teams/InfraThumbnail.webp";
-import WebDesignThumbnail from "../assets/images/Teams/WebDesignThumbnail.webp";
+import FrontEndThumbnail from "../assets/images/Teams/Thumbnails/Front-endThumbnail.png";
+import GameDevThumbnail from "../assets/images/Teams/Thumbnails/GameDevThumbnail.png";
+import InfraThumbnail from "../assets/images/Teams/Thumbnails/InfraThumbnail.png";
+import WebDesignThumbnail from "../assets/images/Teams/Thumbnails/WebDesignThumbnail.png";
 
 const TEAMS = [
   {
