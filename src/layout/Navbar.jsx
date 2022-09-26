@@ -109,14 +109,23 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
                       }
                     >
                       <h1 className="drop-shadow-md">{page.name}</h1>
-
-                      <ImgContainer
-                        src={NavStone}
-                        className={
-                          (pageOnScreen === index && `opacity-100`) +
-                          ` w-20 h-6 md:w-16 opacity-0 m-auto`
-                        }
-                      />
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{
+                          opacity: 1,
+                        }}
+                        transition={{
+                          duration: 0.5,
+                        }}
+                      >
+                        <ImgContainer
+                          src={NavStone}
+                          className={
+                            (pageOnScreen === index && `opacity-100`) +
+                            ` w-20 h-6 md:w-16 opacity-0 m-auto`
+                          }
+                        />
+                      </motion.div>
                     </button>
                   </li>
                 )
