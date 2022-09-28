@@ -17,8 +17,8 @@ const Events = () => {
         <div className="lg:hidden w-[50vw] bg-[#a15d00] rounded-2xl" />
         <div className=" flex flex-col space-y-7 lg:scale-125 md:scale-100 origin-center">
           <div
-            className="w-[2px] h-[33rem] absolute
-            -z-0 ml-11 bg-gray-600"
+            className="w-[1.5px] h-[33rem] absolute
+            -z-0 ml-12 mt-1 bg-gray-500"
           ></div>
           <Event
             date={15}
