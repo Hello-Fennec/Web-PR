@@ -39,14 +39,15 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, transition: { duration: 0.5, delay: 0.3 } }}
       viewport={{ once: true }}
-      className="selectorContainer flex flex-row justify-center items-end mt-8 space-x-5 
+      className=" flex flex-row justify-center items-end mt-8 space-x-5 
       lg:absolute lg:-translate-y-20 lg:right-4 lg:flex-col lg:space-x-0 lg:space-y-5 lg:mt-0 
       sm:flex-col sm:right-2 sm:-translate-y-10 sm:space-y-3 
       2xl:space-x-10"
     >
       {TEAMS.map((team, index) => {
-        return <Selector key={index} index={index} />;
+        return <Selector key={team} index={index} />;
       })}
+      
     </motion.div>
   );
 }
