@@ -21,7 +21,7 @@ const Events = () => {
             -z-0 ml-12 mt-1 bg-gray-500"
           ></div>
           <Event
-            date={15}
+            date={7}
             month={"ต.ค."}
             title={"เปิดรับสมัคร"}
             description={"เฟ้นหาเฟนเนคตัวน้อย"}
