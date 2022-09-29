@@ -8,7 +8,14 @@ import { motion } from "framer-motion";
 // });
 
 const Thumbnail = React.memo(function Image({ src }) {
-  return <img src={src} className="spinner" />;
+  return (
+    <div
+      style={{
+        backgroundImage: `url(${src})`,
+      }}
+      className="bg-cover bg-center bg-no-repeat w-full h-full"
+    />
+  );
 });
 
 export default function TeamSelector({ selectedTeam, setselectedTeam }) {
