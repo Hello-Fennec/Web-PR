@@ -1,4 +1,4 @@
-const today = new Date("2022-11-25");
+const today = new Date();
 const registerDay = new Date("2022-10-7");
 const announceDay = new Date("2022-10-25");
 const fennecDay = new Date("2022-10-29");
