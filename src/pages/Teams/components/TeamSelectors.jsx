@@ -27,7 +27,12 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
         src={TEAMS[index].thumbnail}
         className="w-full h-full m-auto rounded-xl"
       />
-      <h1 className={"text-[#a15d00] font-bold mt-2 text-sm lg:hidden"}>
+      <h1
+        className={
+          (selectedTeam === index && "text-[#a15d00]") +
+          " font-bold mt-2 text-sm lg:hidden"
+        }
+      >
         {TEAMS[index].name === "Game development"
           ? "Game dev"
           : TEAMS[index].name}
