@@ -1,7 +1,15 @@
 import React from "react";
-import ImgContainer from "../../../components/ImgContainer";
+// import ImgContainer from "../../../components/ImgContainer";
 import TEAMS from "../../../constants/TEAMS";
 import { motion } from "framer-motion";
+
+// const Thumbnail = React.memo(function Thumbnail({ size, src, className }) {
+//   return <ImgContainer src={src} size={size} className={className} />;
+// });
+
+const Thumbnail = React.memo(function Image({ src }) {
+  return <img src={src} className="spinner" />;
+});
 
 export default function TeamSelector({ selectedTeam, setselectedTeam }) {
   const Selector = ({ index }) => (
@@ -14,7 +22,7 @@ export default function TeamSelector({ selectedTeam, setselectedTeam }) {
         " w-24 h-24 sm:w-16 sm:h-16 bg-[#F2E2BB] cursor-pointer rounded-xl shadow-xl hover:-translate-y-1 duration-300 2xl:scale-125 origin-top"
       }
     >
-      <ImgContainer
+      <Thumbnail
         size="cover"
         src={TEAMS[index].thumbnail}
         className="w-full h-full m-auto rounded-xl"
