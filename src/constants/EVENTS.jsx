@@ -1,5 +1,5 @@
 const today = new Date();
-const registerDay = new Date("2022-10-7");
+const registerDay = new Date("2022-10-07");
 const announceDay = new Date("2022-10-25");
 const fennecDay = new Date("2022-10-29");
 const graduationDay = new Date("2022-11-25");

@@ -11,7 +11,7 @@ const Events = () => {
         <div className=" flex flex-col space-y-7 lg:scale-125 md:scale-100 origin-center">
           <div
             className="w-1 h-[33rem] absolute
-            -z-0 ml-12 mt-1 bg-gray-500"
+            -z-0 ml-12 mt-1 bg-gray-500 rounded-full"
           >
             <div
               className={
