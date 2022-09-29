@@ -51,9 +51,7 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
                       (pageOnScreen === index
                         ? "text-[#df963a] "
                         : "text-black") +
-                      ` hover:text-[${
-                        !isMobile && "#a15d00"
-                      }] md:hover:text-black text-xl  duration-200`
+                      ` md:hover:text-black text-xl  duration-200`
                     }
                   >
                     {page.name}
@@ -105,7 +103,9 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
                           : PAGES[pageOnScreen].name === "FAQs"
                           ? "text-white"
                           : "text-black") +
-                        " hover:text-[#a15d00] md:hover:text-black text-xl font-bold duration-200"
+                        ` hover:text-[${
+                          !isMobile && `#a15d00`
+                        }]  md:hover:text-black text-xl font-bold duration-200`
                       }
                     >
                       <h1 className="drop-shadow-md">{page.name}</h1>
