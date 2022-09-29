@@ -26,7 +26,7 @@ export default function Event({ date, month, title, description,descriptionLine2
         </h1>
         <p
           className={
-            (isPassed ? "text-[#b47d30]" : "text-gray-500") +
+            (isPassed ? "text-[#a15d00]" : "text-gray-500") +
             " text-lg md:text-base"
           }
         >
