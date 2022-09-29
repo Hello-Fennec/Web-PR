@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import StoneStick from "../../../assets/images/FAQs/StoneStick.webp";
+import StoneStick from "../../../assets/images/FAQs/StoneStick.png";
 
 function MobileToggle(props) {
   const [visible, setVisible] = useState(false);
