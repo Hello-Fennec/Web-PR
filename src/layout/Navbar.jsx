@@ -152,15 +152,15 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
 };
 
 const Tags = ({ pageOnScreen }) => {
-  const [tagShowing, setTagShowing] = useState(false);
-  useEffect(() => {
-    const setChangeTag =
-      pageOnScreen === 0 &&
-      setTimeout(() => {
-        setTagShowing(!tagShowing);
-      }, 3000);
-    pageOnScreen !== 0 && clearTimeout(setChangeTag);
-  }, [tagShowing, pageOnScreen]);
+  const [tagShowing, setTagShowing] = useState(true);
+  // useEffect(() => {
+  //   const setChangeTag =
+  //     pageOnScreen === 0 &&
+  //     setTimeout(() => {
+  //       setTagShowing(!tagShowing);
+  //     }, 3000);
+  //   pageOnScreen !== 0 && clearTimeout(setChangeTag);
+  // }, [tagShowing, pageOnScreen]);
   return (
     <>
       <AnimatePresence exitBeforeEnter>
