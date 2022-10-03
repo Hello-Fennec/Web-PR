@@ -14,7 +14,7 @@ const Logo = () => {
         className=" h-full w-full md:w-[90%] max-w-[32rem] max-h-[18rem] absolute -translate-x-1/2 -translate-y-1/2"
       />
       <div
-        className="w-[80vw] absolute -translate-x-1/2 translate-y-[8rem] text-xl font-bold
+        className="w-[80vw] absolute -translate-x-1/2 translate-y-[8rem] sm:translate-y-[6rem] text-xl font-bold
       sm:text-base "
       >
         <span className="inline-block">Break your limits,</span>

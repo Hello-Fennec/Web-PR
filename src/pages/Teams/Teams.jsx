@@ -8,6 +8,7 @@ function Teams({ pageIndex, pageOnScreen }) {
   return (
     <div className="flex flex-col lg:flex-row lg:items-center ">
       <Content selectedTeam={selectedTeam} />
+
       <TeamSelector
         selectedTeam={selectedTeam}
         setselectedTeam={setselectedTeam}

@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
 import StoneStick from "../../../assets/images/FAQs/StoneStick.webp";
+import React from "react";
+
+const Image = React.memo(function Image({ src, className }) {
+  return <img src={src} className={className} />;
+});
 
 function DesktopToggle(props) {
   return (
@@ -26,13 +31,12 @@ function DesktopToggle(props) {
       >
         {props.title}
         {props.question}
-        <img
+        <Image
           src={StoneStick}
           className={
             (props.index !== props.current && "grayscale") +
             " w-full h-full absolute -z-10 "
           }
-          loading="lazy"
         />
       </button>
     </motion.div>

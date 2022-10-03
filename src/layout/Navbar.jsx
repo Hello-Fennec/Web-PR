@@ -4,10 +4,12 @@ import BREAKPOINTS from "../constants/BREAKPOINTS";
 import PAGES from "../constants/PAGES";
 import styled from "styled-components";
 import SITKMUTT_Tag from "../assets/images/SITKMUTT_Tag.webp";
+import Mercury_Tag from "../assets/images/Mercury.png";
 import { AnimatePresence, motion } from "framer-motion";
 import HelloFennecTag from "../assets/images/HelloFennec-logo.png";
 import ImgContainer from "../components/ImgContainer";
 import NavStone from "../assets/images/NavStone.webp";
+import { useEffect, useState } from "react";
 
 const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
   const { width } = useWindowDimensions();
@@ -144,30 +146,69 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
       id="myMenu"
     >
       {width < BREAKPOINTS.mobile ? <MobileNavbar /> : <DesktopNavbar />}
+      <Tags pageOnScreen={pageOnScreen} />
+    </motion.div>
+  );
+};
 
+const Tags = ({ pageOnScreen }) => {
+  const [tagShowing, setTagShowing] = useState(false);
+  useEffect(() => {
+    const setChangeTag =
+      pageOnScreen === 0 &&
+      setTimeout(() => {
+        setTagShowing(!tagShowing);
+      }, 3000);
+    pageOnScreen !== 0 && clearTimeout(setChangeTag);
+  }, [tagShowing, pageOnScreen]);
+  return (
+    <>
       <AnimatePresence exitBeforeEnter>
-        {pageOnScreen === 0 && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{
-              opacity: 0,
-              transition: { duration: 0.3, ease: "easeInOut" },
-            }}
-          >
-            <Tag
-              onClick={(e) => {
-                e.preventDefault();
-                window.open("https://www.sit.kmutt.ac.th/", "_blank");
+        {pageOnScreen === 0 &&
+          (tagShowing ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{
+                opacity: 0,
+                transition: { duration: 0.3, ease: "easeInOut" },
               }}
-              id="SITTag"
-              src={SITKMUTT_Tag}
-              size={"contain"}
-              color="white"
-              className="w-56 h-[4.5rem] md:w-44 md:h-16 rounded-b-3xl md:rounded-b-2xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1 2xl:scale-125 origin-top-left"
-            />
-          </motion.div>
-        )}
+            >
+              <Tag
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://www.sit.kmutt.ac.th/", "_blank");
+                }}
+                id="SITTag"
+                src={SITKMUTT_Tag}
+                size={"contain"}
+                color="white"
+                className="w-56 h-[4.5rem] md:w-44 md:h-16 rounded-b-3xl md:rounded-b-2xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1 2xl:scale-125 origin-top-left"
+              />
+            </motion.div>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{
+                opacity: 0,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
+            >
+              <Tag
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("", "_blank");
+                }}
+                id="SITTag"
+                disabled
+                src={Mercury_Tag}
+                size={"contain"}
+                color="white"
+                className="w-56 h-[4.5rem] md:w-44 md:h-16 rounded-b-3xl md:rounded-b-2xl sm:rounded-b-xl left-10 md:left-5 shadow-md hover:-translate-y-1 2xl:scale-125 origin-top-left"
+              />
+            </motion.div>
+          ))}
       </AnimatePresence>
 
       <AnimatePresence exitBeforeEnter>
@@ -192,12 +233,13 @@ const Navbar = ({ pageRefs, scrollToRef, pageOnScreen }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </>
   );
 };
 
 const Tag = styled.button`
   background-color: ${(props) => props.color};
+  background-position: center;
   opacity: 1;
   position: fixed;
   top: 0;

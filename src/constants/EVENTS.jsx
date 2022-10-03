@@ -2,7 +2,7 @@ const today = new Date();
 const registerDay = new Date("2022-10-07");
 const announceDay = new Date("2022-10-25");
 const fennecDay = new Date("2022-10-29");
-const graduationDay = new Date("2022-11-25");
+const graduationDay = new Date("2022-11-26");
 function isPassed(date1, date2) {
   return date1 >= date2;
 }
@@ -42,8 +42,7 @@ export const ListOfEvents = [
   },
 ];
 
-const allEvents = Array.from(
-  ListOfEvents.map((event) => event.date.toDateString())
-);
+const allEvents = Array.from(ListOfEvents.map((event) => event.date));
 
-export const onEvent = allEvents.indexOf(today.toDateString()) + 1;
+export const onEvent =
+  allEvents.filter((event) => isPassed(today, event)).length ;

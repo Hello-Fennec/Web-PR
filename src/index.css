@@ -4,7 +4,6 @@
 
 *{
   scroll-behavior: smooth;
-
 }
 
 body {
@@ -28,18 +27,18 @@ code {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background:  #f1f1f1;
+  background:  #ffe394;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #a15d00;
   border-radius: 20px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #834c00;
 }
 
 .scroll-container {

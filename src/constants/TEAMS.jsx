@@ -1,5 +1,4 @@
 import FrontEnd from "../assets/images/Teams/Front-end.webp";
-// import GameDesign from '../assets/images/Teams/GameDesign.webp';
 import GameDev from "../assets/images/Teams/GameDev.webp";
 import Infra from "../assets/images/Teams/Infra.webp";
 import WebDesign from "../assets/images/Teams/WebDesign.webp";

@@ -11,7 +11,7 @@ export default function AboutUsContainer() {
   return (
     <div className="flex flex-col justify-center items-center ">
       <div
-        data-speed={3}
+        data-speed={1}
         className="mousemove text-white h-auto w-[95%] min-h-[24rem] max-w-[44rem] sm:px-8 sm:pt-14 sm:pb-24 p-12 pb-14 translate-x-0"
       >
         <h1

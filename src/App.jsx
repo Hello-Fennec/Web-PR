@@ -37,8 +37,7 @@ function App() {
         }
       });
     }
-    // !isMobile && document.addEventListener("mousemove", mousemoveParallax);
-    // {!isMobile && }
+    !isMobile && document.addEventListener("mousemove", mousemoveParallax);
     document.addEventListener("scroll", currentPageInView);
   });
 
@@ -50,7 +49,7 @@ function App() {
         layer.style.transform = `translateY(${value}px)`;
       });
     }
-    pageOnScreen === 0 && document.addEventListener("scroll", scrollParallax);
+    document.addEventListener("scroll", scrollParallax);
     return () => {
       document.removeEventListener("scroll", scrollParallax);
     };
@@ -73,10 +72,11 @@ function App() {
                   <div className="w-full h-full">{page.component}</div>
                 </div>
               </PageContainer>
-              <div style={page.connector} />
+              <div style={page.connector} className="-translate-y-[1px]" />
             </>
           );
         })}
+
       </ScrollContainer>
       <BottomFixedLayout />
       <Navbar

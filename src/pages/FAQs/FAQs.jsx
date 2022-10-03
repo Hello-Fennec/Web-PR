@@ -110,7 +110,6 @@ function Faqs() {
               (current === -1 && "grayscale") +
               " w-full h-full absolute -z-10 top-0 left-0"
             }
-            loading="lazy"
           />
         </div>
       </div>
