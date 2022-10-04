@@ -11,11 +11,11 @@ const Logo = () => {
     >
       <ImgContainer
         src={HelloFennecLogo}
-        className=" h-full w-full md:w-[90%] max-w-[32rem] max-h-[18rem] absolute -translate-x-1/2 -translate-y-1/2"
+        className=" h-full w-full md:w-[90%] max-w-[32rem] max-h-[18rem] absolute -translate-x-1/2 -translate-y-1/2 2xl:scale-150"
       />
       <div
         className="w-[80vw] absolute -translate-x-1/2 translate-y-[8rem] sm:translate-y-[6rem] text-xl font-bold
-      sm:text-base "
+      sm:text-base 2xl:translate-y-[10rem] 2xl:text-2xl"
       >
         <span className="inline-block">Break your limits,</span>
         <span className="inline-block">&nbsp;practice your skills</span>
