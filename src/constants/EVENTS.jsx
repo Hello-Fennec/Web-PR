@@ -1,6 +1,6 @@
 const today = new Date();
 const registerDay = new Date("2022-10-07");
-const announceDay = new Date("2022-10-25");
+const announceDay = new Date("2022-10-23");
 const fennecDay = new Date("2022-10-29");
 const graduationDay = new Date("2022-11-26");
 function isPassed(date1, date2) {
