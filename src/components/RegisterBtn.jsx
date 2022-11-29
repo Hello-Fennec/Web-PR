@@ -32,7 +32,7 @@ const RegisterBtn = () => {
               ? window.open("https://forms.gle/16JsWhnKX6ecjCpTA", "_blank")
               : onEvent <= 3
               ? window.open("https://forms.gle/ubQeT8r8vRpu4RM98", "_blank")
-              : window.open("../../Game-PR/index.html");
+              : window.open("/student-projects");
           }}
           className={
             (onRegister ? "bg-[#a15d00] hover:bg-[#ca8018]" : "bg-slate-700") +
