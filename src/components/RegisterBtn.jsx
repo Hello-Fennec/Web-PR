@@ -1,22 +1,23 @@
 import React from "react";
 import { TbEdit } from "react-icons/tb";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaLightbulb } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { onEvent } from "../constants/EVENTS";
+
+export const registerBtnVariants = {
+  animate: {
+    scale: [1, 1.05, 1],
+    transition: { duration: 0.5, repeat: Infinity },
+  },
+  whileHover: { scale: 1.05 },
+};
 
 const RegisterBtn = () => {
   const today = new Date();
   const registerDay = new Date("2022-10-07");
   const onRegister = today >= registerDay;
 
-  const registerBtnVariants = {
-    animate: {
-      scale: [1, 1.05, 1],
-      transition: { duration: 0.5, repeat: Infinity },
-    },
-    whileHover: { scale: 1.05 },
-  };
   return (
     <>
       <motion.div
@@ -29,7 +30,9 @@ const RegisterBtn = () => {
           onClick={() => {
             onEvent === 1
               ? window.open("https://forms.gle/16JsWhnKX6ecjCpTA", "_blank")
-              : window.open("https://forms.gle/ubQeT8r8vRpu4RM98", "_blank");
+              : onEvent <= 3
+              ? window.open("https://forms.gle/ubQeT8r8vRpu4RM98", "_blank")
+              : window.open("../../Game-PR/index.html");
           }}
           className={
             (onRegister ? "bg-[#a15d00] hover:bg-[#ca8018]" : "bg-slate-700") +
@@ -46,10 +49,15 @@ const RegisterBtn = () => {
               <TbEdit size={30} />
               <h1 className="md:hidden">&nbsp;Register</h1>
             </>
-          ) : (
+          ) : onEvent === 2 ? (
             <>
               <FaCheck size={20} className="" />
               <h1 className="md:hidden">&nbsp;ยืนยันสิทธิ์</h1>
+            </>
+          ) : (
+            <>
+              <FaLightbulb size={30} className="" />
+              <h1 className="md:hidden">&nbsp;ผลงานน้องๆ</h1>
             </>
           )}
         </button>

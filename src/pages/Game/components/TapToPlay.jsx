@@ -27,9 +27,8 @@ export default function TapToPlay() {
             repeatType: "reverse",
           },
         }}
-        href="
-        http://game-helloworldfennec.sit.kmutt.ac.th/"
-        target="_blank"
+        href="../../../../Game-PR/index.html"
+        // target="_blank"
         className="w-[50rem] h-[30rem]  "
       >
         <ImgContainer src={TapToPlayBtn} className="w-full h-full" />

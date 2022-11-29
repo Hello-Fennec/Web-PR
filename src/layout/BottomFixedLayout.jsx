@@ -2,6 +2,7 @@
 import SocialMedia from "../components/SocialMedia";
 import { motion } from "framer-motion";
 import RegisterBtn from "../components/RegisterBtn";
+import ProjectLinkBtn from "../components/ProjectLinkBtn";
 
 const BottomFixedLayout = () => {
   return (
@@ -13,6 +14,7 @@ const BottomFixedLayout = () => {
       <SocialMedia />
       {/* {isMobile ? null : <AudioToggle />} */}
       <RegisterBtn/>
+      {/* <ProjectLinkBtn/> */}
     </motion.div>
   );
 };
