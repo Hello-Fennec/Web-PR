@@ -8,7 +8,7 @@ const LinkBtn = ({ img, link, bgcolor, alt }) => {
   return (
     <>
       <motion.button
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.15 }}
         whileTap={{ scale: 0.95 }}
         onClick={(e) => {
           console.log("GH");
