@@ -14,7 +14,7 @@ export let projects = [
   {
     groupNum: 1,
     name: "Qwerty",
-    link: "Link",
+    link: "https://qwerty-helloworldfennec.vercel.app/",
     img: qwerty,
     github: "https://github.com/Hello-Fennec/G1-Qwerty",
     figma:
@@ -24,7 +24,7 @@ export let projects = [
   {
     groupNum: 2,
     name: "Medusa",
-    link: "Link",
+    link: "https://medusa-helloworldfennec.vercel.app",
     img: medusa,
     github: "https://github.com/Hello-Fennec/G2-Medusa ",
     figma:
@@ -34,7 +34,7 @@ export let projects = [
   {
     groupNum: 3,
     name: "Phoenix Phoejai ",
-    link: "Link",
+    link: "https://phoenixphoejai-helloworldfennec.vercel.app",
     img: phoenixphoejai,
     github: "https://github.com/Hello-Fennec/G3-PhoenixPhoejai",
     figma:
@@ -44,7 +44,7 @@ export let projects = [
   {
     groupNum: 4,
     name: "Manticore",
-    link: "Link",
+    link: "https://manticore-helloworldfennec.vercel.app",
     img: manticore,
     github: "https://github.com/Hello-Fennec/G4-Manticore",
     figma:
@@ -54,7 +54,7 @@ export let projects = [
   {
     groupNum: 5,
     name: "Dragon",
-    link: "Link",
+    link: "https://dragon-helloworldfennec.vercel.app",
     img: dragon,
     github: "https://github.com/Hello-Fennec/G5-Dragon",
     figma:
@@ -64,7 +64,7 @@ export let projects = [
   {
     groupNum: 6,
     name: "Wanna know u(nicorn) more ",
-    link: "Link",
+    link: "https://wannaknowu-nicorn-more-helloworldfennec.vercel.app",
     img: wannaknowunicornmore,
     github: "https://github.com/Hello-Fennec/G6-WannaKnowU-nicorn-More",
     figma:
@@ -74,7 +74,7 @@ export let projects = [
   {
     groupNum: 7,
     name: "Sweet Maidaan",
-    link: "Link",
+    link: "https://sweetmaidaan-helloworldfennec.vercel.app/",
     img: sweetmaidaan,
     github: "https://github.com/Hello-Fennec/G7-SweetMaidaan",
     figma: null,
@@ -83,7 +83,7 @@ export let projects = [
   {
     groupNum: 8,
     name: "Slime's adventure ",
-    link: "Link",
+    link: "http://slimesadventure-helloworldfennec.vercel.app/",
     img: slimesadventure,
     github: "https://github.com/Hello-Fennec/G8-SlimesAdventure",
     figma: null,
@@ -92,7 +92,7 @@ export let projects = [
   {
     groupNum: 9,
     name: "Escape from dungeon",
-    link: "Link",
+    link: "https://escapefromdungeon-helloworldfennec.vercel.app/",
     img: escapefromdungeon,
     github: "https://github.com/Hello-Fennec/G9-EscapeFromDungeon",
     figma: null,
@@ -101,7 +101,7 @@ export let projects = [
   {
     groupNum: 10,
     name: "Slimeking ",
-    link: "Link",
+    link: "https://slimeking-helloworldfennec.vercel.app/",
     img: slimeking,
     github: "https://github.com/Hello-Fennec/G10-Slimeking",
     figma: null,

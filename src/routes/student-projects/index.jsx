@@ -4,7 +4,7 @@ import Container from "./components/container";
 import SearchBar from "./components/search-bar";
 import { projects } from "./utils/projects";
 import { teams } from "./utils/teams";
-import { motion } from "framer-motion";
+import FilterBadge from "./components/filter-badge";
 
 export default function StudentProjects() {
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -25,32 +25,12 @@ export default function StudentProjects() {
         <div className="flex flex-wrap mb-5 ">
           {teams.map((team, index) => {
             return (
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => {
-                  //filter
-                  cardFilter.includes(team.name)
-                    ? setCardFilter(
-                        cardFilter.filter((item) => item !== team.name)
-                      )
-                    : setCardFilter([...cardFilter, team.name]);
-                }}
-              >
-                <div
-                  style={{
-                    backgroundColor:
-                      cardFilter.length === 0
-                        ? "gray"
-                        : cardFilter.includes(team.name)
-                        ? team.color
-                        : "gray",
-                  }}
-                  className=" text-white drop-shadow-md py-[5px] px-4 text-sm rounded-full whitespace-nowrap mr-2 mb-2 mt-1"
-                >
-                  {team.name}
-                </div>
-              </motion.button>
+              <FilterBadge
+                key={index}
+                team={team}
+                cardFilter={cardFilter}
+                setCardFilter={setCardFilter}
+              />
             );
           })}
         </div>

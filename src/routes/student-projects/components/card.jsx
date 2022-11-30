@@ -62,8 +62,8 @@ const Card = ({
         }
       >
         <div className="p-[6px] flex flex-wrap ">
-          {categories?.map(({ name, color }) => {
-            return <Badge name={name} color={color} />;
+          {categories?.map(({ name, color },index) => {
+            return <Badge key={index} name={name} color={color} />;
           })}
         </div>
         <div className="w-full bg-[#ffffffb2] text-black backdrop-blur-sm rounded-b-3xl flex items-center justify-between pt-2 pb-4 px-3">

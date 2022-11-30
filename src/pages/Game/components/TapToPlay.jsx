@@ -27,7 +27,7 @@ export default function TapToPlay() {
             repeatType: "reverse",
           },
         }}
-        href="../../../../Game-PR/index.html"
+        href="https://helloworldfennec-game.vercel.app/"
         // target="_blank"
         className="w-[50rem] h-[30rem]  "
       >
