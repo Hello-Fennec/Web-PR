@@ -18,21 +18,23 @@ export default function StudentProjects() {
           <h1 className="text-2xl font-bold text-left lg:mb-8">
             HelloWorld Fennec's student projects
           </h1>
-          <div className="flex lg:w-full">
+        </div>
+        <div className="flex flex-wrap lg:flex-col-reverse lg:items-start  items-center mb-5 justify-between">
+          <div className="space-y-1">
+            {teams.map((team, index) => {
+              return (
+                <FilterBadge
+                  key={index}
+                  team={team}
+                  cardFilter={cardFilter}
+                  setCardFilter={setCardFilter}
+                />
+              );
+            })}
+          </div>
+          <div className="flex lg:w-full lg:mb-5">
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
           </div>
-        </div>
-        <div className="flex flex-wrap mb-5 ">
-          {teams.map((team, index) => {
-            return (
-              <FilterBadge
-                key={index}
-                team={team}
-                cardFilter={cardFilter}
-                setCardFilter={setCardFilter}
-              />
-            );
-          })}
         </div>
         <div className="grid gap-x-4 gap-y-10 grid-cols-4 lg:grid-cols-2 xs:grid-cols-1 ">
           {projects

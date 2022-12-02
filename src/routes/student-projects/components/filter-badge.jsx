@@ -29,7 +29,7 @@ export default function FilterBadge({ team, cardFilter, setCardFilter }) {
               ? team.color
               : "gray",
         }}
-        className=" text-white drop-shadow-md py-[5px] px-4 text-sm rounded-full whitespace-nowrap mr-2 mb-2 mt-1"
+        className=" text-white drop-shadow-md py-[5px] px-4 text-sm rounded-full whitespace-nowrap mr-2 mt-1"
       >
         {team.name}
       </div>
